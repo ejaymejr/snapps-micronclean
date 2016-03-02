@@ -1,0 +1,22 @@
+fields:
+  date_time:
+    required:
+        msg: date required.
+  rh:
+    sfNumberValidator:
+        nan_error: requires number 	
+    required:
+        msg: required.
+  x_data:
+    sfNumberValidator:
+        nan_error: requires number 	
+    required:
+        msg: required.
+  temperature:
+    sfNumberValidator:
+        nan_error: requires number	
+    required:
+        msg: required.
+  filter_area:
+    required:
+        msg: required.        

@@ -1,0 +1,95 @@
+<div class="navigation-bar dark">
+    <div class="navigation-bar-content container"> 
+    	
+        <a href="#" class="element"><span class="icon-grid-view">&nbsp;</span><?php echo sfConfig::get('app_apps_name') ?><sup>1.0</sup></a>
+        <span class="element-divider"></span>
+        <a class="element1 pull-menu" href="#"></a>
+<?php 
+//if ($sf_user->isAuthenticated()): 
+	$appName = sfConfig::get('app_menu_name');
+	if (  $appName == 'TicketIssuance') {
+		include_partial('global/menu_ticket');
+	}
+	
+	if (  $appName == 'UserManagement') {
+		include_partial('global/menu_user');
+	}	
+	
+	if (  $appName == 'RejectPhoto') {
+		include_partial('global/menu_reject');
+	}
+	
+	if (  $appName == 'microncleanSurvey') {
+		include_partial('global/menu_survey');
+	}
+	
+	if (  $appName == 'HumanResourceMenu') {
+		include_partial('global/menu_hr');
+	}
+	
+	if (  $appName == 'cameraViewer') {
+		include_partial('global/menu_camera');
+	}
+	
+	if (  $appName == 'dashboardMenu') {
+		include_partial('global/menu_dashboard');
+	}
+	
+	if (  $appName == 'microncleanHanger') {
+		include_partial('global/menu_namelist');
+	}
+	
+	if (  $appName == 'QualityRecord') {
+		include_partial('global/menu_quality_record');
+	}
+	
+	if (  $appName == 'videoViewer') {
+		include_partial('global/menu_videos');
+	}
+	
+//endif;
+?>
+        <div class="element place-right">
+        <?php if ($sf_user->isAuthenticated()): ?>
+			<a class="dropdown-toggle" href="#">
+			<span class="icon-user-3"></span>
+			</a>
+			<ul class="dropdown-menu place-right" data-role="dropdown">
+			<li><?php echo link_to('Sign Out', 'logout') ?></li>
+			<li><?php echo link_to('Password Change', sfCOnfig::get('http_intranet').'micronclean/user/user/passwordChange' )?></li>
+			<li><a href="#">Message Support</a></li>
+			<li><a href="#">Send SMS</a></li>
+			<li><a href="#"><?php echo 'IP Address: ' . $_SERVER['HTTP_X_FORWARDED_FOR'] . '&nbsp;'?></a></li>
+			</ul>
+			</div>
+			<span class="element-divider place-right"></span>
+			<?php echo link_to('<span class="icon-locked-2"></span>', 'logout', 'data-hint="sign out" class="element place-right"  ') ?>
+			
+			<span class="element-divider place-right"></span>
+			
+		<?php else: ?>
+			</div>
+			<?php echo link_to('<span class="icon-unlocked"></span>', 'login', 'class="element place-right"') ?>
+			<span class="element-divider place-right"></span>
+		<?php endif ?>
+
+    </div>
+</div>
+
+
+<?php 
+function MenuPhpToJavascript($menuname, $submenu)
+{
+	$mess = '
+		var '.$menuname.'={divclass:"anylinkmenu", inlinestyle:"", linktarget:""} //First menu variable. Make sure "anylinkmenu1" is a unique name!
+		'.$menuname.'.items=[';
+	foreach($submenu as $sName=>$url) {
+	$mess += '
+			["'.$sName.'", "'.$url.'"],
+    ';
+	}
+	$mess += '	
+		]	
+	';
+	return $mess;
+}

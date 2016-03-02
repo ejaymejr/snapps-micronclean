@@ -1,0 +1,98 @@
+w#all:
+#  propel:
+#    class:          sfPropelDatabase
+#    param:
+#      dsn:          mysql://root@localhost/dbname
+
+all:
+  sfguard:
+    class:    sfPropelDatabase
+    param:
+      phptype:  mysql
+      persistent: true
+      host:     10.10.10.2
+      database: orion_snapps_sfguard
+      username: snapps
+      password: athousandless
+      
+      
+  general:
+    class:    sfPropelDatabase
+    param:
+      phptype:  mysql
+      persistent: true
+      host:     10.10.10.2
+      database: orion_snapps_general
+      username: snapps
+      password: athousandless
+
+  garment:
+    class:    sfPropelDatabase
+    param:
+      phptype:  mysql
+      persistent: true
+      host:     10.10.10.2
+      database: orion_snapps_garment
+      username: snapps
+      password: athousandless
+
+
+  particle:
+    class:    sfPropelDatabase
+    param:
+      phptype:  mysql
+      persistent: true
+      host:     10.10.10.2
+      database: orion_snapps_particle
+      username: snapps
+      password: athousandless
+      
+  inspection:
+    class:    sfPropelDatabase
+    param:
+      phptype:  mysql
+      persistent: true
+      host:     10.10.10.2
+      database: orion_snapps_inspection
+      username: snapps
+      password: athousandless        
+  
+  iso:
+    class:    sfPropelDatabase
+    param:
+      phptype:  mysql
+      persistent: true
+      host:     10.10.10.2
+      database: orion_snapps_iso
+      username: snapps
+      password: athousandless                
+      
+  hr:
+    class:    sfPropelDatabase
+    param:
+      phptype:  mysql
+      persistent: true
+      host:     10.10.10.2
+      database: orion_snapps_hr
+      username: snapps
+      password: athousandless       
+      
+  mercury_online_garment:
+    class:    sfPropelDatabase
+    param:
+      phptype:  mysql
+      persistent: true
+      host:     10.10.1.250
+      database: mercury_online_garment
+      username: mysqlbot
+      password: senoko123until1000  
+      
+  mercury_particle:
+    class:    sfPropelDatabase
+    param:
+      phptype:  mysql
+      persistent: true
+      host:     10.10.1.250
+      database: mercury_particle
+      username: mercury
+      password: mercury  

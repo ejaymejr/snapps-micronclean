@@ -1,0 +1,25 @@
+---
+iso: 
+  _attributes: 
+    package: lib.model.iso
+  customer_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    customer: 
+      type: VARCHAR
+      size: 50
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45

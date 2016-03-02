@@ -1,0 +1,21 @@
+# default values
+#all:
+
+all:
+    apps_name:      Users and Groups    
+    page_heading:   Users and Groups
+    menu_name:      UserManagement     
+    menu:
+        items:        
+            - ['User'],         'user']
+            - ['Group'],        'group']
+            - ['Permission'],   'permission']
+    submenu:
+        items:
+        
+
+    sf_guard_plugin:
+        success_signin_url:      @homepage          # the plugin use the referer as default
+        success_signout_url:     @homepage         # the plugin use the referer as default
+        profile_class:      sfGuardUserProfile
+        profile_field_name: user_id

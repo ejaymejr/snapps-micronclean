@@ -1,0 +1,28 @@
+all:
+    apps_name:      REJECT GARMENTS     
+    page_heading:   REJECT GARMENTS    
+    menu_name:      RejectPhoto         
+    upload_resource: 
+        path: /opt/httpd/htdocs_i/symfony/snapps-reject/web/uploader
+        include_uploader_file: /opt/httpd/htdocs_i/symfony/snapps-reject/web/uploader/phpuploader/include_phpuploader.php
+        resource_handler: /opt/httpd/htdocs_i/symfony/snapps-reject/web/uploader/phpuploader/ajaxuploaderresource.php
+    upload: 
+        path: /opt/httpd/htdocs_i/symfony/snapps-reject/tmp/uploaded_images   
+    image_preview:
+        path: /opt/httpd/htdocs_i/symfony/snapps-reject/web/svcore
+    json:
+        path: /opt/sites/ext/app.microncleansingapore.com/symfony/snapps-micronclean/web/json
+    email:
+    email:
+        smtp_mode:  true
+        smtp_server:     58.185.30.163
+        smtp_username:  
+        smtp_password:  
+        
+        attachment_size_limit:  10
+        
+        from_default:           Micronclean Online
+        from_address_default:   microncleanservice@micronclean.com.sg
+        cclist:                 mcsloggerx@yahoo.com
+        debug_address:          mcslogger@yahoo.com   
+        debug_address_local:    mcslogger@yahoo.com 

@@ -1,0 +1,11 @@
+<?php if ($sf_user->isAuthenticated()): ?>
+        <ul class="element-menu">
+            <li>
+                <a class="dropdown-toggle" href="#">SEAGATE</a>
+                <ul class="dropdown-menu dark" data-role="dropdown">
+                    <li><?php echo link_to('Create Batch', 'seagate/createBatch'  )?></li>
+                    <li><?php echo link_to('Search Namelist', 'seagate/searchBatch'  )?></li>
+                </ul>
+            </li>
+        </ul>
+<?php endif;?>

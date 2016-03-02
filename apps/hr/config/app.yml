@@ -1,0 +1,43 @@
+all:
+    apps_name:      Human Resource    
+    page_heading:   Human Resource
+    menu_name:      HumanResourceMenu      
+    menu:
+        items:        
+            - ['DTR',               'dtr',          'scanin']
+            - ['Home',         		'dashboard',    'dashboard']  
+            - ['Employee Info',     'employee',     'employee']            
+            - ['Maintenance',       'maintenance',  'maintenance'] 
+            - ['Leave Transaction', 'leave',        'leave']
+            - ['Timekeeping',       'timekeeping',  'timekeeping']    
+            - ['Contribution',      'contribution', 'contribution']            
+            - ['Payroll',           'payroll',      'payroll']         
+            - ['Reports',           'reports',      'reports']
+            - ['Utilities',         'utilities',    'utilities']            
+            - ['Business Intel',    'businessIntelligence', 'businessIntelligence']
+    submenu:
+
+    ampie:
+        public_path: /cityhall/js/ampie/
+        public_swf: /cityhall/js/ampie/ampie.swf
+    amline:
+        public_path: /cityhall/js/ampline/
+        public_swf: /cityhall/js/amline/amline.swf
+    amcolumn:
+        public_path: /cityhall/js/amcolumn/
+        public_swf: /cityhall/js/amcolumn/amcolumn.swf
+        
+    amcharts:
+        colors: 
+            - "FF6600"
+            - "FCD202"
+            - "B0DE09"
+            - "2A0CD0"
+            - "990099"
+            - "990000"
+            - "00FF00"
+            - "FF00FF"
+            - "33cccc"
+            - "ff0000"
+            - "ccffff"
+            

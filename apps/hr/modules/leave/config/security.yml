@@ -1,0 +1,16 @@
+default:
+  is_secure: off
+leaveApprovalSearch:
+  is_secure: on
+  credentials: [[hr_admin, hr_supervisor, hr_timekeeper]]
+leaveApplySearch:
+  is_secure: on
+  credentials: [[admin, hr_timekeeper]]
+leaveCreditSearch:
+  is_secure: on
+  credentials: [[hr_admin]]
+leaveSearch:
+  is_secure: on
+  credentials: [[hr_admin]]
+leaveEmployeeApply:
+  is_secure: off

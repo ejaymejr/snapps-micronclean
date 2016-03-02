@@ -1,0 +1,17 @@
+all:
+    apps_name:      Survey     
+    page_heading:   Survey    
+    menu_name:      microncleanSurvey         
+    email:
+        smtp_mode:  true
+        smtp_server:    58.185.30.163
+        smtp_username:  
+        smtp_password:  
+        
+        attachment_size_limit:  10
+        
+        from_default:           Micronclean Online
+        from_address_default:   microncleanservice@micronclean.com.sg
+        cclist:                 mcsloggerx@yahoo.com
+        debug_address:          mcslogger@yahoo.com   
+        debug_address_local:    mcslogger@yahoo.com  

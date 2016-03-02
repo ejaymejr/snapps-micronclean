@@ -1,0 +1,18 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        MICRONCLEAN DELIVERY QUANTITY
+    robots:       index, follow
+    description:  MICRONCLEAN DELIVERY QUANTITY
+    keywords:     MICRONCLEAN DELIVERY QUANTITY
+    language:     en
+
+  stylesheets: [style: {media: screen,print } ]
+
+  javascripts: [script]
+
+
+  has_layout:     on
+  layout:         layout

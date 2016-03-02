@@ -1,0 +1,195 @@
+---
+general: 
+  _attributes: 
+    package: lib.model.general   
+    noXsd: false
+  application_setting:
+    _attributes:
+      idMethod: native
+      phpName: snappsSetting
+    id:
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    application:
+      type: VARCHAR
+      size: 255
+      required: true
+      default:   
+    module:
+      type: VARCHAR
+      size: 255
+      required: true
+      default: 
+    setting_name:
+      type: VARCHAR
+      size: 255
+      required: true
+      default: 
+    setting_value:
+      type: LONGVARCHAR
+      required: true
+    setting_nicename:
+      type: VARCHAR
+      size: 255
+      required: true
+      default: 
+    setting_description:
+      type: VARCHAR
+      size: 255
+      required: true
+      default: 
+  currency:
+    _attributes:
+      idMethod: native
+      phpName: snappsCurrency
+    id:
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    name:
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    code:
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    symbol:
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    sort_order:
+      type: INTEGER
+      required: true
+      default: 10000    
+  currency_rate:
+    _attributes:
+      idMethod: native
+      phpName: snappsCurrencyRate
+    code_from:
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    code_to:
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    date_from: 
+      type: DATE
+      required: true
+      
+    date_to: 
+      type: DATE
+      required: true
+            
+    rate: 
+      type: DECIMAL
+      size: 10
+      scale: 6
+      required: true
+      default: 1.000000    
+  company: 
+    _attributes: 
+      idMethod: native
+      phpName: snappsCompany
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    company: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    nickname: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    initial: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    address_line1: 
+      type: VARCHAR
+      size: 255
+      required: true
+      default: 
+    address_line2: 
+      type: VARCHAR
+      size: 255
+      required: true
+      default: 
+    phone: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    fax: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    postal_code: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    website: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    logo_filename: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  namelist: 
+    _attributes: 
+      idMethod: native
+      phpName: snappsNameList
+    name_id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    name_code: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 200
+      required: true
+      default: 
+  bookmark: 
+    _attributes: 
+      idMethod: native
+      phpName: snappsBookmark
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    name: 
+      type: VARCHAR
+      size: 255
+      required: true
+      default: 
+    path: 
+      type: VARCHAR
+      size: 255
+      required: true
+      default: @homepage

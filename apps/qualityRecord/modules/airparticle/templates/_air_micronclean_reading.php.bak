@@ -1,0 +1,280 @@
+<?php use_helper('Validation', 'Javascript') ?>
+<?php //echo AjaxLib::AjaxScript('saveReading', 'airparticle/microncleanParticleSave', '', '&id=id&spot=spot', 'DIVCloseRightAway')?>
+<?php 
+	$filterList = array(
+		 'A1', 'A2', 'A3', 'A4', 'A5', 'A6'
+		,'B1', 'B2', 'B3', 'B4', 'B5', 'B6'
+		,'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7'
+		,'D1', 'D2', 'D3', 'D4', 'D5', 'D6'
+		,'E1', 'E2', 'E3', 'E4', 'E5', 'E6'
+		,'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7'
+		,'G1', 'G2', 'G3', 'G4', 'G5', 'G6'
+		,'H1', 'H2', 'H3', 'H4', 'H5', 'H6'
+		,'I1', 'I2', 'I3', 'I4', 'I5', 'I6', 'I7'
+		,'J1', 'J2', 'J3', 'J4', 'J5', 'J6'
+		,'K1', 'K2', 'K3', 'K4', 'K5', 'K6'
+		
+	);
+	asort($filterList);
+	foreach($filterList as $filter):
+?>
+	<script>
+	<?php //echo AjaxLib::AjaxInDialogScript('saveReading', 'airparticle/microncleanParticleSave', '', '&id=id&spot=spot', 'DIVCloseRightAway') ?>
+	$(document).ready( function () {
+		$("#<?php echo $filter ?>").on('click', function(){
+	        $.Dialog({
+	            shadow: true,
+	            overlay: false,
+	            draggable: true,
+	            icon: '<span class="icon-bus fg-white"></span>',
+	            title: 'Draggable window',
+	            width: 200,
+	            padding: 10,
+	            content: 'This Window is draggable by caption.',
+	            onShow: function(){
+	                var content = ''+
+		                	'<form id="reading" method="post" action="<?php echo url_for("airparticle/microncleanParticleSave?id=" .$sf_params->get('id')) .'&spot=' . $filter  ?>">' +
+	                        '<label>Particle Count</label>' +
+	                        '<div class="input-control text span2"><input type="number" id="particle" name="particle" placeholder="Enter Particle Count" value="<?php echo $sf_params->get($filter .'_particle') ?>" ><button class="btn-clear"></button></div>' +
+	                        '<label>AirFlow</label>' +
+	                        '<div class="input-control text span2"><input type="number" id="airflow" name="airflow" placeholder="Enter Air Flow" value="<?php echo $sf_params->get($filter .'_air_flow') ?>"><button class="btn-clear"></button></div>' +
+	                        '<div class="form-actions">' +
+	                        //'<button  class="button success">Save Reading</button>&nbsp;'+
+	                      	'<button id="SaveReading" class="button success" type="button" onclick="save(\'<?php echo url_for("airparticle/microncleanParticleSave", 'true') ."?id=" .$sf_params->get("id")."&spot=" . $filter  ?>\',\'particle\',\'airflow\'); $.Dialog.close(); location.reload();">Save Reading</button> '+
+	                        '<div id="DIVCloseRightAway"></div>'
+	                        '</div>'+
+	                        '</form>'
+	                        
+	                        ;
+	                $.Dialog.title("Reading For <?php echo $filter; ?>");
+	                $.Dialog.content(content);
+	            }
+	        });
+	    });
+	});
+	//, airparticle/microncleanParticleSave, \"\", &id=id&spot=spot, DIVCloseRightAway
+	</script>
+<?php endforeach; ?>
+<table class="table bordered ">
+<tr>
+	<td colspan="11"><h2>MICRONCLEAN FILTER LOCATION</h2></h1></td>
+</tr>
+<tr>
+	<?php echo displayIcon('') ?>
+	<?php echo displayIcon('A6') ?>
+	<?php echo displayIcon('A5') ?>
+	<?php echo displayIcon('A4') ?>
+	<?php echo displayIcon('A3') ?>
+	<?php echo displayIcon('A2') ?>
+	<?php echo displayIcon('A1') ?>
+</tr>
+<tr>
+	<?php echo displayIcon('') ?>
+	<?php echo displayIcon('B6') ?>
+	<?php echo displayIcon('B5') ?>
+	<?php echo displayIcon('B4') ?>
+	<?php echo displayIcon('B3') ?>
+	<?php echo displayIcon('B2') ?>
+	<?php echo displayIcon('B1') ?>
+</tr>
+<tr>
+	<?php echo displayIcon('C7') ?>
+	<?php echo displayIcon('C6') ?>
+	<?php echo displayIcon('C5') ?>
+	<?php echo displayIcon('C4') ?>
+	<?php echo displayIcon('C3') ?>
+	<?php echo displayIcon('C2') ?>
+	<?php echo displayIcon('C1') ?>
+</tr>
+<tr>
+	<?php echo displayIcon('') ?>
+	<?php echo displayIcon('D6') ?>
+	<?php echo displayIcon('D5') ?>
+	<?php echo displayIcon('D4') ?>
+	<?php echo displayIcon('D3') ?>
+	<?php echo displayIcon('D2') ?>
+	<?php echo displayIcon('D1') ?>
+</tr>
+<tr>
+	<?php echo displayIcon('') ?>
+	<?php echo displayIcon('E6') ?>
+	<?php echo displayIcon('E5') ?>
+	<?php echo displayIcon('E4') ?>
+	<?php echo displayIcon('E3') ?>
+	<?php echo displayIcon('E2') ?>
+	<?php echo displayIcon('E1') ?>
+</tr>
+<tr>
+	<?php echo displayIcon('F7') ?>
+	<?php echo displayIcon('F6') ?>
+	<?php echo displayIcon('F5') ?>
+	<?php echo displayIcon('F4') ?>
+	<?php echo displayIcon('F3') ?>
+	<?php echo displayIcon('F2') ?>
+	<?php echo displayIcon('F1') ?>
+</tr>
+<tr>
+	<?php echo displayIcon('') ?>
+	<?php echo displayIcon('G6') ?>
+	<?php echo displayIcon('G5') ?>
+	<?php echo displayIcon('G4') ?>
+	<?php echo displayIcon('G3') ?>
+	<?php echo displayIcon('G2') ?>
+	<?php echo displayIcon('G1') ?>
+</tr>
+<tr>
+	<?php echo displayIcon('') ?>
+	<?php echo displayIcon('H6') ?>
+	<?php echo displayIcon('H5') ?>
+	<?php echo displayIcon('H4') ?>
+	<?php echo displayIcon('H3') ?>
+	<?php echo displayIcon('H2') ?>
+	<?php echo displayIcon('H1') ?>
+</tr>
+<tr>
+	<?php echo displayIcon('I7') ?>
+	<?php echo displayIcon('I6') ?>
+	<?php echo displayIcon('I5') ?>
+	<?php echo displayIcon('I4') ?>
+	<?php echo displayIcon('I3') ?>
+	<?php echo displayIcon('I2') ?>
+	<?php echo displayIcon('I1') ?>
+</tr>
+<tr>
+	<?php echo displayIcon('') ?>
+	<?php echo displayIcon('J6') ?>
+	<?php echo displayIcon('J5') ?>
+	<?php echo displayIcon('J4') ?>
+	<?php echo displayIcon('J3') ?>
+	<?php echo displayIcon('J2') ?>
+	<?php echo displayIcon('J1') ?>
+</tr>
+<tr>
+	<?php echo displayIcon('') ?>
+	<?php echo displayIcon('K6') ?>
+	<?php echo displayIcon('K5') ?>
+	<?php echo displayIcon('K4') ?>
+	<?php echo displayIcon('K3') ?>
+	<?php echo displayIcon('K2') ?>
+	<?php echo displayIcon('K1') ?>
+</tr>
+</table>
+
+<?php
+	$alist = array(); 
+	$blist = array();
+	$clist = array();
+	$dlist = array();
+	$elist = array();
+	$flist = array();
+	$glist = array();
+	$hlist = array();
+	$ilist = array();
+	$jlist = array();
+	$klist = array();
+	$firstCh = '';
+	foreach($filterList as $filter):
+		$firstCh = strtoupper(substr($filter, 0, 1));
+		switch($firstCh):
+			case 'A':
+				$alist[] = $filter;
+				break;
+			case 'B':
+				$blist[] = $filter;
+				break;
+			case 'C':
+				$clist[] = $filter;
+				break;
+			case 'D':
+				$dlist[] = $filter;
+				break;
+			case 'E':
+				$elist[] = $filter;
+				break;
+			case 'F':
+				$flist[] = $filter;
+				break;
+			case 'G':
+				$glist[] = $filter;
+				break;
+			case 'H':
+				$hlist[] = $filter;
+				break;
+			case 'I':
+				$ilist[] = $filter;
+				break;
+			case 'J':
+				$jlist[] = $filter;
+				break;
+			case 'K':
+				$klist[] = $filter;
+				break;
+		endswitch;
+	endforeach;
+	
+?>
+<table class="table bordered ">
+<tr>
+	<td class="alignCenter bg-clearBlue"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-clearBlue"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-clearBlue"><label><small>A/F</small></label></td>
+	<td class="alignCenter bg-lightPink fg-white"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-lightPink fg-white"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-lightPink fg-white"><label><small>A/F</small></label></td>
+	<td class="alignCenter bg-green fg-white"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-green fg-white"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-green fg-white"><label><small>A/F</small></label></td>
+	<td class="alignCenter bg-yellow fg-white"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-yellow fg-white"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-yellow fg-white"><label><small>A/F</small></label></td>
+	<td class="alignCenter bg-brown fg-white"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-brown fg-white"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-brown fg-white"><label><small>A/F</small></label></td>
+	<td class="alignCenter bg-cyan fg-white"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-cyan fg-white"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-cyan fg-white"><label><small>A/F</small></label></td>
+	<td class="alignCenter bg-violet fg-white"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-violet fg-white"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-violet fg-white"><label><small>A/F</small></label></td>
+	<td class="alignCenter bg-crimson fg-white"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-crimson fg-white"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-crimson fg-white"><label><small>A/F</small></label></td>
+	<td class="alignCenter bg-lightOlive fg-white"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-lightOlive fg-white"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-lightOlive fg-white"><label><small>A/F</small></label></td>
+	<td class="alignCenter bg-taupe fg-white"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-taupe fg-white"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-taupe fg-white"><label><small>A/F</small></label></td>
+	<td class="alignCenter bg-steel fg-white"><label><small>Filter</small></label></td>
+	<td class="alignCenter bg-steel fg-white"><label><small>Part</small></label></td>
+	<td class="alignCenter bg-steel fg-white"><label><small>A/F</small></label></td>
+</tr>
+<?php for($x=0; $x<= 6; $x++):?>
+<tr>
+	<td class="bg-clearBlue alignRight "><?php echo (isset($alist[$x])? $alist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($alist[$x])? $sf_params->get($alist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($alist[$x])? $sf_params->get($alist[$x].'_air_flow') : '')  ?></td>
+	<td class="bg-lightPink alignRight fg-white"><?php echo (isset($blist[$x])? $blist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($blist[$x])? $sf_params->get($blist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($blist[$x])? $sf_params->get($blist[$x].'_air_flow') : '')  ?></td>
+	<td class="bg-green alignRight fg-white"><?php echo (isset($clist[$x])? $clist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($clist[$x])? $sf_params->get($clist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($clist[$x])? $sf_params->get($clist[$x].'_air_flow') : '')  ?></td>
+	<td class="bg-yellow alignRight fg-white"><?php echo (isset($dlist[$x])? $dlist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($dlist[$x])? $sf_params->get($dlist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($dlist[$x])? $sf_params->get($dlist[$x].'_air_flow') : '')  ?></td>
+	<td class="bg-brown alignRight fg-white"><?php echo (isset($elist[$x])? $elist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($elist[$x])? $sf_params->get($elist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($elist[$x])? $sf_params->get($elist[$x].'_air_flow') : '')  ?></td>
+	<td class="bg-cyan alignRight fg-white"><?php echo (isset($flist[$x])? $flist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($flist[$x])? $sf_params->get($flist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($flist[$x])? $sf_params->get($flist[$x].'_air_flow') : '')  ?></td>
+	<td class="bg-violet alignRight fg-white"><?php echo (isset($glist[$x])? $glist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($glist[$x])? $sf_params->get($glist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($glist[$x])? $sf_params->get($glist[$x].'_air_flow') : '')  ?></td>
+	<td class="bg-crimson alignRight fg-white"><?php echo (isset($hlist[$x])? $hlist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($hlist[$x])? $sf_params->get($hlist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($hlist[$x])? $sf_params->get($hlist[$x].'_air_flow') : '')  ?></td>
+	<td class="bg-lightOlive alignRight fg-white"><?php echo (isset($ilist[$x])? $ilist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($ilist[$x])? $sf_params->get($ilist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($ilist[$x])? $sf_params->get($ilist[$x].'_air_flow') : '')  ?></td>
+	<td class="bg-taupe alignRight fg-white"><?php echo (isset($jlist[$x])? $jlist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($jlist[$x])? $sf_params->get($jlist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($jlist[$x])? $sf_params->get($jlist[$x].'_air_flow') : '')  ?></td>
+	<td class="bg-steel alignRight fg-white"><?php echo (isset($klist[$x])? $klist[$x] : '')  ?></td><td class="alignCenter"><?php echo (isset($klist[$x])? $sf_params->get($klist[$x].'_particle') : '')  ?></td><td class="alignCenter"><?php echo (isset($klist[$x])? $sf_params->get($klist[$x].'_air_flow') : '')  ?></td>
+</tr>
+<?php endfor;?>
+</table>
+<?php 
+	function displayIcon($name = null)
+	{
+		$bg = 'bg-darkBlue';
+		if (! $name):
+			$name = '&nbsp;';
+			$bg = 'bg-clearGray';
+		endif;
+		$msg = '';
+		$msg .= "<td id='$name' class='$bg'><div class='alignCenter' ><h4 class='fg-white'>$name</h4></div></td>";
+		return $msg;
+	}
+?>

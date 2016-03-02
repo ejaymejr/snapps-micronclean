@@ -1,0 +1,526 @@
+---
+hgas3: 
+  _attributes: 
+    package: lib.model.hgas3
+  label_request: 
+    id: 
+      type: INTEGER
+    batch: 
+      type: VARCHAR
+      size: 20
+    company: 
+      type: VARCHAR
+      size: 100
+    name: 
+      type: VARCHAR
+      size: 50
+    gid: 
+      type: VARCHAR
+      size: 20
+    department: 
+      type: VARCHAR
+      size: 40
+    designation: 
+      type: VARCHAR
+      size: 40
+    hanger_no: 
+      type: VARCHAR
+      size: 20
+    shift: 
+      type: VARCHAR
+      size: 50
+    fset: 
+      type: VARCHAR
+      size: 50
+    cell: 
+      type: VARCHAR
+      size: 50
+    end: 
+      type: VARCHAR
+      size: 50
+    locker: 
+      type: VARCHAR
+      size: 50
+    cost_center: 
+      type: VARCHAR
+      size: 50
+    platform: 
+      type: VARCHAR
+      size: 50
+    gsize: 
+      type: VARCHAR
+      size: 20
+    template: 
+      type: VARCHAR
+      size: 100
+    is_checked: 
+      type: CHAR
+      size: 1
+    is_printed: 
+      type: CHAR
+      size: 1
+    order_by: 
+      type: INTEGER
+    printed_by: 
+      type: VARCHAR
+      size: 20
+    date_printed: 
+      type: TIMESTAMP
+    quantity: 
+      type: INTEGER
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP
+  label_company: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    company: 
+      type: VARCHAR
+      size: 50
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP      
+    _uniques: 
+      id: 
+        - id
+  label_preview_detail: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    labeling_template_id: 
+      type: BIGINT      
+    line1_col1: 
+      type: VARCHAR
+      size: 50
+    line1_col2: 
+      type: VARCHAR
+      size: 50
+    line2_col1: 
+      type: VARCHAR
+      size: 50      
+    line2_col2: 
+      type: VARCHAR
+      size: 50      
+    line3_col1: 
+      type: VARCHAR
+      size: 50      
+    line3_col2: 
+      type: VARCHAR
+      size: 50      
+    line4_col1: 
+      type: VARCHAR
+      size: 50      
+    line4_col2: 
+      type: VARCHAR
+      size: 50      
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP      
+    _uniques: 
+      id: 
+        - id
+  labeling_template: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    label_description_id: 
+      type: BIGINT
+    label_field1_id: 
+      type: BIGINT
+    label_field2_id: 
+      type: BIGINT
+    label_field3_id: 
+      type: BIGINT      
+    label_company_id: 
+      type: BIGINT
+    department: 
+      type: BIGINT
+    line1_col1: 
+      type: VARCHAR
+      size: 20
+    line2_col1: 
+      type: VARCHAR
+      size: 20
+    line3_col1: 
+      type: VARCHAR
+      size: 20
+    line4_col1: 
+      type: VARCHAR
+      size: 20
+    line1_col2: 
+      type: VARCHAR
+      size: 20
+    line2_col2: 
+      type: VARCHAR
+      size: 20
+    line3_col2: 
+      type: VARCHAR
+      size: 20
+    line4_col2: 
+      type: VARCHAR
+      size: 20
+    l1_font: 
+      type: VARCHAR
+      size: 20
+    l1_font_size: 
+      type: FLOAT
+      size: 5
+      scale: 2
+    l2_font: 
+      type: VARCHAR
+      size: 20
+    l2_font_size: 
+      type: FLOAT
+      size: 5
+      scale: 2
+    l3_font: 
+      type: VARCHAR
+      size: 20
+    l3_font_size: 
+      type: FLOAT
+      size: 5
+      scale: 2
+    l4_font: 
+      type: VARCHAR
+      size: 20
+    l4_font_size: 
+      type: FLOAT
+      size: 5
+      scale: 2
+    label_height_in_cm: 
+      type: FLOAT
+      size: 5
+      scale: 2
+    label_width_in_cm: 
+      type: FLOAT
+      size: 5
+      scale: 2
+    position: 
+      type: VARCHAR
+      size: 20
+    garment_type: 
+      type: VARCHAR
+      size: 20
+    color: 
+      type: VARCHAR
+      size: 20
+    color_hex: 
+      type: VARCHAR
+      size: 20
+    print_orientation: 
+      type: VARCHAR
+      size: 20
+    remark: 
+      type: VARCHAR
+      size: 255
+    l1_font_style: 
+      type: VARCHAR
+      size: 20
+    l2_font_style: 
+      type: VARCHAR
+      size: 20
+    l3_font_style: 
+      type: VARCHAR
+      size: 20
+    l4_font_style: 
+      type: VARCHAR
+      size: 20
+    l1_separator: 
+      type: CHAR
+      size: 1
+    l2_separator: 
+      type: CHAR
+      size: 1
+    l3_separator: 
+      type: CHAR
+      size: 1
+    l4_separator: 
+      type: CHAR
+      size: 1
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP
+    _uniques: 
+      id: 
+        - id
+  label_department: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    label_company_id: 
+      type: BIGINT
+    department: 
+      type: VARCHAR
+      size: 40
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP
+    _uniques: 
+      id: 
+        - id
+        
+  label_cost_center: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    label_company_id: 
+      type: BIGINT
+    cost_center: 
+      type: VARCHAR
+      size: 40
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP
+    _uniques: 
+      id: 
+        - id
+  label_color: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    description: 
+      type: VARCHAR
+      size: 30
+    hex_color: 
+      type: VARCHAR
+      size: 10      
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP      
+    _uniques: 
+      id: 
+        - id   
+  label_font: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    name: 
+      type: VARCHAR
+      size: 30
+    size: 
+      type: VARCHAR
+      size: 5      
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP      
+    _uniques: 
+      id: 
+        - id                     
+  label_field1: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    label_company_id: 
+      type: BIGINT
+    name: 
+      type: VARCHAR
+      size: 40
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP
+    _uniques: 
+      id: 
+        - id
+  label_field2: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    label_company_id: 
+      type: BIGINT
+    name: 
+      type: VARCHAR
+      size: 40
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP
+    _uniques: 
+      id: 
+        - id        
+  label_field3: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    label_company_id: 
+      type: BIGINT
+    name: 
+      type: VARCHAR
+      size: 40
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP
+    _uniques: 
+      id: 
+        - id        
+  label_description: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    label_company_id: 
+      type: BIGINT
+    description: 
+      type: VARCHAR
+      size: 100
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP
+    _uniques: 
+      id: 
+        - id             
+  label_garment_position: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    labeling_template_id: 
+      type: BIGINT
+    garment: 
+      type: VARCHAR
+      size: 40
+    position: 
+      type: VARCHAR
+      size: 100
+    created_by: 
+      type: VARCHAR
+      size: 20
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 20
+    date_modified: 
+      type: TIMESTAMP
+    _uniques: 
+      id: 
+        - id                           

@@ -1,0 +1,1417 @@
+---
+iso: 
+  _attributes: 
+    package: lib.model.iso
+  contract_management_log: 
+    id: 
+      type: INTEGER
+    customer: 
+      type: VARCHAR
+      size: 200
+    contract_no: 
+      type: VARCHAR
+      size: 50
+    contact_person: 
+      type: VARCHAR
+      size: 100
+    contact_no: 
+      type: VARCHAR
+      size: 10
+    contract_initiator: 
+      type: VARCHAR
+      size: 100
+    remarks: 
+      type: LONGVARCHAR
+    start_date: 
+      type: DATE
+    end_date: 
+      type: DATE
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45    
+  customer_management_action_review: 
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    date_time: 
+      type: DATE
+    case_action: 
+      type: LONGVARCHAR
+    reviewed_by: 
+      type: VARCHAR
+      size: 20      
+    review_date: 
+      type: DATE
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+  customer_management_complain_attr: 
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    complain: 
+      type: LONGVARCHAR
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+  customer_management_complaint_form: 
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    complain_date_time: 
+      type: TIMESTAMP
+      required: true
+    company_name: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    customer_number: 
+      type: VARCHAR
+      size: 10
+      required: true
+       
+    complainee_name: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    complainee_designation: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    complainee_department: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    complainee_contact_no: 
+      type: VARCHAR
+      size: 10
+      required: true
+       
+    complainee_email: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    complain_description: 
+      type: LONGVARCHAR
+      required: true
+    received_by_name: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    received_by_designation: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    received_by_department: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    channel: 
+      type: VARCHAR
+      size: 50
+      required: true
+       
+    complain_concerning: 
+      type: VARCHAR
+      size: 50
+      required: true
+       
+    correction_action_taken: 
+      type: LONGVARCHAR
+      required: true
+    undertaken_by_date: 
+      type: DATE
+      required: true
+       
+    undertaken_by: 
+      type: VARCHAR
+      size: 50
+      required: true
+       
+    undertaken_by_designation: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    undertaken_by_department: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    undertaken_by_initials: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    verified_by_date: 
+      type: DATE
+      required: true
+       
+    verified_by: 
+      type: VARCHAR
+      size: 50
+      required: true
+       
+    verified_by_designation: 
+      type: VARCHAR
+      size: 50
+      required: true
+       
+    verified_by_department: 
+      type: VARCHAR
+      size: 50
+      required: true
+       
+    verified_by_initials: 
+      type: VARCHAR
+      size: 100
+      required: true
+       
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  iso_capa: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    qan_no: 
+      type: INTEGER
+    file_name: 
+      type: VARCHAR
+      size: 50
+    proposed_action: 
+      type: VARCHAR
+      size: 50
+    initiator: 
+      type: VARCHAR
+      size: 50
+    customer: 
+      type: VARCHAR
+      size: 50
+    cust_comment: 
+      type: LONGVARCHAR
+    problem_description: 
+      type: LONGVARCHAR
+    initiated_by: 
+      type: VARCHAR
+      size: 45
+    initiated_date: 
+      type: DATE
+    keyed_in_by: 
+      type: VARCHAR
+      size: 45
+    keyed_in_date: 
+      type: DATE
+    assigned_to: 
+      type: VARCHAR
+      size: 45
+    assigned_date: 
+      type: DATE
+    eight_d_form: 
+      type: VARCHAR
+      size: 3
+    recommended_action: 
+      type: LONGVARCHAR
+    data_collection: 
+      type: LONGVARCHAR
+    implemented_date: 
+      type: DATE
+    affected_parts: 
+      type: LONGVARCHAR
+    initial_completion_date: 
+      type: DATE
+    plan_completion_date: 
+      type: DATE
+    submitted_by: 
+      type: VARCHAR
+      size: 45
+    run_plan_date: 
+      type: DATE
+    approve_comment: 
+      type: LONGVARCHAR
+    approved_by: 
+      type: VARCHAR
+      size: 45
+    action_plan_date: 
+      type: DATE
+    follow_up_by: 
+      type: VARCHAR
+      size: 45
+    follow_up_date: 
+      type: DATE
+    is_effective: 
+      type: VARCHAR
+      size: 3
+    effectivity_comment: 
+      type: LONGVARCHAR
+    closed_out_date: 
+      type: DATE
+    additional_sheet: 
+      type: LONGVARCHAR
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+
+  repair_report_summary: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    repair_date: 
+      type: DATE
+    customer: 
+      type: VARCHAR
+      size: 200
+    department: 
+      type: VARCHAR
+      size: 100
+    garment_code: 
+      type: VARCHAR
+      size: 50
+    garment_type: 
+      type: VARCHAR
+      size: 200
+    repair_type: 
+      type: VARCHAR
+      size: 200
+    temperature: 
+      type: VARCHAR
+      size: 10
+    pressure: 
+      type: VARCHAR
+      size: 10
+    quantity: 
+      type: INTEGER
+    pcs_or_pairs: 
+      type: VARCHAR
+      size: 10
+    initials: 
+      type: VARCHAR
+      size: 100
+    remarks: 
+      type: LONGVARCHAR
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  repair_report_type: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    repair_type: 
+      type: VARCHAR
+      size: 100
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  customer_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    customer: 
+      type: VARCHAR
+      size: 50
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+  non_conformance_part: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+    date: 
+      type: DATE
+    customer: 
+      type: VARCHAR
+      size: 100
+    company: 
+      type: VARCHAR
+      size: 100
+    product_type: 
+      type: VARCHAR
+      size: 100
+    part: 
+      type: VARCHAR
+      size: 100
+    quantity: 
+      type: INTEGER
+    cost: 
+      type: FLOAT
+    vpc: 
+      type: FLOAT
+    adhesive_top: 
+      type: VARCHAR
+      size: 100
+    particle_count: 
+      type: VARCHAR
+      size: 100
+    crack_top: 
+      type: VARCHAR
+      size: 100
+    after_drying: 
+      type: VARCHAR
+      size: 100
+    ddi: 
+      type: VARCHAR
+      size: 100
+    missing_part: 
+      type: VARCHAR
+      size: 100
+    over_date_top: 
+      type: VARCHAR
+      size: 100
+    over_punch_top: 
+      type: VARCHAR
+      size: 100
+    stain: 
+      type: VARCHAR
+      size: 100
+    sticker_top: 
+      type: VARCHAR
+      size: 100
+    torn_broken: 
+      type: VARCHAR
+      size: 100
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    over_date_bottom: 
+      type: VARCHAR
+      size: 100
+    over_date_body: 
+      type: VARCHAR
+      size: 100
+    over_punch_bottom: 
+      type: VARCHAR
+      size: 100
+    over_punch_body: 
+      type: VARCHAR
+      size: 100
+    mixed_part_bottom: 
+      type: VARCHAR
+      size: 100
+    mixed_part_body: 
+      type: VARCHAR
+      size: 100
+    mixed_part_top: 
+      type: VARCHAR
+      size: 100
+    crack_body: 
+      type: VARCHAR
+      size: 100
+    crack_bottom: 
+      type: VARCHAR
+      size: 100
+    scratches_top: 
+      type: VARCHAR
+      size: 100
+    scratches_body: 
+      type: VARCHAR
+      size: 100
+    scratches_bottom: 
+      type: VARCHAR
+      size: 100
+    worpage_top: 
+      type: VARCHAR
+      size: 100
+    worpage_body: 
+      type: VARCHAR
+      size: 100
+    worpage_bottom: 
+      type: VARCHAR
+      size: 100
+    stain_top: 
+      type: VARCHAR
+      size: 100
+    stain_body: 
+      type: VARCHAR
+      size: 100
+    stain_bottom: 
+      type: VARCHAR
+      size: 100
+    sticker_bottom: 
+      type: VARCHAR
+      size: 100
+    sticker_body: 
+      type: VARCHAR
+      size: 100
+    adhesive_body: 
+      type: VARCHAR
+      size: 100
+    adhesive_bottom: 
+      type: VARCHAR
+      size: 100
+    moulding_defect_top: 
+      type: VARCHAR
+      size: 100
+    moulding_defect_bottom: 
+      type: VARCHAR
+      size: 100
+    moulding_defect_body: 
+      type: VARCHAR
+      size: 100
+    hk_drum_fail: 
+      type: VARCHAR
+      size: 50      
+    chips_top: 
+      type: VARCHAR
+      size: 100
+    chips_body: 
+      type: VARCHAR
+      size: 100
+    chips_bottom: 
+      type: VARCHAR
+      size: 100
+    dryer_1_temperature: 
+      type: VARCHAR
+      size: 20
+    dryer_1_particle: 
+      type: VARCHAR
+      size: 20
+    dryer_2_temperature: 
+      type: VARCHAR
+      size: 20
+    dryer_2_particle: 
+      type: VARCHAR
+      size: 20
+    _uniques: 
+      id: 
+        - id
+  non_conformance_part_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    company: 
+      type: VARCHAR
+      size: 50
+    part: 
+      type: VARCHAR
+      size: 100
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  plastic_bag: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    date_time: 
+      type: TIMESTAMP
+    type_of_plastic: 
+      type: VARCHAR
+      size: 100
+    by_who: 
+      type: VARCHAR
+      size: 100
+    surface_area: 
+      type: VARCHAR
+      size: 100
+    vendor: 
+      type: VARCHAR
+      size: 100      
+    vol_in_ml: 
+      type: VARCHAR
+      size: 100
+    lpc_blank_in_ml: 
+      type: VARCHAR
+      size: 100
+    lpc_plastic_in_ml: 
+      type: VARCHAR
+      size: 100
+    lpc_plastic_in_cm: 
+      type: VARCHAR
+      size: 100
+    ic_cl_in_cm: 
+      type: VARCHAR
+      size: 100
+    ic_no_in_cm: 
+      type: VARCHAR
+      size: 100      
+    ic_so_in_cm: 
+      type: VARCHAR
+      size: 100      
+    status: 
+      type: VARCHAR
+      size: 9
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      index_no: 
+        - id
+  dryer_particle_count: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    date_time: 
+      type: TIMESTAMP
+    dryer_no: 
+      type: VARCHAR
+      size: 10
+    particle_count: 
+      type: VARCHAR
+      size: 10
+    name: 
+      type: VARCHAR
+      size: 20
+    temperature: 
+      type: CHAR
+      size: 3
+    actual_temperature: 
+      type: CHAR
+      size: 3
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id        
+  engg_eval_notice: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    een_no: 
+      type: INTEGER
+    proposed_action: 
+      type: VARCHAR
+      size: 50
+    initiator: 
+      type: VARCHAR
+      size: 50
+    customer: 
+      type: VARCHAR
+      size: 50
+    problem_description: 
+      type: LONGVARCHAR
+    initiated_by: 
+      type: VARCHAR
+      size: 45
+    initiated_date: 
+      type: DATE
+    keyed_in_by: 
+      type: VARCHAR
+      size: 45
+    keyed_in_date: 
+      type: DATE
+    assigned_to: 
+      type: VARCHAR
+      size: 45
+    assigned_date: 
+      type: DATE
+    eight_d_form: 
+      type: VARCHAR
+      size: 3
+    flow_description: 
+      type: LONGVARCHAR
+    data_collection: 
+      type: LONGVARCHAR
+    data_completion_date: 
+      type: DATE
+    qty_for_run: 
+      type: LONGVARCHAR
+    run_completion_date: 
+      type: DATE
+    submitted_by: 
+      type: VARCHAR
+      size: 45
+    run_plan_date: 
+      type: DATE
+    approve_comment: 
+      type: LONGVARCHAR
+    approved_by: 
+      type: VARCHAR
+      size: 45
+    action_plan_date: 
+      type: DATE
+    follow_up_by: 
+      type: VARCHAR
+      size: 45
+    follow_up_date: 
+      type: DATE
+    is_effective: 
+      type: VARCHAR
+      size: 3
+    evidence: 
+      type: LONGVARCHAR
+    disposition_of_material: 
+      type: LONGVARCHAR
+    closed_out_date: 
+      type: DATE
+    additional_sheet: 
+      type: LONGVARCHAR
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id              
+  seagate_ca_pa_report: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    report_no: 
+      type: VARCHAR
+      size: 100
+    issue_date: 
+      type: DATE
+    response_date: 
+      type: DATE
+    findings: 
+      type: LONGVARCHAR
+    root_cause_analysis: 
+      type: LONGVARCHAR
+    containment_plan: 
+      type: LONGVARCHAR
+    preventive_plan: 
+      type: LONGVARCHAR
+    verification_of_ca_pa: 
+      type: LONGVARCHAR
+    reported_by: 
+      type: VARCHAR
+      size: 100
+    symptom: 
+      type: LONGVARCHAR
+    era_description: 
+      type: LONGVARCHAR 
+    era_effectivity: 
+      type: VARCHAR
+      size: 100
+    era_implemented: 
+      type: VARCHAR
+      size: 100
+    era_completed: 
+      type: VARCHAR
+      size: 100
+    title: 
+      type: VARCHAR
+      size: 100
+    team: 
+      type: LONGVARCHAR 
+    cont_effectivity: 
+      type: VARCHAR
+      size: 100
+    cont_implemented: 
+      type: VARCHAR
+      size: 100
+    cont_completed: 
+      type: VARCHAR
+      size: 100
+    chosen_perm_ca: 
+      type: LONGVARCHAR 
+    chosen_perm_effectivity: 
+      type: VARCHAR
+      size: 100
+    chosen_perm_implemented: 
+      type: VARCHAR
+      size: 100
+    chosen_perm_completed: 
+      type: VARCHAR
+      size: 100
+    implemented_perm_ca: 
+      type: LONGVARCHAR 
+    implemented_perm_effectivity: 
+      type: VARCHAR
+      size: 100
+    implemented_perm_implemented: 
+      type: VARCHAR
+      size: 100
+    implemented_perm_completed: 
+      type: VARCHAR
+      size: 100              
+    car_name: 
+      type: VARCHAR
+      size: 100           
+    car_name: 
+      type: VARCHAR
+      size: 100
+    car_followup_required: 
+      type: VARCHAR
+      size: 100
+    car_followup_date: 
+      type: DATE
+    car_ca_status: 
+      type: VARCHAR
+      size: 20
+    car_title: 
+      type: VARCHAR
+      size: 100
+    car_plan_effective: 
+      type: VARCHAR
+      size: 100
+    car_verified_by: 
+      type: VARCHAR
+      size: 100
+    car_closure_date: 
+      type: DATE
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  internal_audit_report_summary: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+    auditor: 
+      type: VARCHAR
+      size: 100
+    audited_date: 
+      type: DATE
+    area_audited: 
+      type: LONGVARCHAR
+    nc: 
+      type: INTEGER
+    observation: 
+      type: VARCHAR
+      size: 100
+    findings_summary: 
+      type: LONGVARCHAR
+    other_observation: 
+      type: LONGVARCHAR
+    recommendation: 
+      type: LONGVARCHAR
+    corrective_preventive_action_report_no: 
+      type: LONGVARCHAR
+    prepared_by: 
+      type: VARCHAR
+      size: 100
+    prepared_date: 
+      type: DATE
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id        
+  internal_audit_iso_clause: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    summary_id: 
+      type: INTEGER
+    iso_clause: 
+      type: VARCHAR
+      size: 200
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id        
+  management_review: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    date: 
+      type: DATE
+    venue: 
+      type: VARCHAR
+      size: 100
+    chair_person: 
+      type: VARCHAR
+      size: 100
+    discussion: 
+      type: LONGVARCHAR
+    prop_action: 
+      type: LONGVARCHAR
+    action_date: 
+      type: LONGVARCHAR
+    conclusion: 
+      type: LONGVARCHAR
+    secretary: 
+      type: VARCHAR
+      size: 100
+    review_by: 
+      type: VARCHAR
+      size: 100
+    verify_by: 
+      type: VARCHAR
+      size: 100
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  management_review_absentees: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    management_review_id: 
+      type: INTEGER
+    name: 
+      type: VARCHAR
+      size: 100
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  management_review_members: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    management_review_id: 
+      type: INTEGER
+    name: 
+      type: VARCHAR
+      size: 100
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  management_review_presentees: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    management_review_id: 
+      type: INTEGER
+    name: 
+      type: VARCHAR
+      size: 100
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  management_review_user: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    name: 
+      type: VARCHAR
+      size: 100
+    email: 
+      type: VARCHAR
+      size: 50
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  management_review_venue_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    venue: 
+      type: VARCHAR
+      size: 100
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id
+  supplier_capa: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    report_no: 
+      type: VARCHAR
+      size: 100
+    issue_date: 
+      type: DATE
+    response_date: 
+      type: DATE
+    findings: 
+      type: LONGVARCHAR
+    root_cause_analysis: 
+      type: LONGVARCHAR
+    containment_plan: 
+      type: LONGVARCHAR
+    preventive_plan: 
+      type: LONGVARCHAR
+    verification_of_ca_pa: 
+      type: LONGVARCHAR
+    reported_by: 
+      type: VARCHAR
+      size: 100
+    symptom: 
+      type: LONGVARCHAR      
+    era_description: 
+      type: LONGVARCHAR 
+    era_effectivity: 
+      type: VARCHAR
+      size: 100
+    era_implemented: 
+      type: VARCHAR
+      size: 100
+    era_completed: 
+      type: VARCHAR
+      size: 100
+    title: 
+      type: VARCHAR
+      size: 100
+    team: 
+      type: LONGVARCHAR 
+    cont_effectivity: 
+      type: VARCHAR
+      size: 100
+    cont_implemented: 
+      type: VARCHAR
+      size: 100
+    cont_completed: 
+      type: VARCHAR
+      size: 100     
+    chosen_perm_ca: 
+      type: LONGVARCHAR 
+    chosen_perm_effectivity: 
+      type: VARCHAR
+      size: 100
+    chosen_perm_implemented: 
+      type: VARCHAR
+      size: 100
+    chosen_perm_completed: 
+      type: VARCHAR
+      size: 100
+    implemented_perm_ca: 
+      type: LONGVARCHAR 
+    implemented_perm_effectivity: 
+      type: VARCHAR
+      size: 100
+    implemented_perm_implemented: 
+      type: VARCHAR
+      size: 100
+    implemented_perm_completed: 
+      type: VARCHAR
+      size: 100                                     
+    car_name: 
+      type: VARCHAR
+      size: 100           
+    car_name: 
+      type: VARCHAR
+      size: 100
+    car_followup_required: 
+      type: VARCHAR
+      size: 100
+    car_followup_date: 
+      type: DATE
+    car_ca_status: 
+      type: VARCHAR
+      size: 20
+    car_title: 
+      type: VARCHAR
+      size: 100
+    car_plan_effective: 
+      type: VARCHAR
+      size: 100
+    car_verified_by: 
+      type: VARCHAR
+      size: 100
+    car_closure_date: 
+      type: DATE
+    token: 
+      type: VARCHAR
+      size: 100
+    token_expiry: 
+      type: DATE
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    _uniques: 
+      id: 
+        - id        
+  supplier_document_change_approve: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    date_time: 
+      type: TIMESTAMP
+      required: true
+    company: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    review_index_no: 
+      type: INTEGER
+      required: true
+      default: 0
+    approve_by: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    no_of_email_send: 
+      type: INTEGER
+      required: true
+      default: 0
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+  supplier_document_change_review: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    date_time: 
+      type: TIMESTAMP
+      required: true
+    company: 
+      type: VARCHAR
+      size: 20
+    document_no: 
+      type: VARCHAR
+      size: 50
+    document_title: 
+      type: VARCHAR
+      size: 100
+    original_rev_no: 
+      type: VARCHAR
+      size: 8
+    mod_rev_no: 
+      type: VARCHAR
+      size: 8
+    changes_requested: 
+      type: LONGVARCHAR
+    scr_status: 
+      type: VARCHAR
+      size: 6
+    capa_report_no: 
+      type: VARCHAR
+      size: 100      
+    review_by: 
+      type: VARCHAR
+      size: 20
+    approved: 
+      type: VARCHAR
+      size: 20
+    approved_date: 
+      type: TIMESTAMP
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+  supplier_document_files: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    date_time: 
+      type: TIMESTAMP
+      required: true
+    supplier_document_change_review_id: 
+      type: BIGINT
+      required: true
+      default: 
+    filename: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    path: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    mime_type: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    size: 
+      type: INTEGER
+      required: true
+      default: 
+    description: 
+      type: LONGVARCHAR
+      required: true
+    date_created: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45

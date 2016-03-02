@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule style.css style.php [QSA,L]
+  RewriteRule style2.css style2.php [QSA,L]
+</IfModule>

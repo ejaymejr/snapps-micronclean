@@ -1,0 +1,23 @@
+default:
+  is_secure: off
+
+upload:
+  is_secure: on
+  credentials: [[admin, garmentReject]]
+  
+uploadEdit:
+  is_secure: on
+  credentials: [[admin, garmentReject]]
+
+deletePhoto:
+  is_secure: on
+  credentials: [[admin, garmentReject]]
+
+uploader:
+  is_secure: on
+  credentials: [[admin, garmentReject]]
+
+searchCriteria:
+  is_secure: on
+  credentials: [[admin, garmentReject]]
+  

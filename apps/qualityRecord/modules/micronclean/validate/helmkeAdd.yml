@@ -1,0 +1,29 @@
+fields:
+  date_time:
+    required:
+        msg: date required.
+  customer:
+    required:
+        msg: required.
+  garment_code:
+    required:
+        msg: required.
+  washer:
+    required:
+        msg: required.
+  dryer:
+    required:
+        msg: required.
+  point_3:
+    sfNumberValidator:
+        nan_error: requires number  	
+    required:
+        msg: required.
+  point_5:
+    sfNumberValidator:
+        nan_error: requires number
+    required:
+        msg: required.
+  point_5_spec:
+    required:
+        msg: required.

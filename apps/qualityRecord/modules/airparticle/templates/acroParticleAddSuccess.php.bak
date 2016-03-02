@@ -1,0 +1,369 @@
+<?php use_helper('Validation', 'Javascript') ?>
+		<?php 
+			$reading1 = '<i class="icon-soundcloud"></i>'; 
+			$reading2 = '<h2 class="fg-amber">19.0</h2>'
+		?>
+<div class="contentBox">
+<form id="reading" method="post" action="<?php echo url_for("airparticle/acroParticleAdd?id=". $sf_params->get('id') ) ?>" >
+<table class="table bordered">
+<tr>
+	<td colspan="3" >
+		<nav class="breadcrumbs">
+			<ul>
+			<li><a href="#"><i class="icon-home"></i></a></li>
+			<li class=" "><a id="save" href="<?php echo url_for('airparticle/acroSearch') ?>" class="" >Search Acro Particle Data</a></li>
+			<li><a href="#">&nbsp;</a></li>
+			</ul>
+		</nav
+	</td>
+</tr>
+</table>
+<h1>Air Particle (ACRO)</h1>
+<h2>Air Particle Count in Class 100 environment</h2>
+<table class="table bordered">
+<tr>
+	<td class="bg-clearBlue alignRight span2" ><label>Condition</label></td>
+	<td class="span2" >
+		<?php echo HTMLLib::CreateInputText('humidity', $sf_params->get('humidity'), 'span1')?>
+		<small class="warning">%</small>
+	</td>
+	<td class="bg-clearBlue  alignRight span2" ><label>RH</label></td>
+	<td class="span2" >
+		<?php echo HTMLLib::CreateInputText('temperature', $sf_params->get('temperature'), 'span1')?>
+		<small class="warning">&deg;C</small>
+	</td>
+	<td class="bg-clearBlue  alignRight span2" ><label>Diff Pressure</label></td>
+	<td class="span2" colspan="2">
+		<?php echo HTMLLib::CreateInputText('diff_pressure', $sf_params->get('diff_pressure'), 'span1')?>
+		<small class="warning"></small>
+	</td>
+</tr>
+<tr>
+	<td class="bg-clearBlue alignRight span2" ><label>Date</label></td>
+	<td class="span2" >
+		<?php echo HTMLLib::CreateDateInput('date_record', $sf_params->get('date_record'), 'span2')?>
+		<small class="warning"></small>
+	</td>
+	<td class="bg-clearBlue  alignRight span2" ><label>Frequency</label></td>
+	<td class="span2" colspan="3">
+		<?php echo HTMLLib::CreateSelect('frequency', $sf_params->get('frequency'), array('daily'=>'Daily', 'weekly'=>'Weekly', 'monthly'=>'Monthly'), 'span2'); ?>
+		<small class="warning">Spec Limit: 	< 100 counts @ 0.5um, 1cfm</small>
+	</td>
+</tr>
+<tr>
+	<td class="bg-clearBlue alignRight span2" ><label>Remarks</label></td>
+	<td class="" colspan="4">
+		<?php 
+			echo HTMLLib::CreateTextArea('remark', $sf_params->get('remark'), 'span6');
+			echo HTMLLib::CreateSubmitButton('save', 'Save Data ');
+		?>
+	</td>
+</td>
+</table>
+
+<!--<table class="table bordered">
+<tr>
+	<td class=" alignCenter bg-teal fg-white" colspan="2"><label>1232-A</label></td>
+	<td class=" alignCenter bg-teal fg-white" colspan="2" ><label>1232-B</label></td>
+</tr>
+<tr>
+	<td class="bg-clearBlue alignCenter " ><label>P-A1</label></td>
+	<td class="bg-clearBlue alignCenter " ><label>P-A2</label></td>
+	<td class="bg-clearBlue alignCenter " ><label>P-B1</label></td>
+	<td class="bg-clearBlue alignCenter " ><label>P-B2</label></td>
+</tr>
+<tr>
+	<td class=" alignCenter " >
+		<?php echo HTMLLib::CreateInputText('pa1', $sf_params->get('pa1'), 'span2')?>
+		<small class="warning"></small>
+	</td>
+	<td class="alignCenter" >
+		<?php echo HTMLLib::CreateInputText('pa2', $sf_params->get('pa2'), 'span2')?>
+		<small class="warning"></small>
+	</td>
+	<td class="alignCenter" >
+	<?php echo HTMLLib::CreateInputText('pb1', $sf_params->get('pb1'), 'span2')?>
+		<small class="warning"></small>
+	</td>
+	<td class="alignCenter" >
+		<?php echo HTMLLib::CreateInputText('pb2', $sf_params->get('pb1'), 'span2')?>
+		<small class="warning"></small>
+	</td>
+</tr>
+</table>
+-->
+
+<?php 
+	$filterList = array('2_1', '2_2','2_3', '2_4','2_5', '2_6','2_7', '2_8','2_9', '2_10','2_11', '2_12','2_13', '2_14','2_15', '2_16','2_17', '2_18','2_19', '2_20',);
+	foreach($filterList as $filter):
+?>
+	<script>
+	$(document).ready( function () {
+		$("#<?php echo $filter ?>").on('click', function(){
+	        $.Dialog({
+	            shadow: true,
+	            overlay: false,
+	            draggable: true,
+	            icon: '<span class="icon-bus fg-white"></span>',
+	            title: 'Draggable window',
+	            width: 200,
+	            padding: 10,
+	            content: 'This Window is draggable by caption.',
+	            onShow: function(){
+	                var content = ''+
+                	'<form id="reading" method="post" action="<?php echo url_for("airparticle/acroParticleSave?id=" .$sf_params->get('id')) .'&spot=' . $filter  ?>">' +
+                    '<label>Particle Count</label>' +
+                    '<div class="input-control text span2"><input type="number" id="particle" name="particle" placeholder="Enter Particle Count" value="<?php echo $sf_params->get($filter .'_particle') ?>" ><button class="btn-clear"></button></div>' +
+                    '<label>AirFlow</label>' +
+                    '<div class="input-control text span2"><input type="number" id="airflow" name="airflow" placeholder="Enter Air Flow" value="<?php echo $sf_params->get($filter .'_air_flow') ?>"><button class="btn-clear"></button></div>' +
+                    '<div class="form-actions">' +
+                    //'<button  class="button success">Save Reading</button>&nbsp;'+
+                  	'<button id="SaveReading" class="button success" type="button" onclick="save(\'<?php echo url_for("airparticle/acroParticleSave", 'true') ."?id=" .$sf_params->get("id")."&spot=" . $filter  ?>\',\'particle\',\'airflow\'); $.Dialog.close(); location.reload();">Save Reading</button> '+
+                    '<div id="DIVCloseRightAway"></div>'
+                    '</div>'+
+                    '</form>'
+                    ;
+	                $.Dialog.title("Reading For <?php echo $filter; ?>");
+	                $.Dialog.content(content);
+	            }
+	        });
+	    });
+	});
+	</script>
+<?php endforeach; ?>
+
+
+<?php 
+	if (!$sf_params->get('id')):
+		echo '<table class="table bordered "><tr><td><h2>SAVE THE DATA FIRST</h2></td></tr></table>';
+	else:
+?>
+<table class="table bordered span8 ">
+<tr >
+	<td colspan="6" rowspan="3" class="bg-clearGray"></td>
+	<td ><div class="tile half " ></td>
+	<td class=""> <div class="alignRight" >
+		<div id="2_1" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1; //echo displayValues($sf_params->get( '2_1_particle').' | '. $sf_params->get( '2_1_air_flow')) ?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-1</span></div>
+		</div>
+		</div>
+	</td>
+	<td class="">
+		<div id="2_2" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-2</span></div>
+		</div>
+	</td>
+	<td ><div class="tile half " ></td>
+</tr>
+<tr>
+	<td><div class="tile half " ></td>
+	<td class="">
+		<div id="2_3" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-3</span></div>
+		</div>
+	</td>
+	<td class="">
+		<div id="2_4" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-4</span></div>
+		</div>
+	</td>
+	<td ><div class="tile half " ></td>
+</tr>
+<tr>
+	<td><div class="tile half " ></td>
+	<td class="">
+		<div id="2_5" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-5</span></div>
+		</div>
+	</td>
+	<td class="">
+		<div id="2_6" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-6</span></div>
+		</div>
+	</td>
+	<td ><div class="tile half " ></td>
+</tr>
+<tr>
+	<td class="">
+		<div id="2_15" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-15</span></div>
+		</div>
+	</td>
+	<td  class="">
+		<div id="2_16" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-16</span></div>
+		</div>
+	</td>
+	<td colspan="2" rowspan="2"  class=""> 
+		<div id="2_11" class="tile  bg-darkBlue"> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-11</span></div>
+		</div>
+	</td>
+	<td colspan="2" rowspan="2"  class="">
+		<div id="2_12" class="tile bg-darkBlue"> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-12</span></div>
+		</div>
+	</td>
+	<td colspan="2" rowspan="2"  class="">
+		<div id="2_7" class="tile bg-darkBlue"> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-7</span></div>
+		</div>
+	</td>
+	<td colspan="2" rowspan="2" class="">
+		<div id="2_8" class="tile bg-darkBlue"> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-8</span></div>
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="">
+		<div id="2_17" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-17</span></div>
+		</div>
+	</td>
+	<td class="">
+		<div id="2_18" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-18</span></div>
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="">
+		<div id="2_19" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-19</span></div>
+		</div>
+	</td>
+	<td class="">
+		<div id="2_20" class="tile half bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-20</span></div>
+		</div>
+	</td >
+		<td colspan="2" rowspan="2" class=""> 
+		<div id="2_13" class="tile  bg-darkBlue"> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-13</span></div>
+		</div>
+	</td>
+	<td colspan="2" rowspan="2" class="">
+		<div id="2_14" class="tile bg-darkBlue"> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-14</span></div>
+		</div>
+	</td>
+	<td colspan="2" rowspan="2" class="">
+		<div id="2_9" class="tile bg-darkBlue"> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-9</span></div>
+		</div>
+	</td>
+	<td colspan="2" rowspan="2" class="">
+		<div id="2_10" class="tile bg-darkBlue "> 
+			 <div class="tile-content icon">
+				<?php echo $reading1?>
+			</div>
+			<div class="tile-status"><span class="name alignCenter">&nbsp;&nbsp;&nbsp;2-10</span></div>
+		</div>
+	</td>
+</tr>
+<tr>
+	<td><div class="tile half " ></div>	</td>
+	<td><div class="tile half " ></div>	</td>
+</tr>
+</table>
+
+<table class="table bordered ">
+<tr>
+	<td class="alignCenter bg-clearBlue"><label>Spot</label></td>
+	<td class="alignCenter bg-clearBlue"><label>Particle</label></td>
+	<td class="alignCenter bg-clearBlue"><label>Airflow</label></td>
+	<td class="alignCenter bg-lightPink fg-white"><label>Spot</label></td>
+	<td class="alignCenter bg-lightPink fg-white"><label>Particle</label></td>
+	<td class="alignCenter bg-lightPink fg-white"><label>Airflow</label></td>
+	<td class="alignCenter bg-green fg-white"><label>Spot</label></td>
+	<td class="alignCenter bg-green fg-white"><label>Particle</label></td>
+	<td class="alignCenter bg-green fg-white"><label>Airflow</label></td>
+	<td class="alignCenter bg-yellow fg-white"><label>Spot</label></td>
+	<td class="alignCenter bg-yellow fg-white"><label>Particle</label></td>
+	<td class="alignCenter bg-yellow fg-white"><label>Airflow</label></td>
+</tr>
+
+<?php 
+	for($x=1; $x<= 5; $x++):
+?>
+<tr>
+	<td class="bg-clearBlue alignRight">2-<?php echo $x ?></td><td class="alignCenter"><?php echo $sf_params->get('2_'. $x . '_particle');?></td><td class="alignCenter"><?php echo $sf_params->get('2_'. $x . '_air_flow');?></td>
+	<td class="bg-lightPink fg-white alignRight">2-<?php echo $x + 5 ?></td><td class="alignCenter"><?php echo $sf_params->get('2_'. ($x+5) . '_particle');?></td><td class="alignCenter"><?php echo $sf_params->get('2_'. ($x+5) . '_air_flow');?></td>
+	<td class="bg-green fg-white alignRight">2-<?php echo $x + 10 ?></td><td class="alignCenter"><?php echo $sf_params->get('2_'. ($x+10) . '_particle');?></td><td class="alignCenter"><?php echo $sf_params->get('2_'. ($x+10) . '_air_flow');?></td>
+	<td class="bg-yellow fg-white alignRight">2-<?php echo $x + 15 ?></td><td class="alignCenter"><?php echo $sf_params->get('2_'. ($x+15) . '_particle');?></td><td class="alignCenter"><?php echo $sf_params->get('2_'. ($x+15) . '_air_flow');?></td>
+</tr>
+<?php endfor;?>
+
+
+</table>
+
+<?php include_partial('air_acro_reading')?>
+<?php endif; ?>
+
+
+
+</form>
+</div>
+<?php function displayValues($val)
+{
+ 	$val = $val? '<h2 class="readable-text alignCenter fg-amber">'.$val.'</h2>' : '<i class="icon-soundcloud"></i>';
+ 	return $val;
+}

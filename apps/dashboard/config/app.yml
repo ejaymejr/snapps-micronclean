@@ -1,0 +1,13 @@
+# default values
+#all:
+
+all:
+    apps_name:      Dashboard Micronclean Singapore   
+    menu_name:      dashboardMenu 
+
+
+    sf_guard_plugin:
+        success_signin_url:      @homepage          # the plugin use the referer as default
+        success_signout_url:     @homepage         # the plugin use the referer as default
+        profile_class:      sfGuardUserProfile
+        profile_field_name: user_id        

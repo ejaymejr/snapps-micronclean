@@ -1,0 +1,217 @@
+<?php
+
+class PagerQualityRecord
+{
+	public static function AcroAirParticleSearch($pager)
+	{
+		$editDel = "";
+		$data = array();
+		$seq = 0;
+		foreach ($pager as $record):
+			$seq ++ ;
+			$editUrl  = link_to('Edit', 'airparticle/acroParticleEdit?id='. $record->getId());
+			$delUrl   = link_to('Delete', 'airparticle/acroParticleDelete?id='. $record->getId(),
+                    	array('confirm' => 'Sure to delete this record?')); 
+			$editDel = $editUrl . ' | ' . $delUrl ;
+			$data[] = array(
+					  'seq'=>'<small>'.$seq.'</small>'
+					, 'action'=>'<small>'.$editDel.'</small>'
+					, 'date'=> '<small>'.$record->getDateRecord().'</small>'
+					, 'humidity'=> '<small>'.$record->getHumidity().'</small>'
+					, 'temperature'=> '<small>'. $record->getTemperature() .'</small>'
+					, 'diff_pressure'=> '<small>'. $record->getDiffPressure().'</small>'
+					, 'frequency'=> '<small>'.$record->getFrequency().'</small>'
+					, 'tester'=> '<small>'.$record->getTesterId().'</small>'
+					
+			);
+		endforeach;
+		return $data;
+	}
+	
+	public static function MicroncleanAirParticleSearch($pager)
+	{
+		$editDel = "";
+		$data = array();
+		$seq = 0;
+		foreach ($pager as $record):
+			$seq ++ ;
+			$editUrl  = link_to('Edit', 'airparticle/microncleanParticleEdit?id='. $record->getId());
+			$delUrl   = link_to('Delete', 'airparticle/microncleanParticleDelete?id='. $record->getId(),
+                    	array('confirm' => 'Sure to delete this record?')); 
+			$editDel = $editUrl . ' | ' . $delUrl ;
+			$data[] = array(
+					  'seq'=>'<small>'.$seq.'</small>'
+					, 'action'=>'<small>'.$editDel.'</small>'
+					, 'date'=> '<small>'.$record->getDateRecord().'</small>'
+					, 'humidity'=> '<small>'.$record->getHumidity().'</small>'
+					, 'temperature'=> '<small>'. $record->getTemperature() .'</small>'
+					, 'diff_pressure'=> '<small>'. $record->getDiffPressure().'</small>'
+					, 'frequency'=> '<small>'.$record->getFrequency().'</small>'
+					, 'tester'=> '<small>'.$record->getTesterId().'</small>'
+					
+			);
+		endforeach;
+		return $data;
+	}
+	
+	public static function NanocleanAirParticleSearch($pager)
+	{
+		$editDel = "";
+		$data = array();
+		$seq = 0;
+		foreach ($pager as $record):
+			$seq ++ ;
+			$editUrl  = link_to('Edit', 'airparticle/nanocleanParticleEdit?id='. $record->getId());
+			$delUrl   = link_to('Delete', 'airparticle/nanocleanParticleDelete?id='. $record->getId(),
+                    	array('confirm' => 'Sure to delete this record?')); 
+			$editDel = $editUrl . ' | ' . $delUrl ;
+			$data[] = array(
+					  'seq'=>'<small>'.$seq.'</small>'
+					, 'action'=>'<small>'.$editDel.'</small>'
+					, 'date'=> '<small>'.$record->getDateRecord().'</small>'
+					, 'humidity'=> '<small>'.$record->getHumidity().'</small>'
+					, 'temperature'=> '<small>'. $record->getTemperature() .'</small>'
+					, 'diff_pressure'=> '<small>'. $record->getDiffPressure().'</small>'
+					, 'frequency'=> '<small>'.$record->getFrequency().'</small>'
+					, 'tester'=> '<small>'.$record->getTesterId().'</small>'
+					
+			);
+		endforeach;
+		return $data;
+	}
+	
+	public static function HelmkeSearch($pager)
+	{
+		$editDel = "";
+		$data = array();
+		$seq = 0;
+		$log = "
+			  <script>
+			  $(document).ready(function() {
+               $('#logWindow').on('click', function(){
+                 $.Dialog({
+                      shadow: true,
+                      overlay: false,
+                      icon: '<span class=icon-rocket></span>',
+                      title: 'Title',
+                      width: 500,
+                      padding: 10,
+                      content: 'Window content here'
+                 });
+               });
+              });
+              </script>
+                        ";
+		foreach ($pager as $record):
+			$seq ++ ;
+			$editUrl  = link_to('Edit', 'micronclean/helmkeEdit?id='. $record->getId());
+			$delUrl   = link_to('Delete', 'micronclean/helmkeDelete?id='. $record->getId(),
+                    	array('confirm' => 'Sure to delete this record?')); 
+			$editDel = $editUrl . ' | ' . $delUrl ;
+			$data[] = array(
+					  'seq'=>'<small>'.$seq.'</small>'
+					, 'action'=>'<small>'.$editDel.'</small>'
+					, 'date'=> '<small>'.$record->getDateTime().'</small>'
+					, 'customer'=> '<small>'.$record->getCustomer().'</small>'
+					, 'garment'=> '<small>'. $record->getGarmentCode() .'</small>'
+					, 'department'=> '<small>'. $record->getDepartment().'</small>'
+					, 'type'=> '<small>'.$record->getType().'</small>'
+					, 'washer'=> '<small>'.$record->getWasher().'</small>'
+					, 'dryer'=> '<small>'.$record->getDryer().'</small>'
+					, 'tester'=> '<small>'.$record->getTester().'</small>'
+					, 'log'=> '<small><a href="#" id="logWindow">'.$log.'Log</a></small>'
+					
+			);
+		endforeach;
+		return $data;
+	}
+	
+	public static function WaterMonitoringPager($pager)
+	{
+		$editDel = "";
+		$data = array();
+		$seq = 0;
+		$log = "
+			  <script>
+			  		ShowLog('WaterMonitoringPager');
+              </script>
+              <a href='#' id='logWindow'>Log</a>
+                        ";
+		foreach ($pager as $record):
+			$seq ++ ;
+			$editUrl  = link_to('Edit', 'machine/waterMonitoringEdit?id='. $record->getId());
+			$delUrl   = link_to('Delete', 'machine/waterMonitoringDelete?id='. $record->getId(),
+                    	array('confirm' => 'Sure to delete this record?')); 
+			$editDel = $editUrl . ' | ' . $delUrl ;
+			$data[] = array(
+					  'seq'=>'<small>'.$seq.'</small>'
+					, 'action'=>'<small>'.$editDel.'</small>'
+					, 'date'=> '<small>'.DateUtils::DUFormat('d-m-Y', $record->getDateTime()).'</small>'
+					, 'machine'=> '<small>'.$record->getMachineNo().'</small>'
+					, '8am'=> '<small>'.$record->getAm8().'</small>'
+					, '9am'=> '<small>'.$record->getAm9().'</small>'
+					, '10am'=> '<small>'.$record->getAm10().'</small>'
+					, '11am'=> '<small>'.$record->getAm11().'</small>'
+					, '12nn'=> '<small>'.$record->getNn12().'</small>'
+					, '1pm'=> '<small>'.$record->getPm1().'</small>'
+					, '2pm'=> '<small>'.$record->getPm2().'</small>'
+					, '3pm'=> '<small>'.$record->getPm3().'</small>'
+					, '4pm'=> '<small>'.$record->getPm4().'</small>'
+					, '5pm'=> '<small>'.$record->getPm5().'</small>'
+					, '6pm'=> '<small>'.$record->getPm6().'</small>'
+					, '7pm'=> '<small>'.$record->getPm7().'</small>'
+					, '8pm'=> '<small>'.$record->getPm8().'</small>'
+					, '9pm'=> '<small>'.$record->getPm9().'</small>'
+					, '10pm'=> '<small>'.$record->getPm10().'</small>'
+					, 'tester'=> '<small>'.$record->getTester().'</small>'
+					, 'log'=> '<small>'.$log.'</small>'
+					
+			);
+		endforeach;
+		return $data;
+	}
+	
+	public static function DryerMonitoringPager($pager)
+	{
+		$editDel = "";
+		$data = array();
+		$seq = 0;
+		$log = "
+			  <script>
+			  		ShowLog('DryerMonitoringPager');
+              </script>
+              <a href='#' id='logWindow'>Log</a>
+                        ";
+		foreach ($pager as $record):
+			$seq ++ ;
+			$editUrl  = link_to('Edit', 'machine/dryerMonitoringEdit?id='. $record->getId());
+			$delUrl   = link_to('Delete', 'machine/dryerMonitoringDelete?id='. $record->getId(),
+                    	array('confirm' => 'Sure to delete this record?')); 
+			$editDel = $editUrl . ' | ' . $delUrl ;
+			$data[] = array(
+					  'seq'=>'<small>'.$seq.'</small>'
+					, 'action'=>'<small>'.$editDel.'</small>'
+					, 'date'=> '<small>'.DateUtils::DUFormat('d-m-Y', $record->getDateTime()).'</small>'
+					, 'machine'=> '<small>'.$record->getMachineNo().'</small>'
+					, '8am'=> '<small>'.$record->getAm8().'</small>'
+					, '9am'=> '<small>'.$record->getAm9().'</small>'
+					, '10am'=> '<small>'.$record->getAm10().'</small>'
+					, '11am'=> '<small>'.$record->getAm11().'</small>'
+					, '12nn'=> '<small>'.$record->getNn12().'</small>'
+					, '1pm'=> '<small>'.$record->getPm1().'</small>'
+					, '2pm'=> '<small>'.$record->getPm2().'</small>'
+					, '3pm'=> '<small>'.$record->getPm3().'</small>'
+					, '4pm'=> '<small>'.$record->getPm4().'</small>'
+					, '5pm'=> '<small>'.$record->getPm5().'</small>'
+					, '6pm'=> '<small>'.$record->getPm6().'</small>'
+					, '7pm'=> '<small>'.$record->getPm7().'</small>'
+					, '8pm'=> '<small>'.$record->getPm8().'</small>'
+					, '9pm'=> '<small>'.$record->getPm9().'</small>'
+					, '10pm'=> '<small>'.$record->getPm10().'</small>'
+					, 'tester'=> '<small>'.$record->getTester().'</small>'
+					, 'log'=> '<small>'.$log.'</small>'
+			);
+		endforeach;
+		return $data;
+	}
+}

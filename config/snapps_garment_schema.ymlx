@@ -1,0 +1,2082 @@
+---
+garment: 
+  _attributes: 
+    package: lib.model.garment
+  access_level_attr: 
+    access_level: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+  addnew: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    user_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    email: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    hanger_no: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    job_title: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    date_employed: 
+      type: TIMESTAMP
+      required: true
+      
+    jumpsuit_w_hood_size: 
+      type: VARCHAR
+      size: 20
+    jumpsuit_size: 
+      type: VARCHAR
+      size: 50
+    booties_size: 
+      type: VARCHAR
+      size: 50
+    hood_size: 
+      type: VARCHAR
+      size: 50
+    labcoat_size: 
+      type: VARCHAR
+      size: 50
+    shoe_size: 
+      type: VARCHAR
+      size: 50
+    safety_shoe_size: 
+      type: VARCHAR
+      size: 50
+    added: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    completed_date: 
+      type: TIMESTAMP
+      required: true
+      
+    customer: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    _uniques: 
+      id: 
+        - id
+  changedepartmentorshift: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    user_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    email: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    changed: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    completed_date: 
+      type: TIMESTAMP
+    customer: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  changesize: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    user_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    email: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    jumpsuit_w_hood_size: 
+      type: VARCHAR
+      size: 50
+    jumpsuit_size: 
+      type: VARCHAR
+      size: 50
+    booties_size: 
+      type: VARCHAR
+      size: 50
+    hood_size: 
+      type: VARCHAR
+      size: 50
+    labcoat_size: 
+      type: VARCHAR
+      size: 50
+    shoe_size: 
+      type: VARCHAR
+      size: 50
+    safety_shoe_size: 
+      type: VARCHAR
+      size: 50
+    changed: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    completed_date: 
+      type: TIMESTAMP
+    customer: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  check_do_garmentInformation: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    no_of_times_wash: 
+      type: INTEGER
+      required: true
+      default: 0
+    number: 
+      type: VARCHAR
+      size: 15
+    hanger_no: 
+      type: LONGVARCHAR
+    inserted_date: 
+      type: TIMESTAMP
+      required: true
+      
+    department: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  check_do_outscan: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+  check_do_wearerInformation: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    job_title: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    access_level: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    password: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    email: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    customer_id: 
+      type: VARCHAR
+      size: 10
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    allow_access: 
+      type: VARCHAR
+      size: 5
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  color_attr: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+  cost: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    month: 
+      type: INTEGER
+      required: true
+      default: 0
+    year: 
+      type: INTEGER
+      required: true
+      default: 0
+    department: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    cost: 
+      type: DOUBLE
+      required: true
+      default: 0
+    type: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+  deleteuser: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    user_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    email: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    job_title: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    deleted: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    completed_date: 
+      type: TIMESTAMP
+    customer: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  department: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    _indexes: 
+      index_number: 
+        - number
+      index_customer: 
+        - customer
+      index_shift: 
+        - shift
+      index_department: 
+        - department
+  department_attr: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    building: 
+      type: CHAR
+      size: 2
+      required: true
+      default: 
+  feedback: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    date_time: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    email: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    feedback: 
+      type: LONGVARCHAR
+      required: true
+  hanger_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    hanger: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+  hanger_no: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    hanger_no: 
+      type: LONGVARCHAR
+      required: true
+    _indexes: 
+      hanger_no: 
+        - hanger_no
+  inscan: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+    created_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP
+  job_title_attr: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    job_title: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+  log_reason: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    no_of_times_wash: 
+      type: INTEGER
+      required: true
+      default: 0
+    hanger_no: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    submitted_date: 
+      type: TIMESTAMP
+      required: true
+      
+    completed_date: 
+      type: TIMESTAMP
+      required: true
+      
+    reason: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    remarks: 
+      type: LONGVARCHAR
+      required: true
+    created_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP      
+  log_reason_attr: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    reason: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  missing: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    user_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    email: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    job_title: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    reasonlog: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    remarks: 
+      type: LONGVARCHAR
+      required: true
+    replaced: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    repaired: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    completed_date: 
+      type: TIMESTAMP
+      
+    customer: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  outscan: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    no_of_times_wash: 
+      type: INTEGER
+      required: true
+      default: 0
+    type: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    hanger_no: 
+      type: LONGVARCHAR
+      required: true
+    inserted_date: 
+      type: TIMESTAMP
+      required: true
+      
+    status: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    do_number: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    created_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP
+    _indexes: 
+      idx_gict: 
+        - garment_code
+        - inserted_date
+        - customer
+        - type
+  outscan2: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+  outscan_blank: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    max_date_time: 
+      type: TIMESTAMP
+      required: true
+      
+  outscan_blank_complete: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    m_date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    no_of_times_wash: 
+      type: INTEGER
+      required: true
+      default: 0
+    number: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    hanger_no: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    inserted_date: 
+      type: TIMESTAMP
+      required: true
+      
+    status: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+  outscan_time_change: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    date_time_change: 
+      type: TIMESTAMP
+      required: true
+      
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+  reject: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    reviewed_date: 
+      type: TIMESTAMP
+      required: true
+    reviewed_result: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    reject_date: 
+      type: TIMESTAMP
+      required: true
+    repair_sent_date: 
+      type: TIMESTAMP
+      required: true
+    repair_receive_date: 
+      type: TIMESTAMP
+      required: true
+    scrap_complete_date: 
+      type: TIMESTAMP
+      required: true
+    downgrade_date: 
+      type: TIMESTAMP
+      required: true
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    no_of_times_wash: 
+      type: INTEGER
+      required: true
+      default: 0
+    number: 
+      type: VARCHAR
+      size: 15
+    hanger_no: 
+      type: LONGVARCHAR
+    inserted_date: 
+      type: TIMESTAMP
+      required: true
+    reject_type: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    building: 
+      type: CHAR
+      size: 2
+      required: true
+      default: 
+    reject_date_modified: 
+      type: TIMESTAMP
+      required: true
+    reviewed_date_modified: 
+      type: TIMESTAMP
+      required: true
+    repair_sent_date_modified: 
+      type: TIMESTAMP
+      required: true
+    repair_receive_date_modified: 
+      type: TIMESTAMP
+      required: true
+    scrap_complete_date_modified: 
+      type: TIMESTAMP
+      required: true
+    downgrade_date_modified: 
+      type: TIMESTAMP
+      required: true
+    created_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP      
+      
+  reject_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    customer: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    garment_type: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    reason: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  repair: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    repair_send_date: 
+      type: TIMESTAMP
+      required: true
+      
+    repair_receive_date: 
+      type: TIMESTAMP
+      required: true
+      
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    no_of_times_wash: 
+      type: INTEGER
+      required: true
+      default: 0
+    number: 
+      type: VARCHAR
+      size: 15
+    hanger_no: 
+      type: LONGVARCHAR
+    inserted_date: 
+      type: TIMESTAMP
+      required: true
+      
+    reject_type: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    reject_index_no: 
+      type: INTEGER
+      required: true
+      default: 0
+    department: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    building: 
+      type: CHAR
+      size: 2
+      required: true
+      default: 
+    repair_send_date_modified: 
+      type: TIMESTAMP
+      required: true
+      
+    repair_receive_date_modified: 
+      type: TIMESTAMP
+      required: true
+    created_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default:       
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP      
+      
+  scrap: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    reject_date: 
+      type: TIMESTAMP
+      required: true
+      
+    scrap_date: 
+      type: TIMESTAMP
+      required: true
+      
+    scrap_complete_date: 
+      type: TIMESTAMP
+      required: true
+      
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    no_of_times_wash: 
+      type: INTEGER
+      required: true
+      default: 0
+    number: 
+      type: VARCHAR
+      size: 15
+    hanger_no: 
+      type: LONGVARCHAR
+    inserted_date: 
+      type: TIMESTAMP
+      required: true
+      
+    reject_type: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    building: 
+      type: CHAR
+      size: 2
+      required: true
+      default: 
+    scrap_date_modified: 
+      type: TIMESTAMP
+      required: true
+      
+    scrap_date_complete_modified: 
+      type: TIMESTAMP
+      required: true
+      
+    reject_index_no: 
+      type: INTEGER
+      required: true
+      default: 0
+    created_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default:       
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP      
+  seagate_add_new: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    user_name: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    email: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    job_title: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    date_employed: 
+      type: DATE
+      required: true
+
+    added: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    completed_date: 
+      type: DATE
+      required: true
+      
+  seagate_add_new_garments: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    add_new_index: 
+      type: INTEGER
+      required: true
+      default: 0
+    garment_type: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    garment_size: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    garment_color: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+  seagate_cost: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    month: 
+      type: INTEGER
+      required: true
+      default: 0
+    year: 
+      type: INTEGER
+      required: true
+      default: 0
+    department: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    cost: 
+      type: DOUBLE
+      required: true
+      default: 0
+    cost_per_head: 
+      type: DOUBLE
+      required: true
+      default: 0
+    type: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+  seagate_damage: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    index_no: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    month: 
+      type: INTEGER
+      required: true
+      default: 0
+    year: 
+      type: INTEGER
+      required: true
+      default: 0
+    seagate1_garment: 
+      type: INTEGER
+      required: true
+      default: 0
+    seagate1_missing_quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+    seagate1_damage_quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+    seagate1_damage_repair_quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+    seagate1_damage_replace_quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+    seagate2_garment: 
+      type: INTEGER
+      required: true
+      default: 0
+    seagate2_missing_quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+    seagate2_damage_quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+    seagate2_damage_repair_quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+    seagate2_damage_replace_quantity: 
+      type: INTEGER
+      required: true
+      default: 0
+  shift_attr: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+  showa_namelist: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    employee_number: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    location: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+  showa_outscan: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    no_of_times_wash: 
+      type: INTEGER
+      required: true
+      default: 0
+    type: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    hanger_no: 
+      type: LONGVARCHAR
+      required: true
+    inserted_date: 
+      type: TIMESTAMP
+      required: true
+      
+    status: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+  size_attr: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+  temp_garmentInformation_dec_2006: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    number: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    hanger_no: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+  temp_outscan: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+  testing: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    hanger_no: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    team: 
+      type: VARCHAR
+      size: 5
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+  today_outscan: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+  type_attr: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+  visitors: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    date_time: 
+      type: TIMESTAMP
+      required: true
+      
+    user_name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    email: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    date_deliver: 
+      type: TIMESTAMP
+      required: true
+      
+    date_return: 
+      type: TIMESTAMP
+      
+    jhXS: 
+      type: VARCHAR
+      size: 50
+    jhS: 
+      type: VARCHAR
+      size: 50
+    jhM: 
+      type: VARCHAR
+      size: 50
+    jhL: 
+      type: VARCHAR
+      size: 50
+    jhXL: 
+      type: VARCHAR
+      size: 50
+    jhXXL: 
+      type: VARCHAR
+      size: 50
+    jhXXXL: 
+      type: VARCHAR
+      size: 50
+    jXS: 
+      type: VARCHAR
+      size: 50
+    jS: 
+      type: VARCHAR
+      size: 50
+    jM: 
+      type: VARCHAR
+      size: 50
+    jL: 
+      type: VARCHAR
+      size: 50
+    jXL: 
+      type: VARCHAR
+      size: 50
+    jXXL: 
+      type: VARCHAR
+      size: 50
+    jXXXL: 
+      type: VARCHAR
+      size: 50
+    bXS: 
+      type: VARCHAR
+      size: 50
+    bS: 
+      type: VARCHAR
+      size: 50
+    bM: 
+      type: VARCHAR
+      size: 50
+    bL: 
+      type: VARCHAR
+      size: 50
+    bXL: 
+      type: VARCHAR
+      size: 50
+    bXXL: 
+      type: VARCHAR
+      size: 50
+    bXXXL: 
+      type: VARCHAR
+      size: 50
+    hL: 
+      type: VARCHAR
+      size: 50
+    h2L: 
+      type: VARCHAR
+      size: 50
+    h3L: 
+      type: VARCHAR
+      size: 50
+    lXS: 
+      type: VARCHAR
+      size: 50
+    lS: 
+      type: VARCHAR
+      size: 50
+    lM: 
+      type: VARCHAR
+      size: 50
+    lL: 
+      type: VARCHAR
+      size: 50
+    lXL: 
+      type: VARCHAR
+      size: 50
+    lXXL: 
+      type: VARCHAR
+      size: 50
+    lXXXL: 
+      type: VARCHAR
+      size: 50
+    s24: 
+      type: VARCHAR
+      size: 50
+    s25: 
+      type: VARCHAR
+      size: 50
+    s26: 
+      type: VARCHAR
+      size: 50
+    s27: 
+      type: VARCHAR
+      size: 50
+    s28: 
+      type: VARCHAR
+      size: 50
+    s29: 
+      type: VARCHAR
+      size: 50
+    s30: 
+      type: VARCHAR
+      size: 50
+    ss24: 
+      type: VARCHAR
+      size: 50
+    ss25: 
+      type: VARCHAR
+      size: 50
+    ss26: 
+      type: VARCHAR
+      size: 50
+    ss27: 
+      type: VARCHAR
+      size: 50
+    ss28: 
+      type: VARCHAR
+      size: 50
+    ss29: 
+      type: VARCHAR
+      size: 50
+    ss30: 
+      type: VARCHAR
+      size: 50
+    requested: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    completed_date: 
+      type: TIMESTAMP
+    customer: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  wearer_information: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    number: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    name: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    job_title: 
+      type: VARCHAR
+      size: 15
+      required: true
+      default: 
+    access_level: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    password: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    email: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    customer_id: 
+      type: VARCHAR
+      size: 10
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    allow_access: 
+      type: VARCHAR
+      size: 5
+      required: true
+      default:
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP
+    _indexes: 
+      index_number: 
+        - number
+      index_customer: 
+        - customer
+  garment_information: 
+    id: 
+      type: INTEGER
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    no_of_times_wash: 
+      type: INTEGER
+      required: true
+      default: 0
+    number: 
+      type: VARCHAR
+      size: 15
+    hanger_no: 
+      type: LONGVARCHAR
+    inserted_date: 
+      type: TIMESTAMP
+    status: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    created_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP
+    _indexes: 
+      index_garment_code: 
+        - garment_code
+      index_number: 
+        - number
+      index_customer: 
+        - customer

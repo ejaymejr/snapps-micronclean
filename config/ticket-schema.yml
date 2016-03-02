@@ -1,0 +1,123 @@
+---
+rental: 
+  _attributes: 
+    package: lib.model.ticket
+  ticket_design_detail: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    garment: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: ''
+    component: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: ''
+    value: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: ''
+    remark: 
+      type: LONGVARCHAR
+    sequence: 
+      type: INTEGER
+      default: 1
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    ticket_design_header_id: 
+      type: BIGINT
+      required: true
+      default: 0
+  ticket_design_header: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    name: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    company: 
+      type: VARCHAR
+      size: 100
+    department: 
+      type: VARCHAR
+      size: 100
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  ticket_delivery_record: 
+    id: 
+      type: BIGINT
+      required: true
+      default: 0
+    trans_date: 
+      type: TIMESTAMP
+      required: true
+    ticket_design_header_id: 
+      type: BIGINT
+      required: true
+      default: 0
+    ticket_design_detail_id: 
+      type: BIGINT
+      required: true
+      default: 0
+    delivery_ticket_id: 
+      type: VARCHAR
+      size: 50
+      required: true
+    garment: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: ''
+    component: 
+      type: VARCHAR
+      size: 40
+      required: true
+      default: 
+    value: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: ''
+    quantity: 
+      type: VARCHAR
+      size: 10
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP

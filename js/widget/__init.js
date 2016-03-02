@@ -1,0 +1,5 @@
+
+
+Snapps.widget = {};
+
+

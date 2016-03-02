@@ -1,0 +1,10 @@
+fields:
+  date_time:
+    required:
+        msg: date required.
+  filter_area:
+    required:
+        msg: required.
+  bacteria_count:
+    required:
+        msg: required.        

@@ -1,0 +1,2 @@
+<?php use_helper('Validation', 'Javascript') ?>
+<?php include_partial('email_send_to', array('co'=>$sf_params->get('customer'), 'dept'=>$sf_params->get('department'), 'shift'=>$sf_params->get('shift')));?>    

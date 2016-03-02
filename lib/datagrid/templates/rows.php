@@ -1,0 +1,121 @@
+<?php
+// $Source$
+// $Id$
+use_helper('Javascript', 'Text');
+
+
+$rowToolTips = array();
+?>
+
+<?php if ($this->rows && sizeof($this->rows)) : ?>
+<?php $rowCount = 0; foreach ($this->rows as $row) : ?>
+<?php
+
+$rowClass = 'dgRow ' . ( (($rowCount % 2) == 0) ? "dg_ro" : "dg_re" );
+$rowID = $this->getHtmlId() . '_' . $rowCount;  
+
+$tooltipContents = array();
+
+// if (YAHOO.snapps.datagrid.rowSelected) { return YAHOO.snapps.datagrid.rowSelected.fire(' . $this->jsObject . ', this); }
+$trContent = '';
+$trContent = '<tr class="' . $rowClass . '"' . 
+                  ' id="' . $rowID . '"' . 
+                  ' onmouseover="rowHovered(\'' . $rowID . '\');"' . 
+                  ' onmouseout="rowUnhovered(\'' . $rowID . '\');"' . 
+                  ' onmouseup="rowClicked(\'' . $rowID . '\', null);if (YAHOO.snapps.datagrid.rowSelected) { return YAHOO.snapps.datagrid.rowSelected.fire(' . $this->jsObject . ', this); }; return true;">';
+$trContent .= "\n\t" . 
+    '<td nowrap>' . (array_key_exists('admin', $row) ? $row['admin'][0] : '&nbsp;')  . '</td>';
+
+foreach ($this->columns as $column) {
+    if ($column->getDisplay()) {
+        if (array_key_exists($column->getId(), $row)) {
+            $cf = $column->getCfData();    
+            $tdID = $row[$column->getId()][1] ? $row[$column->getId()][1] : false;    
+            $tdClass = '';
+            $tdClass .= array_key_exists('class_name', $cf) ? $cf['class_name'] : '';
+            $tdClass .= $row[$column->getId()][2] ? $row[$column->getId()][2] : ''; 
+        
+            
+            $tdClass .= ($this->getSortBy() == $column->getId()) ? ' sorted-column-' . strtoupper($this->getSortOrder()) : '';
+            
+            $extraHTML = '';
+            $extraHTML .= array_key_exists('extra_html', $cf) ? $cf['extra_html'] : '';
+            $extraHTML .= $row[$column->getId()][3] ? $row[$column->getId()][3] : ''; 
+            
+            
+            if (sizeof($row[$column->getId()]) >= 5) {
+                if ($row[$column->getId()][4]) {
+                    $tooltipContents[$column->getTitle()] = $row[$column->getId()][0];
+                }
+            }
+        
+            $text = $row[$column->getId()][0];
+            if ($cf['truncate_length'] > 0 && strlen($text) > $cf['truncate_length']) {
+                $text = truncate_text($text, $cf['truncate_length'], $cf['truncate_text']);
+            }
+            
+            $trContent .= "\n\t" . 
+                '<td ' .  
+                ($row[$column->getId()][1] ? ' id="' . $row[$column->getId()][1] . '"' : '') . 
+                ($tdClass != '' ? ' class="' . $tdClass . '"' : '') .
+                ($extraHTML != '' ? ' ' . $extraHTML : '') .
+                //'><div style="overflow:hidden; height:12px; width:' . $column->getWidth() . 'px;">' . $row[$column->getId()][0]  . '</div></td>';
+                '>' . $text  . '</td>';
+        } else {
+            $trContent .= "\n" . '<td>&nbsp;</td>';
+        }
+    }
+}
+
+$trContent .= "\n\t" .
+    '<td>' . (array_key_exists('blank', $row) ? $row['blank'][0] : '&nbsp;') . '</td>';
+
+
+$trContent .= "\n" . '</tr>';
+
+echo $trContent;
+
+
+
+
+if (sizeof($tooltipContents)) {
+    $rowToolTips["$rowID"] = $tooltipContents;
+}
+
+$rowCount++;
+?>
+<?php endforeach; ?>
+
+<?php
+if (sizeof($rowToolTips)) {
+    $ttJs = '';
+    foreach ($rowToolTips as $rID => $tts) {
+        $ttID = XIDX::next();
+        
+        $text = '<table width="400px" cellspacing="0" cellpadding="2" border="0">';
+        foreach ($tts as $key => $val) {
+            $text .= '<tr class="form-row"><td class="FORMcell-left">' . $key . '</td>';
+            $text .= '<td class="FORMcell-right">' . $val . '</td></tr>';
+        }
+        $text .= '</table>';
+        $text = escape_javascript($text);
+        
+        $ttJs .= '
+        YAHOO.example.container.' . $ttID . ' = new YAHOO.widget.Tooltip("' . $ttID. '", 
+                            { context:"' . $rID . '", 
+                              text:"' . $text . '" });
+        ';
+    
+    }    
+    //echo javascript_tag($ttJs);
+}
+
+
+
+?>
+
+
+<?php endif; ?>
+
+
+

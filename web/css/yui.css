@@ -1,0 +1,30 @@
+
+/* ############################# YUI TAB */
+
+.yui-skin-sam .yui-navset .yui-content {
+    background:#fff;
+}
+
+.yui-skin-sam .yui-navset .yui-content, .yui-skin-sam .yui-navset .yui-navset-top .yui-content
+{
+   margin:0;
+   padding:0;   
+}
+
+
+.yui-button * {
+	font-family:verdana, arial, helvetica;
+    font-size:8pt;
+    
+    color:#003;
+    padding:2px 2px 4px 2px;
+}
+
+
+.yui-resize .yui-resize-handle-br { 
+    right:0; 
+    bottom:0; 
+    height: 8px; 
+    width: 8px; 
+    position:absolute;  
+} 

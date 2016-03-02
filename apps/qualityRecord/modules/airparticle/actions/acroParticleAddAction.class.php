@@ -1,0 +1,98 @@
+<?php
+
+/**
+ * maintenance actions.
+ *
+ * @package    snapps
+ * @subpackage maintenance
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 2692 2006-11-15 21:03:55Z fabien $
+ */
+class acroParticleAddAction extends SnappsAction
+{
+	var $preCount = 0;
+
+	public function preExecute()
+	{
+		if (!$this->preCount)
+		{
+			sfConfig::set('app_page_heading', sfConfig::get('app_page_heading') . ' &raquo; ');
+			$this->preCount++;
+		}
+	
+		$id = $this->_G('id');
+		$this->header = AirParticleCountAcroGPeer::retrieveByPK($id);
+		$detail = false;
+		if (!$this->header):
+			$this->header = new AirParticleCountAcroG();
+			$this->header->setDateCreated(DateUtils::DUNow());
+			$this->header->setDateModified(DateUtils::DUNow());
+		endif;
+		if ($this->getRequest()->getMethod() != sfRequest::POST )
+		{
+			$this->_S('diff_pressure', 0);
+			$this->_S('date_record', Date('Y-m-d'));
+		}
+	}
+
+	public function execute()
+	{	
+		if ($this->getRequest()->getMethod() == sfRequest::POST )
+		{
+			$this->header->setHumidity($this->_G('humidity'));
+			$this->header->setTemperature($this->_G('temperature'));
+			$this->header->setDiffPressure($this->_G('diff_pressure'));
+			$this->header->setDateRecord($this->_G('date_record'));
+			$this->header->setFrequency($this->_G('frequency'));
+			$this->header->setTesterId($this->_U());
+			$this->header->setRemark($this->_G('remark'));
+			$this->header->save();
+			foreach($_POST as $k => $v):
+				if (strpos($k, '_air_flow') > 0):
+					$gridID = str_replace('_air_flow','',  $k);
+					$detail = AirParticleCountAcroGCellPeer::GetDataByHeaderIDGridID($this->header->getId(), $gridID);
+			  		if (! $detail):
+			  			$detail = new AirParticleCountAcroGCell();
+			  		endif;
+			  		//$detail->setParticleCount($this->_G('particle'));
+			  		$detail->setAirFlow($this->_G($k) == "" ? null : $this->_G($k));
+			  		$detail->setRecordId($this->header->getId());
+			  		$detail->setGridLabel($gridID);
+			  		$detail->save();
+				endif; 
+				if (strpos($k, '_particle') > 0):
+					$gridID = str_replace('_particle','',  $k);
+					$detail = AirParticleCountAcroGCellPeer::GetDataByHeaderIDGridID($this->header->getId(), $gridID);
+			  		if (! $detail):
+			  			$detail = new AirParticleCountAcroGCell();
+			  		endif;
+			  		$detail->setParticleCount($this->_G($k) == "" ? null : $this->_G($k));
+			  		//$detail->setAirFlow($v);
+			  		$detail->setRecordId($this->header->getId());
+			  		$detail->setGridLabel($gridID);
+			  		$detail->save();
+				endif;
+			endforeach;
+			$this->_SUF('Record has been saved.');
+			$this->redirect('airparticle/acroParticleEdit?id='. $this->header->getId() );
+		}
+	}
+
+	public function validateUploader()
+	{
+		
+		$this->preExecute();
+		if ($this->getRequest()->getMethod() != sfRequest::POST)
+		{
+			return true;
+		}
+		$localError = 0;
+		return ($localError == 0);
+	}
+
+	public function handleErrorUploader()
+	{
+		return sfView::SUCCESS;
+	}
+
+}

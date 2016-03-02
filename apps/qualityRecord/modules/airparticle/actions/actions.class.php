@@ -1,0 +1,214 @@
+<?php
+
+/**
+ * airparticle actions.
+ *
+ * @package    qualityRecords
+ * @subpackage airparticle
+ * @author     Your name here
+ * @version    SVN: $Id: actions.class.php 2692 2006-11-15 21:03:55Z fabien $
+ */
+class airparticleActions extends SnappsActions
+{
+  /**
+   * Executes index action
+   *
+   */
+  public function executeIndex()
+  {
+    //$this->forward('default', 'module');
+  }
+  
+  public function executeAcroSearch()
+  {
+    $c = new Criteria();
+    $c->addDescendingOrderByColumn(AirParticleCountAcroGPeer::DATE_CREATED);
+    $this->pager = AirParticleCountAcroGPeer::doSelect($c);
+  }
+  
+  public function executeAcroParticleEdit()
+  {
+  	$id = $this->_G('id');
+  	$header = AirParticleCountAcroGPeer::retrieveByPK($id);
+	$detail = false;
+	if ($header):
+		$detail = AirParticleCountAcroGCellPeer::GetDataByHeaderId($header->getId());
+		$this->_S('date_record', $header->getDateRecord());
+		$this->_S('humidity', $header->getHumidity());
+		$this->_S('temperature', $header->getTemperature());
+		$this->_S('diff_pressure', $header->getDiffPressure());
+		$this->_S('frequency', $header->getFrequency());
+		$this->_S('remark', $header->getRemark());
+		if ($detail):
+			foreach($detail as $det):
+				//echo str_replace('-', '_', $det->getGridLabel()) . '_particle' .'<br>';
+				$this->_S(str_replace('-', '_', $det->getGridLabel()) . '_particle', $det->getParticleCount());
+				$this->_S(str_replace('-', '_', $det->getGridLabel()) . '_air_flow', $det->getAirFlow());
+			endforeach;
+		endif;
+	endif;
+	$this->setTemplate('acroParticleAdd');
+  }
+  
+  
+  public function executeAcroParticleDelete()
+  {
+  	$id = $this->_G('id');
+  	$header = AirParticleCountAcroGPeer::retrieveByPK($id);
+	if ($header):
+		$desc = $header->getDateRecord();
+		$header->delete();
+		$this->_SUF($desc. ' Record has been deleted');
+	endif;
+	$this->redirect('airparticle/acroSearch');
+  }
+  
+  public function executeAcroParticleSave()
+  {
+    $id = $this->_G('id');
+    $spot = $this->_G('spot');
+  	$header = AirParticleCountAcroGPeer::retrieveByPK($id);
+  	if ($spot):
+  		$header->setDateModified(DateUtils::DUNow());
+  		$gridID = str_replace('_', '-', $spot);
+  		$detail = AirParticleCountAcroGCellPeer::GetDataByHeaderIDGridID($header->getId(), $gridID);
+  		if (! $detail):
+  			$detail = new AirParticleCountAcroGCell();
+  		endif;
+  		$detail->setParticleCount($this->_G('particle'));
+  		$detail->setAirFlow($this->_G('airflow'));
+  		$detail->setRecordId($this->_G('id'));
+  		$detail->setGridLabel($gridID);
+  		$detail->save();
+  	endif;
+  	$this->redirect('airparticle/acroParticleEdit?id='. $id );
+  }
+  
+  public function executeMicroncleanSearch()
+  {
+    $c = new Criteria();
+    $c->addDescendingOrderByColumn(AirParticleCountMicroncleanGPeer::DATE_CREATED);
+    $this->pager = AirParticleCountMicroncleanGPeer::doSelect($c);
+  }
+  
+  public function executeMicroncleanParticleEdit()
+  {
+  	$id = $this->_G('id');
+  	$header = AirParticleCountMicroncleanGPeer::retrieveByPK($id);
+	$detail = false;
+	if ($header):
+		$detail = AirParticleCountMicroncleanGCellPeer::GetDataByHeaderId($header->getId());
+		$this->_S('date_record', $header->getDateRecord());
+		$this->_S('humidity', $header->getHumidity());
+		$this->_S('temperature', $header->getTemperature());
+		$this->_S('diff_pressure', $header->getDiffPressure());
+		$this->_S('frequency', $header->getFrequency());
+		$this->_S('remark', $header->getRemark());
+		if ($detail):
+			foreach($detail as $det):
+				//echo str_replace('-', '_', $det->getGridLabel()) . '_particle' .'<br>';
+				$this->_S(str_replace('-', '_', $det->getGridLabel()) . '_particle', $det->getParticleCount());
+				$this->_S(str_replace('-', '_', $det->getGridLabel()) . '_air_flow', $det->getAirFlow());
+			endforeach;
+		endif;
+	endif;
+	$this->setTemplate('microncleanParticleAdd');
+  }
+  
+  public function executeMicroncleanParticleDelete()
+  {
+  	$id = $this->_G('id');
+  	$header = AirParticleCountMicroncleanGPeer::retrieveByPK($id);
+	if ($header):
+		$desc = $header->getDateRecord();
+		$header->delete();
+		$this->_SUF($desc. ' Record has been deleted');
+	endif;
+	$this->redirect('airparticle/microncleanSearch');
+  }
+  
+  public function executeMicroncleanParticleSave()
+  {
+    $id = $this->_G('id');
+    $spot = $this->_G('spot');
+  	$header = AirParticleCountMicroncleanGPeer::retrieveByPK($id);
+  	if ($spot):
+  		$header->setDateModified(DateUtils::DUNow());
+  		$gridID = str_replace('_', '-', $spot);
+  		$detail = AirParticleCountMicroncleanGCellPeer::GetDataByHeaderIDGridID($header->getId(), $gridID);
+  		if (! $detail):
+  			$detail = new AirParticleCountMicroncleanGCell();
+  		endif;
+  		$detail->setParticleCount($this->_G('particle'));
+  		$detail->setAirFlow($this->_G('airflow'));
+  		$detail->setRecordId($this->_G('id'));
+  		$detail->setGridLabel($gridID);
+  		$detail->save();
+  	endif;
+  	//$this->redirect('airparticle/microncleanParticleEdit?id='. $id );
+  }
+  
+  public function executeNanocleanSearch()
+  {
+    $c = new Criteria();
+    $c->addDescendingOrderByColumn(AirParticleCountNanoGPeer::DATE_CREATED);
+    $this->pager = AirParticleCountNanoGPeer::doSelect($c);
+  }
+  
+  public function executeNanocleanParticleEdit()
+  {
+  	$id = $this->_G('id');
+  	$header = AirParticleCountNanoGPeer::retrieveByPK($id);
+	$detail = false;
+	if ($header):
+		$detail = AirParticleCountNanoGCellPeer::GetDataByHeaderId($header->getId());
+		$this->_S('date_record', $header->getDateRecord());
+		$this->_S('humidity', $header->getHumidity());
+		$this->_S('temperature', $header->getTemperature());
+		$this->_S('diff_pressure', $header->getDiffPressure());
+		$this->_S('frequency', $header->getFrequency());
+		$this->_S('remark', $header->getRemark());
+		if ($detail):
+			foreach($detail as $det):
+				//echo str_replace('-', '_', $det->getGridLabel()) . '_particle' .'<br>';
+				$this->_S(str_replace('-', '_', $det->getGridLabel()) . '_particle', $det->getParticleCount());
+				$this->_S(str_replace('-', '_', $det->getGridLabel()) . '_air_flow', $det->getAirFlow());
+			endforeach;
+		endif;
+	endif;
+	$this->setTemplate('nanocleanParticleAdd');
+  }
+  
+  public function executeNanocleanParticleDelete()
+  {
+  	$id = $this->_G('id');
+  	$header = AirParticleCountNanoGPeer::retrieveByPK($id);
+	if ($header):
+		$desc = $header->getDateRecord();
+		$header->delete();
+		$this->_SUF($desc. ' Record has been deleted');
+	endif;
+	$this->redirect('airparticle/nanocleanSearch');
+  }
+  
+  public function executeNanocleanParticleSave()
+  {
+    $id = $this->_G('id');
+    $spot = $this->_G('spot');
+  	$header = AirParticleCountNanoGPeer::retrieveByPK($id);
+  	if ($spot):
+  		$header->setDateModified(DateUtils::DUNow());
+  		$gridID = str_replace('_', '-', $spot);
+  		$detail = AirParticleCountNanoGCellPeer::GetDataByHeaderIDGridID($header->getId(), $gridID);
+  		if (! $detail):
+  			$detail = new AirParticleCountNanoGCell();
+  		endif;
+  		$detail->setParticleCount($this->_G('particle'));
+  		$detail->setAirFlow($this->_G('airflow'));
+  		$detail->setRecordId($this->_G('id'));
+  		$detail->setGridLabel($gridID);
+  		$detail->save();
+  	endif;
+  	//$this->redirect('airparticle/microncleanParticleEdit?id='. $id );
+  }
+}

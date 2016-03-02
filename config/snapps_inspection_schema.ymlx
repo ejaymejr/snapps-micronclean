@@ -1,0 +1,736 @@
+---
+inspection: 
+  _attributes: 
+    package: lib.model.inspection
+  dosing_calibration: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_no: 
+      type: VARCHAR
+      size: 20
+    pump_model: 
+      type: VARCHAR
+      size: 45
+    eq_flow_rate: 
+      type: VARCHAR
+      size: 45
+    density: 
+      type: FLOAT
+      size: 9
+      scale: 2
+    frequency: 
+      type: VARCHAR
+      size: 45
+    flow_rate: 
+      type: INTEGER
+    reading_time: 
+      type: INTEGER
+    reading: 
+      type: INTEGER
+    checked_by: 
+      type: VARCHAR
+      size: 45
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  machine_parameter: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    trans_time: 
+      type: TIME
+    machine_no: 
+      type: VARCHAR
+      size: 20
+    di_water: 
+      type: INTEGER
+    cda1: 
+      type: INTEGER
+    cda2: 
+      type: INTEGER
+    cda_diff: 
+      type: INTEGER
+    sumptank: 
+      type: INTEGER
+    ultra_tank: 
+      type: INTEGER
+    water_temp: 
+      type: INTEGER
+    rinse_temp: 
+      type: INTEGER
+    checked_by: 
+      type: VARCHAR
+      size: 45
+    verified_by: 
+      type: VARCHAR
+      size: 45
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  pms_1232ab: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_no: 
+      type: VARCHAR
+      size: 20
+    wash_flow_rate: 
+      type: FLOAT
+    rinse_flow_rate: 
+      type: FLOAT
+    cham_1: 
+      type: INTEGER
+      default: 0
+    cham_2: 
+      type: INTEGER
+      default: 0
+    panel_inspect: 
+      type: INTEGER
+      default: 0
+    exit_inspect: 
+      type: INTEGER
+      default: 0
+    switch_control: 
+      type: INTEGER
+      default: 0
+    initial: 
+      type: VARCHAR
+      size: 45
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  pms_1232ab_monthly: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_no: 
+      type: VARCHAR
+      size: 20
+    drain_system: 
+      type: INTEGER
+      default: 0
+    electrical_system: 
+      type: INTEGER
+      default: 0
+    hoses_connectors: 
+      type: INTEGER
+      default: 0
+    initial: 
+      type: VARCHAR
+      size: 45
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: INTEGER
+    date_modified: 
+      type: TIMESTAMP
+  pms_1232ab_quarterly: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_no: 
+      type: VARCHAR
+      size: 20      
+    quarter: 
+      type: VARCHAR
+      size: 20
+    date_completed: 
+      type: DATE
+    due_date: 
+      type: DATE
+    cda_filter: 
+      type: INTEGER
+      default: 0
+    di_water_filter: 
+      type: INTEGER
+      default: 0
+    initial: 
+      type: VARCHAR
+      size: 45
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  pms_1232ab_weekly: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_no: 
+      type: VARCHAR
+      size: 20
+    sensor_diagnostic: 
+      type: INTEGER
+      default: 0
+    chamber_temp: 
+      type: INTEGER
+      default: 0
+    actuator_diagnostic: 
+      type: INTEGER
+      default: 0
+    basket_inspect: 
+      type: INTEGER
+      default: 0
+    chamber_clean: 
+      type: INTEGER
+      default: 0
+    nozzle_inspect: 
+      type: INTEGER
+      default: 0
+    plumbing_inspect: 
+      type: INTEGER
+      default: 0
+    drive_roller: 
+      type: INTEGER
+      default: 0
+    drive_belt: 
+      type: INTEGER
+      default: 0
+    chain_tention: 
+      type: INTEGER
+      default: 0
+    initial: 
+      type: VARCHAR
+      size: 45
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  pms_6252: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_no: 
+      type: VARCHAR
+      size: 20
+    cda_di_water: 
+      type: INTEGER
+      default: 0
+    pre_inspect: 
+      type: INTEGER
+      default: 0
+    fluid_leak: 
+      type: INTEGER
+      default: 0
+    panel_inspect: 
+      type: INTEGER
+      default: 0
+    exit_inspect: 
+      type: INTEGER
+      default: 0
+    switch_control: 
+      type: INTEGER
+      default: 0
+    initial: 
+      type: VARCHAR
+      size: 45
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  pms_6252_monthly: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_no: 
+      type: VARCHAR
+      size: 20
+    drain_system: 
+      type: INTEGER
+      default: 0
+    electrical_system: 
+      type: INTEGER
+      default: 0
+    hoses_connectors: 
+      type: INTEGER
+      default: 0
+    initial: 
+      type: VARCHAR
+      size: 45
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: INTEGER
+    date_modified: 
+      type: TIMESTAMP
+  pms_6252_quarterly: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    quarter: 
+      type: VARCHAR
+      size: 20
+    date_completed: 
+      type: DATE
+    due_date: 
+      type: DATE
+    cda_filter: 
+      type: INTEGER
+      default: 0
+    di_water_filter: 
+      type: INTEGER
+      default: 0
+    initial: 
+      type: VARCHAR
+      size: 45
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  pms_6252_weekly: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_no: 
+      type: VARCHAR
+      size: 20
+    sensor_diagnostic: 
+      type: INTEGER
+      default: 0
+    actuator_diagnostic: 
+      type: INTEGER
+      default: 0
+    basket_inspect: 
+      type: INTEGER
+      default: 0
+    chamber_clean: 
+      type: INTEGER
+      default: 0
+    nozzle_inspect: 
+      type: INTEGER
+      default: 0
+    plumbing_inspect: 
+      type: INTEGER
+      default: 0
+    drive_roller: 
+      type: INTEGER
+      default: 0
+    drive_belt: 
+      type: INTEGER
+      default: 0
+    chain_tention: 
+      type: INTEGER
+      default: 0
+    initial: 
+      type: VARCHAR
+      size: 45
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  inspection_field_list: 
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    field_name:
+      type: VARCHAR
+      size: 30
+      required: true
+    field_type: 
+      type: VARCHAR
+      size: 30
+      required: true
+    remark:
+      type: VARCHAR
+      size: 30
+      required: true
+    status:
+      type: CHAR
+      size: 1
+      required: true
+    seq: 
+      type: INTEGER
+      required: true
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+
+  inspection_record: 
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    inspection_type: 
+      type: VARCHAR
+      size: 15
+      required: true
+    inspection_date:
+      type: DATE
+      required: true
+    checked_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+  inspection_record_item: 
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    inspection_record_id: 
+      type: INTEGER
+      required: true
+    inspection_field_list_id: 
+      type: INTEGER
+      required: true
+    field_name:
+      type: VARCHAR
+      size: 30
+      required: true
+    field_value: 
+      type: VARCHAR
+      size: 30
+      required: true
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP          
+  washer_pm: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_type: 
+      type: VARCHAR
+      size: 20
+    clean_machine: 
+      type: CHAR
+      size: 3
+    purged_water: 
+      type: CHAR
+      size: 3
+    clean_door: 
+      type: CHAR
+      size: 3
+      default: 0
+    check_belt: 
+      type: CHAR
+      size: 3
+      default: 0
+    check_hose: 
+      type: CHAR
+      size: 3
+      default: 0
+    lubricate_bearings: 
+      type: CHAR
+      size: 3
+      default: 0
+    check_sensory: 
+      type: CHAR
+      size: 3
+      default: 0
+    temp_control: 
+      type: CHAR
+      size: 3
+    temp_verify: 
+      type: CHAR
+      size: 3
+    performed_by: 
+      type: VARCHAR
+      size: 45
+    verified_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default:
+    verify_date: 
+      type: TIMESTAMP 
+    check_brake: 
+      type: CHAR
+      size: 3
+      required: true
+      default: 
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  dryer_pm: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_type: 
+      type: VARCHAR
+      size: 20
+    clean_machine: 
+      type: CHAR
+      size: 3
+    cage_shaft: 
+      type: CHAR
+      size: 3
+    fan_bearing: 
+      type: CHAR
+      size: 3
+      default: 0
+    fan_shaft: 
+      type: CHAR
+      size: 3
+      default: 0
+    fan_motor: 
+      type: CHAR
+      size: 3
+      default: 0
+    cage_motor: 
+      type: CHAR
+      size: 3
+      default: 0
+    temp_control: 
+      type: CHAR
+      size: 3
+    temp_verify: 
+      type: CHAR
+      size: 3
+    performed_by: 
+      type: VARCHAR
+      size: 45
+    verified_by: 
+      type: VARCHAR
+      size: 45
+      required: true
+      default:
+    verify_date: 
+      type: TIMESTAMP 
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  heat_sealer_pm: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: DATE
+    machine_type: 
+      type: VARCHAR
+      size: 20
+    air_regulator: 
+      type: CHAR
+      size: 3
+    heat: 
+      type: CHAR
+      size: 3
+    thermopatch: 
+      type: CHAR
+      size: 3
+      default: 0
+    dwell: 
+      type: CHAR
+      size: 3
+      default: 0
+    piston: 
+      type: CHAR
+      size: 3
+      default: 0
+    performed_by: 
+      type: VARCHAR
+      size: 45
+    verified_by: 
+      type: VARCHAR
+      size: 45
+    verify_date: 
+      type: TIMESTAMP       
+    remark: 
+      type: LONGVARCHAR
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP

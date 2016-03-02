@@ -1,0 +1,307 @@
+<?php
+// $Source$
+// $Id$
+
+class HTMLForm
+{
+    
+    public static function Error($field)
+    {
+        sfLoader::loadHelpers(array('Validation'));
+        $tmp = form_error($field);
+        $tmp = str_replace('&darr;', '', $tmp);
+        $tmp = str_replace('&nbsp;', '', $tmp);
+        $tmp = trim($tmp);
+        return $tmp;
+    }
+    // wrapper
+    
+    
+    public static function DrawButton($id, $name, $value)
+    {
+        return '<span id="' . $id . '" class="yui-button yui-push-button"><strong class="first-child"><button type="button" name="' . $name . '">' . $value . '</button></strong></span>';
+        
+    }
+    public static function DrawInput($field)
+    {
+        $type = $name = $value = $params = '';
+        $options = array();
+
+        $totalField = sizeof($field);
+        if($totalField > 0) $type = $field[0];
+        if($totalField > 1) $name = $field[1];
+        if($totalField > 2) $value = $field[2];        
+        if($totalField > 3) $params = $field[3];
+        if($totalField > 4) $options = $field[4];
+
+
+        $tmp = '';
+        if($type == 'text') {
+            $tmp .= HTMLForm::DrawTextField($name, $value, $params);
+
+        } else if($type == 'hidden') {
+            $tmp .= HTMLForm::DrawHiddenField($name, $value, $params);
+
+        } else if($type == 'dropdown') {
+            $tmp .= HTMLForm::DrawDropDown($name, $value, $params, $options);
+        }
+
+        return $tmp;
+    }
+
+    
+    public static function DrawTextField($name, $value, $params)
+    {
+        $value = HTMLForm::FormatFormValue($value);
+        $tmp = '
+        <input type="text" name="' . $name . '" value="' . $value . '"
+            ' . $params . ' />
+        ';
+        return $tmp;
+    }
+
+
+    public static function DrawTextField2($name, $value, $id, $params)
+    {
+        $params .= '        
+                id="' . $id . '"
+                onFocus="textfieldFocus(\'' . $id . '\');"
+                onBlur="textfieldBlur(\'' . $id . '\');"
+        ';
+        return HTMLForm::DrawTextField($name, $value, $params);
+    }
+
+    public static function DrawCheckBox($name, $value, $currentValue, $options = '')
+    {
+        $value = HTMLForm::FormatFormValue($value);
+        $checked = strtolower($value) == strtolower($currentValue) ? ' checked' : false;
+        $tmp = '
+        <input type="checkbox" name="' . $name . '" 
+            value="' . $value . '"' . $checked . $options . ' />
+        ';
+        return $tmp;
+    }
+    
+    public static function DrawRadio($name, $value, $currentValue, $params)
+    {
+        $value = HTMLForm::FormatFormValue($value);
+        $checked = strtolower($value) == strtolower($currentValue) ? ' checked' : false;
+        $tmp = '
+        <input type="radio" name="' . $name . '" 
+            value="' . $value . '"' . $checked . ' ' . $params . '/>
+        ';
+        return $tmp;
+    }
+
+    public static function DrawTextArea($name, $value, $params)
+    {
+        $value = HTMLForm::FormatFormValue($value);
+        $tmp = '
+        <textarea name="' . $name . '"
+            ' . $params . '>' . $value . '</textarea>
+        ';
+        return $tmp;
+    }
+
+    public static function DrawHiddenField($name, $value, $params)
+    {
+        $value = HTMLForm::FormatFormValue($value);
+        $tmp = '
+        <input type="hidden" name="' . $name . '" value="' . $value . '"
+            ' . $params . ' />
+        ';
+        return $tmp;
+    }
+
+    public static function DrawDropDown($name, $value, $params, $options)
+    {
+        $tmp = '
+        <select name="' . $name . '" ' . $params . '>
+        ';
+        if(sizeof($options)) {
+            foreach($options as $option) {
+                $selected = (strtolower($option[0]) == strtolower($value)) ? ' selected' : '';
+
+                $optionValue = HTMLForm::FormatFormValue($option[0]);
+                $tmp .= '
+                <option value="' . $optionValue . '"' . $selected . '>' . $option[1] . '</option>
+                ';
+
+
+            }
+        }
+        $tmp .= '
+        </select>
+        ';
+        return $tmp;
+    }
+
+    public static function DrawMultipleSelect($name, $selectedValues, $params, $options)
+    {
+        $tmp = '
+        <select name="' . $name . '" multiple="multiple" ' . $params . '>
+        ';
+        if(sizeof($options)) {
+            foreach($options as $option) {
+                $selected = (in_array($option[0], $selectedValues)) ? ' selected' : '';
+
+                $optionValue = HTMLForm::FormatFormValue($option[0]);
+                $tmp .= '
+                <option value="' . $optionValue . '"' . $selected . '>' . $option[1] . '</option>
+                ';
+
+
+            }
+        }
+        $tmp .= '
+        </select>
+        ';
+        return $tmp;
+
+    }
+
+    public static function DrawDateInput($FORMname, $FORMvalue, $ID, $triggerID, $params = '')
+    {
+        $params .= '        
+                id="' . $ID . '"
+                onFocus="textfieldFocus(\'' . $ID . '\');"
+                onBlur="textfieldBlur(\'' . $ID . '\');"
+                size="11"
+        ';
+        $tmp = HTMLForm::DrawTextField($FORMname, $FORMvalue, $params);
+        $tmp .= image_tag('cal2.gif', ' width="16" height="16" border="0" id="' . $triggerID . '" style="cursor:pointer;"') . 
+            '<script type="text/javascript">
+                Calendar.setup({
+                    inputField     :    "' . $ID . '",     // id of the input field
+                    ifFormat       :    "%Y-%m-%d",      // format of the input field
+                    button         :    "' . $triggerID . '",  // trigger for the calendar (button ID)
+                    align          :    "BR",
+                    singleClick    :    true,  
+                    weekNumbers    :    false,
+                        showOthers : true
+                });
+            </script>
+        ';
+        return $tmp;
+    }
+
+    public static function FormatFormValue($text) {
+        
+        $text = stripslashes($text);
+        $text = htmlentities($text);
+
+        return $text;
+    }
+
+    public static function FormatJSValue($text) {
+        
+        $subst = array("'" => "\\'",
+                        '"' => '&quot;',
+                        "\r\n" => '\\n',
+                        "\n" => '\\n');
+        return (strtr($text, $subst));
+    }
+
+
+    public static function IsValueInOptions($value, $options) {
+        
+        $tmp = false;
+        foreach ($options as $option) {
+            if (strtolower($option[0]) == strtolower($value)) {
+                $tmp = true;
+                break;
+            }
+        }
+    
+        return $tmp;
+    }
+    public static function FindOptionName($value, $options) {
+        
+        $tmp = false;
+        foreach ($options as $option) {
+             if (strtolower($option[0]) == strtolower($value)) {
+                $tmp = $option[1];
+                break;
+            }
+        }
+    
+        return $tmp;
+    }
+    public static function FindOptionName2($value, $options) {
+        
+        $tmp = false;
+        foreach ($options as $key => $option) {
+             if (strtolower($key) == strtolower($value)) {
+                $tmp = $option;
+                break;
+            }
+        }
+    
+        return $tmp;
+    }
+    public static function FindOptionValue($name, $options) {
+        
+        $tmp = false;
+        $Lname = strtolower($name);
+        foreach ($options as $option) {
+            if (strtolower($option[1]) == $Lname) {
+                $tmp = $option[0];
+                break;
+            }
+        }
+    
+        return $tmp;
+    }
+
+
+    public static function RemoveRequestVar($vars, $var)
+    {
+        $array = array();
+        foreach ($vars as $key => $val) {
+            if ($key != $var) $array[$key] = $val;
+        }
+        return $array;
+    }
+    
+
+    public static function SelectDeselectLinks($id)
+    {
+        return image_tag('icons/smallbox-white.gif',
+            array('onclick' => "toggleAllSelectOptions('$id'); return false;",
+                    'width' => '10', 'height' => '10', 'border' => '0')
+                    );
+    }
+    public static function SelectDeselectLinksCheckboxes($formName, $prefix)
+    {
+        return '
+        <img
+            onClick="toggleAllCheckboxOptions(\'' . $formName . '\', \'' . $prefix . '\'); return false;"
+            src="' . PATH_TEMPLATE_ADMIN . 'images/smallbox-white.gif" border="0" width="10" height="10" />
+        ';
+    }
+    
+    
+    public static function Stars($n)
+    {        
+        $s = 16;
+        $s2 = $n * $s;
+        
+        $html = '';
+        $html .= '<div class="snStars" style="width:' . ($s * 5) . 'px; height:' . $s . 'px;">'; 
+        $html .= '<div class="snStars2" style="float:left;width:' . ($s2) . 'px; height:' . $s . 'px;">';        
+        $html .= '</div>';       
+        $html .= '</div>';
+        return $html;
+    }
+    
+    public static function ModifyQuery($query, $list)
+    {
+        parse_str($query, $tmp);
+        foreach ($list as $key => $val) {
+            $tmp["$key"] = urlencode($val);
+        }
+        return http_build_query($tmp);        
+    }
+}
+
+?>

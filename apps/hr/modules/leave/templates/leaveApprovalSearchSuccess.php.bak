@@ -1,0 +1,78 @@
+<?php use_helper('Form', 'Javascript', 'PagerNavigation'); ?>
+
+<form name="FORMadd" id="IDFORMadd" action="<?php echo url_for('leave/leaveApprovalSearch');?>" method="post">
+ <table id="" class=" bordered"  >
+      <tr class="bg-color-orangeDark">
+        <td colspan="2" class="alignCenter fg-color-white " nowrap><h2 style="color: #fff;">EMPLOYEE LEAVE APPROVAL</h2></td>
+    </tr>
+  <tr>
+    <td width="200px" class="bg-color-blueLight alignRight">Show this month Only</td>
+    <td >
+    <?php
+      if (! $sf_params->get('cMonth')){
+          $sf_params->set('cMonth', $sf_params->get('cDate'));
+          $sf_params->set('cYear', DateUtils::DUFormat('Y', $sf_params->get('cDate')) );
+          $sf_params->set('cMon', $sf_params->get('cDate') );
+      }
+      $optCal = array_merge(sfConfig::get('monthlyCalendar'), array('ALL'=>'ALL'));
+	  $xyear = HrFiscalYearPeer::GetFiscalYearListYK();
+	  echo select_tag('cMonth', 
+             options_for_select($optCal, 
+             $sf_params->get('cMonth') ) );    
+      echo '&nbsp;&nbsp;';
+	  echo select_tag('cYear', 
+             options_for_select($xyear, 
+             $sf_params->get('cYear') ) );
+	  echo '&nbsp;&nbsp;';  
+	  echo input_tag('cMon', $sf_params->get('cMon'), 'id=cMon type=hidden');  
+	  
+    ?>
+    <input type="submit" name="filter" value=" Apply Filters " class="submit-button">    
+    <br>
+    </td>
+</tr>
+<tr>
+    <td class="bg-color-blueLight alignRight">Filter By Company</td>
+    <td>
+    <?php 
+      $companyList = HrCompanyPeer::GetCompanyList();
+	  echo select_tag('hr_company_id', 
+             options_for_select($companyList, 
+             $sf_params->get('hr_company_id') ) );  
+    ?>
+    </td>
+ </tr>
+ <tr>
+    <td class="bg-color-blueLight alignRight">Approver</td>
+    <td>
+    <?php 
+      echo input_tag('approver', $sf_user->getUsername() , 'type=hidden');
+      echo $sf_params->get('approver');
+    ?>
+    </td>
+ </tr>
+</table>
+</form>
+<?php
+
+if ($sf_params->get('cMon')!= 'ALL'){
+    $nMonth = DateUtils::DUFormat('-m-d', $sf_params->get('cMon'));
+}else{
+    $nMonth = $sf_params->get('cYear').'-01-01';
+}
+    
+$cDate = ($sf_params->get('cMonth') == 'ALL')? 'ALL' : $sf_params->get('cYear'). $nMonth;
+$cDate = date('Y-m-d');
+$gridVars = array(
+    'searchTemplate' => 'approveleave_list_header_search',
+    'pagerTemplate' => 'approveleave_pager_list',
+    'baseURL' => $sf_request->getModuleAction().'?cDate=' . $sf_params->get('cMon') , 
+    'pager' => $pager,
+    'searchContainerID' => XIDX::next(),
+    'headers' => sfConfig::get('app_approveleave_grid_headers')
+);
+include_partial('global/datagrid/container', $gridVars);
+
+
+    
+

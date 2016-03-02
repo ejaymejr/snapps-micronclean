@@ -1,0 +1,20 @@
+fields:
+  date_time:
+    required:
+        msg: date required.
+  customer:
+    required:
+        msg: required.
+  garment_code:
+    required:
+        msg: required.
+  washer:
+    required:
+        msg: required.
+  dryer:
+    required:
+        msg: required.
+  bacteria_count:
+    required:
+        msg: required.
+        

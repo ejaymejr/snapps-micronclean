@@ -1,0 +1,94 @@
+sfGuardUser:
+  admin:
+    username:       admin
+    password:       admin
+    is_super_admin: true
+ 
+  opr1:
+    username:   opr1
+    password:   opr1
+    is_super_admin: false
+    
+  pch1:
+    username:   pch1
+    password:   pch1
+    is_super_admin: false
+
+sfGuardPermission:
+  admin:
+    name:           admin
+    description:    Administrator permission
+  
+  operator:
+    name:           operator
+    description:    General Operator    
+    
+  purchaser:
+    name:   purchaser
+    description:    purchasing staff
+  purchase_request:
+    name:   purchase_request
+    description: Add new purchase requests
+  purchase_approve:
+    name:   purchase_approve
+    description: Approve purchase requests
+  
+  operator_general:
+    name:   operator_general
+    description: General production operator
+    
+sfGuardGroup:
+  admin:
+    name:           admin
+    description:    Administrator group
+ 
+  operator:
+    name:       operator
+    description:    Operator Group
+ 
+  purchaser:
+    name:   purchaser
+    description: Purchaser Group
+    
+sfGuardGroupPermission:
+  admin:
+    group_id:       admin
+    permission_id:  admin
+  
+  purchaser:
+    group_id:   purchaser
+    permission_id:  purchaser
+ 
+  operator:
+    group_id: operator
+    permission_id: operator
+
+sfGuardUserGroup:
+  admin:
+    group_id:       admin
+    user_id:        admin
+
+  pch1:
+    group_id:   purchaser
+    user_id:    pch1
+    
+  opr1:
+    group_id:   operator
+    user_id:    opr1
+    
+sfGuardUserProfile:
+  admin:
+    user_id: admin
+    first_name: The
+    last_name: Administrator
+    birthday: 2007-12-17
+    
+  opr1:
+    user_id: opr1
+    first_name: Operating
+    last_name: Operator
+    
+  pch1:
+    user_id: pch1
+    first_name: I Will Be Called
+    last_name: Purchaser

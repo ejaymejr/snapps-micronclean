@@ -1,0 +1,16 @@
+<?php
+// $Source$
+// $Id$
+
+?>
+<tr class="dgts" style="display:<?php echo $sf_params->get('commit', false) !== false ? '\'\'' : 'none' ?>;" id="<?php echo $searchContainerID ?>">
+    <td><?php echo submit_tag('search', 'width="100%" height="100%"') ?></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><?php echo input_tag('name', $sf_params->get('name'), 'size="10"') ?></td>
+    <td><?php echo input_tag('leave_type', $sf_params->get('leave_type'), 'size="10"') ?></td>
+    <td><?php echo input_tag('reason_leave', $sf_params->get('reason_leave'), 'size="10"') ?></td>    
+    <td><?php echo input_tag('inclusive_datefrom', $sf_params->get('inclusive_datefrom'), 'size="10"') ?></td>    
+    <td><?php echo input_tag('inclusive_dateto', $sf_params->get('inclusive_dateto'), 'size="10"') ?></td>    
+    <td><?php echo submit_tag('search', 'width="100%" height="100%"') ?></td>    
+</tr> 

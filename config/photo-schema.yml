@@ -1,0 +1,479 @@
+---
+reject_photo: 
+  _attributes: 
+    package: lib.model.manage
+  email_history: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    file_detail_id: 
+      type: BIGINT
+      required: true
+      default: 0
+    email_address: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    email_date: 
+      type: TIMESTAMP
+    email_token: 
+      type: VARCHAR
+      size: 50
+    date_created: 
+      type: TIMESTAMP
+      required: true
+    created_by: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP
+      required: true
+    modified_by: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default:
+  photo_detail: 
+    _attributes: 
+      idMethod: native    
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    trans_date: 
+      type: TIMESTAMP
+    batch_id: 
+      type: VARCHAR
+      size: 50
+    customer_id: 
+      type: BIGINT
+    name: 
+      type: VARCHAR
+      size: 100
+    garment_code: 
+      type: VARCHAR
+      size: 100
+    color: 
+      type: VARCHAR
+      size: 100
+    garment: 
+      type: VARCHAR
+      size: 100
+    reason: 
+      type: VARCHAR
+      size: 50
+    size: 
+      type: BIGINT
+      size: 100
+    no_of_times_wash: 
+      type: BIGINT
+    department: 
+      type: VARCHAR
+      size: 50
+    shift: 
+      type: VARCHAR
+      size: 50
+    garment_action: 
+      type: VARCHAR
+      size: 30
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+    description: 
+      type: LONGVARCHAR
+    filelink: 
+      type: VARCHAR
+      size: 255
+    filename: 
+      type: VARCHAR
+      size: 100      
+    _uniques: 
+      id: 
+        - id
+  file_detail: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: INTEGER
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    batch_id: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    garment_code: 
+      type: VARCHAR
+      size: 40
+      required: true
+      default: 
+    file_name: 
+      type: VARCHAR
+      size: 255
+      required: true
+      default: 
+    path: 
+      type: VARCHAR
+      size: 255
+    file_name_original: 
+      type: VARCHAR
+      size: 255
+      required: true
+      default: 
+    mime_type: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    size: 
+      type: INTEGER
+      required: true
+      default: 0
+    description: 
+      type: LONGVARCHAR
+      required: true
+    date_created: 
+      type: TIMESTAMP
+      required: true
+    created_by: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP
+      required: true
+    modified_by: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+  garmentInformation: 
+    garment_code: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    type: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    size: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    color: 
+      type: VARCHAR
+      size: 80
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    no_of_times_wash: 
+      type: INTEGER
+      required: true
+      default: 0
+    number: 
+      type: VARCHAR
+      size: 15
+    hanger_no: 
+      type: LONGVARCHAR
+    inserted_date: 
+      type: TIMESTAMP
+      required: true
+    status: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    _indexes: 
+      index_garment_code: 
+        - garment_code
+      index_number: 
+        - number
+      index_customer: 
+        - customer
+  reject_color_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    color: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  reject_customer_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    customer_id: 
+      type: VARCHAR
+      size: 10
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  reject_reject_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    garment_type: 
+      type: VARCHAR
+      size: 20
+      required: true
+      default: 
+    reason: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    repairable: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  reject_size_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    size: 
+      type: VARCHAR
+      size: 10
+      required: true
+      default: 
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  reject_type_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    type: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  reject_department_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    department: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    building: 
+      type: CHAR
+      size: 2
+      required: true
+      default: 
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  reject_shift_attr: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    shift: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    customer: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    created_by: 
+      type: VARCHAR
+      size: 45
+    date_created: 
+      type: TIMESTAMP
+    modified_by: 
+      type: VARCHAR
+      size: 45
+    date_modified: 
+      type: TIMESTAMP
+  email_contact: 
+    _attributes: 
+      idMethod: native
+    id: 
+      type: BIGINT
+      required: true
+      autoIncrement: true
+      primaryKey: true
+    email_address: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    website: 
+      type: VARCHAR
+      size: 100
+      required: true
+      default: 
+    company: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    department: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    shift: 
+      type: VARCHAR
+      size: 50
+      required: true
+      default: 
+    date_created: 
+      type: TIMESTAMP
+      required: true
+    created_by: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    date_modified: 
+      type: TIMESTAMP
+      required: true
+    modified_by: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    designation: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default: 
+    mobile: 
+      type: VARCHAR
+      size: 30
+      required: true
+      default:

@@ -1,0 +1,16 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Micronclean Singapore
+    robots:       index, follow
+    description:  Micronclean Singapore
+    keywords:     micronclean, singapore
+    language:     en
+
+  stylesheets: [style]
+  javascripts: [script]
+    
+  has_layout:     on
+  layout:         layout

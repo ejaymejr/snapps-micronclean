@@ -1,0 +1,127 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#framework').click(function (){
+				window.location.href='welcome/framework';
+				//window.location.href='<?php echo sfConfig::get('http_intranet') . 'micronclean/reject' ?>';
+			});
+
+		$('#hr').click(function (){
+			window.location.href='<?php echo sfConfig::get('http_intranet') . 'micronclean/hr' ?>';
+		});
+		
+		$('#reject').click(function (){
+			window.location.href='<?php echo sfConfig::get('http_intranet') . 'micronclean/reject' ?>';
+		});
+		
+		$('#ticket').click(function (){
+			window.location.href='<?php echo sfConfig::get('http_intranet') . 'micronclean/ticket' ?>';
+		});
+
+		$('#survey').click(function (){
+			window.location.href='<?php echo sfConfig::get('http_intranet') . 'micronclean/survey' ?>';
+		});
+	});
+</script>
+<table class="" border='1'>
+	<tr>
+		<td colspan="2" class="alignCenter">
+			<h2>DASHBOARD MENU</h2>
+		</td>
+	</tr>
+
+	<tr>
+		<td  rowspan="10" width="200px" ></td>
+		<td >
+			<ul class="listview" id="reject">
+			<li class=" fg-color-yellow bg-color-greenDark" >
+				<div class="icon">
+					<?php echo image_tag('WIN8.png') ?>
+				</div>
+				<div class="data ">
+					<h4 class="fg-color-white" >Goto Reject Photo</h4>
+					<div class="progress-bar">
+						<div class="bar bg-color-green" style="width: 100%"></div>
+					</div>
+					<p >Take photo / send email </p>
+				</div>
+			</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td >
+			<ul class="listview" id="survey">
+			<li class=" fg-color-yellow bg-color-greenDark" >
+				<div class="icon">
+					<?php echo image_tag('WIN8.png') ?>
+				</div>
+				<div class="data ">
+					<h4 class="fg-color-white" >Goto Survey</h4>
+					<div class="progress-bar">
+						<div class="bar bg-color-green" style="width: 100%"></div>
+					</div>
+					<p >Employee Satisfaction Index</p>
+				</div>
+			</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<td >
+			<ul class="listview" id="labeling">
+			<li class=" fg-color-yellow bg-color-greenDark" >
+				<div class="icon">
+					<?php echo image_tag('WIN8.png') ?>
+				</div>
+				<div class="data ">
+					<h4 class="fg-color-white" >Goto Labeling</h4>
+					<div class="progress-bar">
+						<div class="bar bg-color-green" style="width: 100%"></div>
+					</div>
+					<p >Thermopatch Printing</p>
+				</div>
+			</li>
+			</ul>
+		</td>
+	</tr>
+	<?php if ( $sf_user->getUsername() == 'emmanuel' ): ?>
+	<tr>
+		<td >
+			<ul class="listview" id="hr">
+			<li class=" fg-color-yellow bg-color-greenDark" >
+				<div class="icon">
+					<?php echo image_tag('WIN8.png') ?>
+				</div>
+				<div class="data ">
+					<h4 class="fg-color-white" >Goto HR</h4>
+					<div class="progress-bar">
+						<div class="bar bg-color-green" style="width: 100%"></div>
+					</div>
+					<p >Manage HR Information</p>
+				</div>
+			</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		
+		<td >
+			<ul class="listview" id="framework">
+			<li class=" fg-color-yellow bg-color-greenDark" >
+				<div class="icon">
+					<?php echo image_tag('WIN8.png') ?>
+				</div>
+				<div class="data ">
+					<h4 class="fg-color-white" >Framework</h4>
+					<div class="progress-bar">
+						<div class="bar bg-color-green" style="width: 100%"></div>
+					</div>
+					<p >My Personal Framework</p>
+				</div>
+			</li>
+			</ul>
+		</td>
+	</tr>
+	<?php endif;?>
+</table>
+

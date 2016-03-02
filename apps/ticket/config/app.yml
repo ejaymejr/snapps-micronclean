@@ -1,0 +1,36 @@
+all:
+    apps_name:      MICRONCLEAN D.O. TICKET ISSUANCE  
+    page_heading:   MICRONCLEAN D.O. TICKET ISSUANCE
+    menu_name:      TicketIssuance
+    menu:
+        items:        
+            - ['HOME',              'home',       'index']         
+#            - ['GENERAL GARMENT',                 'generalGarment',       'index']
+#            - ['TECH GARMENT SYSTEM',             'techGarment',       'index']
+#            - ['QUALITY RECORDS',                 'micronclean',       'index']
+#            - ['TRAINING RECORDS',                'training',       'index']
+
+    ampie:
+        public_path: /qualityRecord/js/ampie/
+        public_swf: /qualityRecord/js/ampie/ampie.swf
+    amline:
+        public_path: /qualityRecord/js/ampline/
+        public_swf: /qualityRecord/js/amline/amline.swf
+    amcolumn:
+        public_path: /qualityRecord/js/amcolumn/
+        public_swf: /qualityRecord/js/amcolumn/amcolumn.swf
+        
+    garment_sizes:
+            jumpsuit:       [XS, S, M, L, XL, 2XL (3L), 3XL (4L), 4XL (5L), 5XL (6L), 6XL (7L), 7XL (8L), 8XL (9L), 9XL (10L)]
+            hood:           [XS, S, M, L, XL, 2XL (3L), 3XL (4L), 4XL (5L), 5XL (6L), 6XL (7L), 7XL (8L), 8XL (9L), 9XL (10L)]
+            bag:            [XS, S, M, L, XL, 2XL (3L), 3XL (4L), 4XL (5L), 5XL (6L), 6XL (7L), 7XL (8L), 8XL (9L), 9XL (10L)]
+            booties:        [22, 22, 23, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
+    garment:          
+            color:           
+              BLUE:  BLUE
+              DARK BLUE: DARK BLUE
+              SKY BLUE: SKY BLUE
+              BLACK: BLACK
+              YELLOW: YELLOW
+              WHITE: WHITE
+              

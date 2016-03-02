@@ -1,0 +1,606 @@
+.mainlogo {
+	position: absolute;
+	}
+#nestedList { color:#eee; }
+#nestedList ol {  }
+#nestedList ol li { padding:0px 0px 0px 10px; font-size:12px; color: #000; }
+#nestedList ol li ol { list-style-image: url("../images/nested2.png"); font-size:12px; padding:5px 0px 10px 30px;   }
+#nestedList ol li ol li { color:#1941A5; height:20px; margin-left:0px; padding-top: -5px;  font-size:11px; }
+
+.selectionStacked{
+	position: relative;
+	//border:1px solid #f00;
+	width:300px;
+	float: left;
+	margin: 5px;
+}
+
+.selectionStackedMain{
+	position: relative;
+	//border:1px solid #00f;
+	float: left;
+	width: 100%;
+}
+
+.selectionStackedButton{
+	position: relative;
+	//border:1px solid #f00;
+	width:900px;
+	float: left;
+	margin: 5px;
+}
+
+#DIVFilterSearchReject{
+	position: relative;
+	//border:1px solid #f00;
+	width:100%;
+	float: left;
+	//margin: 5px;
+}
+.rowHovered{
+	
+}
+
+.rowUnHovered{
+	
+}
+
+.bg-clearBlue {
+	background-color: #EFF4FF;
+}
+
+.bg-clearGray {
+	background-color: #EEEEEE;
+}
+
+
+#showloader
+    {
+        //position: relative;
+	    position: absolute;
+	    top: -10%;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+        z-index: 9999;
+        float: left;
+        background-color: #fff;
+        background: url(../images/preloader1.gif) 50% 50% no-repeat #ede9df;
+        background-color: rgba(50,50,50,0.5);
+		//filter:alpha(opacity=40); /* For IE8 and earlier */
+		//box-shadow: 10px 10px 5px #888888;
+		//border:2px solid;
+		//border-radius:25px;
+    }
+
+.attachmentIcon
+{
+	padding-left:25px;
+	padding-top:15px;
+}
+ 
+ .ScreenContainer
+{
+     left: 0px;
+     top: 0px;
+     //width:1024px;
+     height:100%;
+	
+	//border:1px solid #f00;
+}
+
+.overlay {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     z-index: 1000;
+     background-image:url(background-trans.png);
+}
+.overlay div {
+     width:500px;
+     margin: 100px auto;
+     background-color: #f0f0f0;
+     border:1px solid #000;
+     padding:15px;
+}
+
+#DIVDialogSearch {
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	top: 10px;
+	background-color: #eee;
+	style-display: none;
+	position: absolute;
+}
+
+.DIVSendToContainer {
+	padding: 5px;
+	//margin: 5px;
+}
+
+.DIVQuantityGarment {
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	position:relative;
+	top: 5px;
+}
+.DIVQuantityColor {
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	position:relative;
+	top: 10px;
+}
+.DIVQuantitySize {
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	position:relative;
+	top: 10px;
+}
+
+.DIVQuantityCount {
+	font-size: 120px;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	position:relative;
+	top: 70px;
+}
+
+.DIVQuantityInput {
+	position:relative;
+	padding-top:120px;
+	padding-bottom:10px;
+	padding-right:0px;
+	padding-left:70px;
+	//border: 2px solid #CD101B;
+}
+.survey-criteria {
+	font-size: 14px;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.radioButtonText {
+	font-size: 12px;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.tk-bgimgmon {
+	background-image: url('../images/hr/monthBg.gif');
+}
+
+.tk-bgimgday {
+	background-image: url('../images/hr/dayBg.gif');
+}
+
+.tk-bgimgtmp {
+	background-image: url('../images/hr/monthBg1.gif');
+}
+
+.hr-inprocess {
+	background-image: url('../images/icons/ajax-loader.gif');
+}
+
+.stripebg {
+	background-image: url(../images/conveyor/conveyorbg.gif);
+}
+
+.gridButton {
+	background-image: url(../images/hr/monthBg.gif);
+}
+
+.tk-menu {
+	background-image: url('../images/bg/menu.png');
+}
+
+.tk-blue {
+	background-color: #A4CAE6;
+}
+
+.tk-pink {
+	background-color: #F2BFBF;
+}
+
+.tk-gree {
+	background-color: #CCFF00;
+}
+
+.tk-yell {
+	background-color: #FBF484;
+}
+
+.tk-oran {
+	background-color: #FFC18A;
+}
+
+.tk-lgra {
+	background-color: #EEEEEE;
+}
+
+.tk-dgra {
+	background-color: #D0D0D0;
+}
+
+.tk-red {
+	color: #FF0000;
+}
+
+.tk-grn {
+	color: #339900;
+}
+
+.tk-dred {
+	color: #CC0000;
+}
+
+.tk-brwn {
+	color: #663333;
+}
+
+#DIVColorPicker {
+	background-color: #FFFFFF;
+	border: 2px solid #CD101B;
+	color: #FFFFFF;
+	float: right;
+	margin: 1px;
+	position: fixed;
+	left: 20px;
+	top: 120px;
+	width: 375px;
+}
+
+.colorIndicator {
+	background-color: #000;
+	display: inline;
+	float: left;
+	height: 14px;
+	margin-right: 2px;
+	width: 14px;
+}
+
+#DIVThermoPreview {
+	position: relative;
+	left: 28px;
+	top: 0px;
+	width: 345px;
+	z-index: 1;
+	background-color: #cef6f5;
+}
+
+#DIVPrintLabelCompanyInfo {
+	width: 400px;
+	float: left;
+}
+
+#DIVPrintLabel {
+	width: 325px;
+	float: left;
+	border: 2px solid #CD101B;
+}
+
+#DIVPrintLabelAdjusted {
+	position: absolute;
+	width: 33px;
+	left: 2px;
+ 
+}
+
+#DIVPrintBrowseList {
+	position: relative;
+	width: 400px;
+	float: left;
+}
+
+#DIVPrintDialog {
+	float: left;
+	position: relative;
+	background: #fff;
+	height: 460px;
+	border: 2px solid #0f0;
+	width: 300px;
+}
+
+#DIVPrintDialogReminder {
+	float: left;
+	position: relative;
+	height: 400px;
+	width: 280px;
+	color: #fff;
+	left: 5px;
+	padding: 5px;
+	font-size: 14px;
+	color: #F6D455;
+}
+
+#DIVAjaxCompany {
+	float: left;
+	position: relative;
+	background: #fff;
+	height: 460px;
+	border: 2px solid #0f0;
+}
+
+#DIVThermoPatchPreview {
+	width: 400px;
+	float: left;
+	left: 10px;
+	height: 102px;
+	background-color: #0000FF;
+	left-padding: 10px;
+	border: 2px solid #0f0;
+}
+
+#DIVLabelRequest {
+	float: left;
+	left: 10px;
+	margin: 1px;
+	top: 10px;
+}
+
+#DIVLabelRequest {
+	float: left;
+	left: 10px;
+	margin: 1px;
+	top: 10px;
+}
+
+#PreviewDIV {
+	width: 345px;
+	border: 2px solid #0144C3;
+}
+
+#DIVRequestList {
+	float: left;
+	left: 10px;
+	margin: 1px;
+	top: 20px;
+}
+
+#DIVActions {
+	float: left;
+	width: 200px;
+	position: relative;
+	margin: 5px;
+	top: 20px;
+	left: 10px;
+}
+
+#DIVBoxPreview {
+	float: left;
+	width: 350px;
+	position: relative;
+	margin: 5px;
+	top: 20px;
+	left: 10px;
+}
+
+#DIVBoxReminders {
+	float: left;
+	left: 10px;
+	margin: 5px; 
+	position: relative;
+	width: 400px;
+	top: 20px;
+}
+
+#DIVLabelMain {
+	//float: left;
+	position: relative;
+	margin: 5px; 
+	
+	//background: none repeat scroll 0 0 #F8F7E5;
+	border: 1px solid #C0D0E0;
+	padding: 7px 10px 15px;
+	
+}
+
+.previewSample {
+	height: 25px;
+}
+
+.DIVSpacer {
+	height: 13px;
+	background-color: #eef;
+}
+
+.coloumnHeaders {
+	background: url("../images/bg/header-3.gif") repeat-x scroll 0 0 transparent;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 14px;
+	padding: 5px;
+}
+
+.coloumnGridHeaders {
+	background: url("../images/bg/dgh2.gif") repeat-x scroll 0 0 transparent
+		;
+	font-size: 8pt;
+	font-weight: bold;
+	height: 10px;
+	padding: 5px;
+}
+
+.thermoPreview {
+	font-size: 20px;
+	color: #000;
+}
+
+#DIVDisplayTemplates {
+	float: left;
+	left: 20px;
+	margin: 10px;
+	position: relative;
+	background: #fff;
+	border-bottom-width: medium;
+	border-bottom-style: thin;
+	border-bottom-color: #0099FF;
+	border-left-width: medium;
+	border-left-style: thin;
+	border-left-color: #0099FF;
+	border-right-width: medium;
+	border-right-style: thin;
+	border-right-color: #0099FF;
+}
+
+/*  ------------------------       */
+ @charset "utf-8";
+
+/*  Jeong Chan Myeong(dece24@gmail.com)
+	http://naradesign.net/open_content/reference/button/# 
+*/ /* abutton Reset */
+.abutton,.abutton a,.abutton abutton,.abutton input {
+	position: relative;
+	margin: 0;
+	display: -moz-inline-stack;
+	display: inline-block;
+	text-decoration: none !important;
+	border: 0;
+	font-size: 12px;
+	font-family: Tahoma, Sans-serif;
+	white-space: nowrap;
+	background: url(../images/buttonWhite.gif) no-repeat;
+	overflow: visible;
+	color: #333;
+}
+
+.abutton {
+	height: 23px;
+	padding: 0;
+	vertical-align: middle;
+	margin-right: 2px;
+	background-position: left top;
+}
+
+.abutton a,.abutton abutton,.abutton input {
+	left: 2px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+/* abutton Size */
+.abutton.large {
+	height: 29px;
+	background-position: left -30px;
+}
+
+.abutton.xLarge {
+	height: 35px;
+	background-position: left -65px;
+}
+
+.abutton.small {
+	height: 18px;
+	background-position: left -107px;
+}
+
+.abutton a,.abutton abutton,.abutton input {
+	height: 23px;
+	padding: 0 10px 0 8px;
+	font-size: 12px;
+	line-height: 23px;
+	background-position: right top;
+}
+
+.abutton.large a,.abutton.large abutton,.abutton.large input {
+	height: 30px;
+	padding: 0 10px 0 8px;
+	font-size: 16px;
+	line-height: 29px;
+	background-position: right -30px;
+}
+
+.abutton.xLarge a,.abutton.xLarge abutton,.abutton.xLarge input {
+	height: 35px;
+	padding: 0 10px 0 8px;
+	font-size: 20px;
+	line-height: 35px;
+	background-position: right -65px;
+}
+
+.abutton.small a,.abutton.small abutton,.abutton.small input {
+	height: 18px;
+	padding: 0 6px 0 4px;
+	font-size: 11px;
+	line-height: 18px;
+	background-position: right -107px;
+}
+
+/* abutton Text Color */
+.abutton * :hover,.abutton * :active,.abutton * :focus {
+	color: #690;
+}
+
+.abutton.green,.abutton.green a,.abutton.green abutton,.abutton.green input
+	{
+	background-image: url(../images/buttonGreen.gif);
+	color: #fff;
+}
+
+.abutton.green * :hover,.abutton.green * :active,.abutton.green * :focus
+	{
+	color: #ff0;
+}
+
+.abutton.black,.abutton.black a,.abutton.black abutton,.abutton.black input
+	{
+	background-image: url(../images/buttonBlack.gif);
+	color: #fff;
+}
+
+.abutton.black * :hover,.abutton.black * :active,.abutton.black * :focus
+	{
+	color: #ff0;
+}
+
+.abutton.red,.abutton.red a,.abutton.red abutton,.abutton.red input {
+	background-image: url(../images/buttonRed.gif);
+	color: #fff;
+}
+
+.abutton.red * :hover,.abutton.red * :active,.abutton.red * :focus {
+	color: #ff0;
+}
+
+.abutton.blue,.abutton.blue a,.abutton.blue abutton,.abutton.blue input
+	{
+	background-image: url(../images/buttonBlue.gif);
+	color: #fff;
+}
+
+.abutton.blue * :hover,.abutton.blue * :active,.abutton.blue * :focus {
+	color: #ff0;
+}
+
+/* abutton Text Strong */
+.abutton.strong * {
+	font-weight: bold !important;
+}
+
+/*  boxes */
+.boxes {
+	background: none repeat scroll 0 0 #F9FAF9;
+	border: 1px solid #C0D0E0;
+	padding: 7px 10px 15px;
+	color: #333333;
+	margin-bottom: 15px;
+	margin-top: 20px;
+	overflow: hidden;
+	
+}
+

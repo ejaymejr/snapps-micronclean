@@ -1,0 +1,1073 @@
+>> file-     /opt/httpd/htdocs_i/symfony/sna...erated-sfGuardPlugin-schema.xml
+ath] Resolved /opt/httpd/htdocs_i/symfony/snapps/config to /opt/httpd/htdocs_i/symfony/snapps/config
+
+propel-project-builder > check-project-or-dir-set:
+
+propel-project-builder > check-project-set:
+
+propel-project-builder > set-project-dir:
+
+propel-project-builder > check-buildprops-exists:
+
+propel-project-builder > check-buildprops-for-propel-gen:
+
+propel-project-builder > check-buildprops:
+
+propel-project-builder > configure:
+     [echo] Loading project-specific props from /opt/httpd/htdocs_i/symfony/snapps/config/propel.ini
+ [property] Loading /opt/httpd/htdocs_i/symfony/snapps/config/propel.ini
+
+propel-project-builder > om:
+    [phing] Calling Buildfile '/opt/php/lib/php/symfony/vendor/propel-generator/build-propel.xml' with target 'om'
+ [property] Loading /opt/php/lib/php/symfony/vendor/propel-generator/./default.properties
+
+propel > check-run-only-on-schema-change:
+
+propel > om-check:
+
+propel > om:
+     [echo] +------------------------------------------+
+     [echo] |                                          |
+     [echo] | Generating Peer-based Object Model for   |
+     [echo] | YOUR Propel project! (NEW OM BUILDERS)!  |
+     [echo] |                                          |
+     [echo] +------------------------------------------+
+[phingcall] Calling Buildfile '/opt/php/lib/php/symfony/vendor/propel-generator/build-propel.xml' with target 'om-template'
+ [property] Loading /opt/php/lib/php/symfony/vendor/propel-generator/./default.properties
+
+propel > om-template:
+[propel-om] Target database type: mysql
+[propel-om] Target package: lib.model
+[propel-om] Using template path: /opt/php/lib/php/symfony/vendor/propel-generator/templates
+[propel-om] Output directory: /opt/httpd/htdocs_i/symfony/snapps
+[propel-om] Processing: generated-sfGuardPlugin-schema.xml
+[propel-om] Processing: generated-snapps_inspection_schema.xml
+[propel-om] Processing: generated-snapps_support_schema.xml
+[propel-om] Processing: generated-snapps_finance_schema.xml
+[propel-om] Processing: generated-snapps_sales_schema.xml
+[propel-om] Processing: generated-snapps_cleanroom_schema.xml
+[propel-om] Processing: generated-snapps_maintenance_schema.xml
+[propel-om] Processing: generated-snapps_isodoc_schema.xml
+[propel-om] Processing: generated-snapps_hr_schema.xml
+[propel-om] Processing: generated-snapps_cassidy_schema.xml
+[propel-om] Processing: generated-snapps_conveyor_schema.xml
+[propel-om] Processing: generated-snapps_vendor_schema.xml
+[propel-om] Processing: generated-snapps_general_schema.xml
+[propel-om] Processing: generated-seagate_hgas_schema.xml
+[propel-om] Processing: generated-seagate_inventory_schema.xml
+[propel-om] Processing: generated-snapps_cassette_schema.xml
+[propel-om] Processing: generated-conveyor_schema.xml
+[propel-om] Processing: generated-snapps_purchase_schema.xml
+[propel-om] Processing: generated-snapps_customer_schema.xml
+[propel-om] Processing Datamodel : JoinedDataModel
+[propel-om]   - processing database : sfguard
+[propel-om] 	+ sf_guard_group
+[propel-om] 		-> BasesfGuardGroupPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardGroup [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardGroupMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardGroupPeer
+[propel-om] 		-> (exists) sfGuardGroup
+[propel-om] 	+ sf_guard_permission
+[propel-om] 		-> BasesfGuardPermissionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardPermission [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardPermissionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardPermissionPeer
+[propel-om] 		-> (exists) sfGuardPermission
+[propel-om] 	+ sf_guard_group_permission
+[propel-om] 		-> BasesfGuardGroupPermissionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardGroupPermission [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardGroupPermissionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardGroupPermissionPeer
+[propel-om] 		-> (exists) sfGuardGroupPermission
+[propel-om] 	+ sf_guard_user
+[propel-om] 		-> BasesfGuardUserPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardUser [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardUserMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardUserPeer
+[propel-om] 		-> (exists) sfGuardUser
+[propel-om] 	+ sf_guard_user_permission
+[propel-om] 		-> BasesfGuardUserPermissionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardUserPermission [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardUserPermissionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardUserPermissionPeer
+[propel-om] 		-> (exists) sfGuardUserPermission
+[propel-om] 	+ sf_guard_user_group
+[propel-om] 		-> BasesfGuardUserGroupPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardUserGroup [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardUserGroupMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardUserGroupPeer
+[propel-om] 		-> (exists) sfGuardUserGroup
+[propel-om] 	+ sf_guard_remember_key
+[propel-om] 		-> BasesfGuardRememberKeyPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardRememberKey [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardRememberKeyMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardRememberKeyPeer
+[propel-om] 		-> (exists) sfGuardRememberKey
+[propel-om] 	+ sf_guard_user_profile
+[propel-om] 		-> BasesfGuardUserProfilePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardUserProfile [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardUserProfileMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardUserProfilePeer
+[propel-om] 		-> (exists) sfGuardUserProfile
+[propel-om]   - processing database : inspection
+[propel-om] 	+ inspection_field_list
+[propel-om] 		-> BaseInspectionFieldListPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseInspectionFieldList [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> InspectionFieldListMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) InspectionFieldListPeer
+[propel-om] 		-> (exists) InspectionFieldList
+[propel-om] 	+ inspection_record
+[propel-om] 		-> BaseInspectionRecordPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseInspectionRecord [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> InspectionRecordMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) InspectionRecordPeer
+[propel-om] 		-> (exists) InspectionRecord
+[propel-om] 	+ inspection_record_item
+[propel-om] 		-> BaseInspectionRecordItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseInspectionRecordItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> InspectionRecordItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) InspectionRecordItemPeer
+[propel-om] 		-> (exists) InspectionRecordItem
+[propel-om]   - processing database : support
+[propel-om] 	+ ticket_category
+[propel-om] 		-> BaseTicketCategoryPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTicketCategory [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TicketCategoryMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TicketCategoryPeer
+[propel-om] 		-> (exists) TicketCategory
+[propel-om] 	+ ticket
+[propel-om] 		-> BaseTicketPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTicket [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TicketMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TicketPeer
+[propel-om] 		-> (exists) Ticket
+[propel-om] 	+ ticket_thread
+[propel-om] 		-> BaseTicketThreadPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTicketThread [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TicketThreadMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TicketThreadPeer
+[propel-om] 		-> (exists) TicketThread
+[propel-om]   - processing database : finance
+[propel-om] 	+ finance_summary
+[propel-om] 		-> BaseFinanceSummaryPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseFinanceSummary [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> FinanceSummaryMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) FinanceSummaryPeer
+[propel-om] 		-> (exists) FinanceSummary
+[propel-om] 	+ power_usage
+[propel-om] 		-> BasePowerUsagePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePowerUsage [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PowerUsageMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PowerUsagePeer
+[propel-om] 		-> (exists) PowerUsage
+[propel-om] 	+ power_cost
+[propel-om] 		-> BasePowerCostPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePowerCost [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PowerCostMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PowerCostPeer
+[propel-om] 		-> (exists) PowerCost
+[propel-om]   - processing database : sales
+[propel-om] 	+ company_has_product
+[propel-om] 		-> BaseCompanyHasProductPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCompanyHasProduct [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CompanyHasProductMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CompanyHasProductPeer
+[propel-om] 		-> (exists) CompanyHasProduct
+[propel-om] 	+ do
+[propel-om] 		-> BaseDeliveryOrderPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseDeliveryOrder [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> DeliveryOrderMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) DeliveryOrderPeer
+[propel-om] 		-> (exists) DeliveryOrder
+[propel-om] 	+ do_item
+[propel-om] 		-> BaseDoItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseDoItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> DoItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) DoItemPeer
+[propel-om] 		-> (exists) DoItem
+[propel-om] 	+ invoice
+[propel-om] 		-> BaseInvoicePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseInvoice [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> InvoiceMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) InvoicePeer
+[propel-om] 		-> (exists) Invoice
+[propel-om] 	+ invoice_item
+[propel-om] 		-> BaseInvoiceItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseInvoiceItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> InvoiceItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) InvoiceItemPeer
+[propel-om] 		-> (exists) InvoiceItem
+[propel-om] 	+ product
+[propel-om] 		-> BaseProductPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseProduct [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ProductMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ProductPeer
+[propel-om] 		-> (exists) Product
+[propel-om] 	+ product_attribute_option
+[propel-om] 		-> BaseProductAttributeOptionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseProductAttributeOption [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ProductAttributeOptionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ProductAttributeOptionPeer
+[propel-om] 		-> (exists) ProductAttributeOption
+[propel-om] 	+ product_has_attribute
+[propel-om] 		-> BaseProductHasAttributePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseProductHasAttribute [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ProductHasAttributeMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ProductHasAttributePeer
+[propel-om] 		-> (exists) ProductHasAttribute
+[propel-om] 	+ product_type_has_attribute_option
+[propel-om] 		-> BaseProductTypeHasAttributeOptionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseProductTypeHasAttributeOption [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ProductTypeHasAttributeOptionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ProductTypeHasAttributeOptionPeer
+[propel-om] 		-> (exists) ProductTypeHasAttributeOption
+[propel-om] 	+ product_type_option
+[propel-om] 		-> BaseProductTypeOptionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseProductTypeOption [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ProductTypeOptionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ProductTypeOptionPeer
+[propel-om] 		-> (exists) ProductTypeOption
+[propel-om] 	+ sales_quote
+[propel-om] 		-> BaseSalesQuotePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSalesQuote [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SalesQuoteMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SalesQuotePeer
+[propel-om] 		-> (exists) SalesQuote
+[propel-om] 	+ sales_quote_has_customer_entity
+[propel-om] 		-> BaseSalesQuoteHasCustomerEntityPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSalesQuoteHasCustomerEntity [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SalesQuoteHasCustomerEntityMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SalesQuoteHasCustomerEntityPeer
+[propel-om] 		-> (exists) SalesQuoteHasCustomerEntity
+[propel-om] 	+ sales_quote_item
+[propel-om] 		-> BaseSalesQuoteItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSalesQuoteItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SalesQuoteItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SalesQuoteItemPeer
+[propel-om] 		-> (exists) SalesQuoteItem
+[propel-om] 	+ so
+[propel-om] 		-> BaseSalesOrderPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSalesOrder [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SalesOrderMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SalesOrderPeer
+[propel-om] 		-> (exists) SalesOrder
+[propel-om] 	+ so_has_customer_entity
+[propel-om] 		-> BaseSoHasCustomerEntityPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSoHasCustomerEntity [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SoHasCustomerEntityMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SoHasCustomerEntityPeer
+[propel-om] 		-> (exists) SoHasCustomerEntity
+[propel-om] 	+ so_item
+[propel-om] 		-> BaseSoItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSoItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SoItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SoItemPeer
+[propel-om] 		-> (exists) SoItem
+[propel-om]   - processing database : cleanroom
+[propel-om] 	+ janitorial_record
+[propel-om] 		-> BaseJanitorialRecordPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseJanitorialRecord [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> JanitorialRecordMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) JanitorialRecordPeer
+[propel-om] 		-> (exists) JanitorialRecord
+[propel-om] 	+ janitorial_record_item
+[propel-om] 		-> BaseJanitorialRecordItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseJanitorialRecordItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> JanitorialRecordItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) JanitorialRecordItemPeer
+[propel-om] 		-> (exists) JanitorialRecordItem
+[propel-om] 	+ janitorial_set
+[propel-om] 		-> BaseJanitorialSetPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseJanitorialSet [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> JanitorialSetMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) JanitorialSetPeer
+[propel-om] 		-> (exists) JanitorialSet
+[propel-om] 	+ janitorial_set_item
+[propel-om] 		-> BaseJanitorialSetItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseJanitorialSetItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> JanitorialSetItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) JanitorialSetItemPeer
+[propel-om] 		-> (exists) JanitorialSetItem
+[propel-om]   - processing database : isodoc
+[propel-om] 	+ document_record_list
+[propel-om] 		-> BaseDocumentRecordListPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseDocumentRecordList [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> DocumentRecordListMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) DocumentRecordListPeer
+[propel-om] 		-> (exists) DocumentRecordList
+[propel-om] 	+ document_reference
+[propel-om] 		-> BaseDocumentReferencePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseDocumentReference [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> DocumentReferenceMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) DocumentReferencePeer
+[propel-om] 		-> (exists) DocumentReference
+[propel-om] 	+ document_release_log
+[propel-om] 		-> BaseDocumentReleaseLogPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseDocumentReleaseLog [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> DocumentReleaseLogMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) DocumentReleaseLogPeer
+[propel-om] 		-> (exists) DocumentReleaseLog
+[propel-om] 	+ document_revision
+[propel-om] 		-> BaseDocumentRevisionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseDocumentRevision [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> DocumentRevisionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) DocumentRevisionPeer
+[propel-om] 		-> (exists) DocumentRevision
+[propel-om]   - processing database : hr
+[propel-om] 	+ attendance
+[propel-om] 		-> BaseAttendancePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseAttendance [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> AttendanceMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) AttendancePeer
+[propel-om] 		-> (exists) Attendance
+[propel-om] 	+ hr_company
+[propel-om] 		-> BaseHrCompanyPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrCompany [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrCompanyMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrCompanyPeer
+[propel-om] 		-> (exists) HrCompany
+[propel-om] 	+ hr_department
+[propel-om] 		-> BaseHrDepartmentPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrDepartment [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrDepartmentMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrDepartmentPeer
+[propel-om] 		-> (exists) HrDepartment
+[propel-om] 	+ hr_employee
+[propel-om] 		-> BaseHrEmployeePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrEmployee [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrEmployeeMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrEmployeePeer
+[propel-om] 		-> (exists) HrEmployee
+[propel-om] 	+ hr_awards_recognition
+[propel-om] 		-> BaseHrAwardsRecognitionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrAwardsRecognition [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrAwardsRecognitionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrAwardsRecognitionPeer
+[propel-om] 		-> (exists) HrAwardsRecognition
+[propel-om] 	+ hr_employee_benefit
+[propel-om] 		-> BaseHrEmployeeBenefitPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrEmployeeBenefit [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrEmployeeBenefitMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrEmployeeBenefitPeer
+[propel-om] 		-> (exists) HrEmployeeBenefit
+[propel-om] 	+ hr_benefit
+[propel-om] 		-> BaseHrBenefitPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrBenefit [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrBenefitMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrBenefitPeer
+[propel-om] 		-> (exists) HrBenefit
+[propel-om] 	+ hr_employee_dependant
+[propel-om] 		-> BaseHrEmployeeDependantPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrEmployeeDependant [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrEmployeeDependantMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrEmployeeDependantPeer
+[propel-om] 		-> (exists) HrEmployeeDependant
+[propel-om] 	+ hr_employee_leave_credits
+[propel-om] 		-> BaseHrEmployeeLeaveCreditsPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrEmployeeLeaveCredits [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrEmployeeLeaveCreditsMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrEmployeeLeaveCreditsPeer
+[propel-om] 		-> (exists) HrEmployeeLeaveCredits
+[propel-om] 	+ hr_leave
+[propel-om] 		-> BaseHrLeavePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrLeave [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrLeaveMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrLeavePeer
+[propel-om] 		-> (exists) HrLeave
+[propel-om] 	+ hr_individual_leave
+[propel-om] 		-> BaseHrIndividualLeavePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrIndividualLeave [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrIndividualLeaveMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrIndividualLeavePeer
+[propel-om] 		-> (exists) HrIndividualLeave
+[propel-om] 	+ hr_employee_leave
+[propel-om] 		-> BaseHrEmployeeLeavePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrEmployeeLeave [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrEmployeeLeaveMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrEmployeeLeavePeer
+[propel-om] 		-> (exists) HrEmployeeLeave
+[propel-om] 	+ hr_employee_spouse
+[propel-om] 		-> BaseHrEmployeeSpousePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrEmployeeSpouse [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrEmployeeSpouseMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrEmployeeSpousePeer
+[propel-om] 		-> (exists) HrEmployeeSpouse
+[propel-om] 	+ hr_fiscal_year
+[propel-om] 		-> BaseHrFiscalYearPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrFiscalYear [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrFiscalYearMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrFiscalYearPeer
+[propel-om] 		-> (exists) HrFiscalYear
+[propel-om] 	+ hr_medical_history
+[propel-om] 		-> BaseHrMedicalHistoryPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrMedicalHistory [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrMedicalHistoryMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrMedicalHistoryPeer
+[propel-om] 		-> (exists) HrMedicalHistory
+[propel-om] 	+ hr_shortlisted_applicant
+[propel-om] 		-> BaseHrShortlistedApplicantPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrShortlistedApplicant [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrShortlistedApplicantMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrShortlistedApplicantPeer
+[propel-om] 		-> (exists) HrShortlistedApplicant
+[propel-om] 	+ hr_training_development
+[propel-om] 		-> BaseHrTrainingDevelopmentPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrTrainingDevelopment [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrTrainingDevelopmentMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrTrainingDevelopmentPeer
+[propel-om] 		-> (exists) HrTrainingDevelopment
+[propel-om] 	+ hr_holiday
+[propel-om] 		-> BaseHrHolidayPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrHoliday [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrHolidayMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrHolidayPeer
+[propel-om] 		-> (exists) HrHoliday
+[propel-om] 	+ tk_attendance
+[propel-om] 		-> BaseTkAttendancePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTkAttendance [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TkAttendanceMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TkAttendancePeer
+[propel-om] 		-> (exists) TkAttendance
+[propel-om] 	+ tk_worktemplate
+[propel-om] 		-> BaseTkWorktemplatePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTkWorktemplate [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TkWorktemplateMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TkWorktemplatePeer
+[propel-om] 		-> (exists) TkWorktemplate
+[propel-om] 	+ tk_worktemplate_detail
+[propel-om] 		-> BaseTkWorktemplateDetailPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTkWorktemplateDetail [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TkWorktemplateDetailMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TkWorktemplateDetailPeer
+[propel-om] 		-> (exists) TkWorktemplateDetail
+[propel-om] 	+ tk_fiscal_year
+[propel-om] 		-> BaseTkFiscalYearPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTkFiscalYear [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TkFiscalYearMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TkFiscalYearPeer
+[propel-om] 		-> (exists) TkFiscalYear
+[propel-om] 	+ tk_dtrsummary
+[propel-om] 		-> BaseTkDtrsummaryPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTkDtrsummary [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TkDtrsummaryMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TkDtrsummaryPeer
+[propel-om] 		-> (exists) TkDtrsummary
+[propel-om] 	+ tk_prepost_summary
+[propel-om] 		-> BaseTkPrepostSummaryPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTkPrepostSummary [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TkPrepostSummaryMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TkPrepostSummaryPeer
+[propel-om] 		-> (exists) TkPrepostSummary
+[propel-om] 	+ pay_account_code
+[propel-om] 		-> BasePayAccountCodePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePayAccountCode [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PayAccountCodeMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PayAccountCodePeer
+[propel-om] 		-> (exists) PayAccountCode
+[propel-om] 	+ pay_basic_pay
+[propel-om] 		-> BasePayBasicPayPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePayBasicPay [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PayBasicPayMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PayBasicPayPeer
+[propel-om] 		-> (exists) PayBasicPay
+[propel-om] 	+ pay_employee_ledger
+[propel-om] 		-> BasePayEmployeeLedgerPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePayEmployeeLedger [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PayEmployeeLedgerMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PayEmployeeLedgerPeer
+[propel-om] 		-> (exists) PayEmployeeLedger
+[propel-om] 	+ pay_remittance
+[propel-om] 		-> BasePayRemittancePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePayRemittance [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PayRemittanceMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PayRemittancePeer
+[propel-om] 		-> (exists) PayRemittance
+[propel-om] 	+ tk_dtrmaster
+[propel-om] 		-> BaseTkDtrmasterPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTkDtrmaster [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TkDtrmasterMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TkDtrmasterPeer
+[propel-om] 		-> (exists) TkDtrmaster
+[propel-om] 	+ pay_scheduled_deduction
+[propel-om] 		-> BasePayScheduledDeductionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePayScheduledDeduction [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PayScheduledDeductionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PayScheduledDeductionPeer
+[propel-om] 		-> (exists) PayScheduledDeduction
+[propel-om] 	+ pay_scheduled_income
+[propel-om] 		-> BasePayScheduledIncomePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePayScheduledIncome [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PayScheduledIncomeMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PayScheduledIncomePeer
+[propel-om] 		-> (exists) PayScheduledIncome
+[propel-om] 	+ pay_sched_income_log
+[propel-om] 		-> BasePaySchedIncomeLogPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePaySchedIncomeLog [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PaySchedIncomeLogMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PaySchedIncomeLogPeer
+[propel-om] 		-> (exists) PaySchedIncomeLog
+[propel-om] 	+ pay_sched_deduction_log
+[propel-om] 		-> BasePaySchedDeductionLogPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePaySchedDeductionLog [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PaySchedDeductionLogMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PaySchedDeductionLogPeer
+[propel-om] 		-> (exists) PaySchedDeductionLog
+[propel-om] 	+ pay_employee_ledger_archive
+[propel-om] 		-> BasePayEmployeeLedgerArchivePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePayEmployeeLedgerArchive [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PayEmployeeLedgerArchiveMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PayEmployeeLedgerArchivePeer
+[propel-om] 		-> (exists) PayEmployeeLedgerArchive
+[propel-om] 	+ pay_manual_payroll
+[propel-om] 		-> BasePayManualPayrollPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePayManualPayroll [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PayManualPayrollMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PayManualPayrollPeer
+[propel-om] 		-> (exists) PayManualPayroll
+[propel-om] 	+ cpf_employee
+[propel-om] 		-> BaseCpfEmployeePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCpfEmployee [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CpfEmployeeMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CpfEmployeePeer
+[propel-om] 		-> (exists) CpfEmployee
+[propel-om] 	+ cpf_assoc_table
+[propel-om] 		-> BaseCpfAssocTablePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCpfAssocTable [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CpfAssocTableMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CpfAssocTablePeer
+[propel-om] 		-> (exists) CpfAssocTable
+[propel-om] 	+ cpf_govt_rule
+[propel-om] 		-> BaseCpfGovtRulePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCpfGovtRule [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CpfGovtRuleMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CpfGovtRulePeer
+[propel-om] 		-> (exists) CpfGovtRule
+[propel-om] 	+ full_employee_pay_final
+[propel-om] 		-> BaseFullEmployeePayFinalPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseFullEmployeePayFinal [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> FullEmployeePayFinalMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) FullEmployeePayFinalPeer
+[propel-om] 		-> (exists) FullEmployeePayFinal
+[propel-om] 	+ pay_employee_cash
+[propel-om] 		-> BasePayEmployeeCashPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePayEmployeeCash [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PayEmployeeCashMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PayEmployeeCashPeer
+[propel-om] 		-> (exists) PayEmployeeCash
+[propel-om] 	+ tk_meal_summary
+[propel-om] 		-> BaseTkMealSummaryPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTkMealSummary [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TkMealSummaryMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TkMealSummaryPeer
+[propel-om] 		-> (exists) TkMealSummary
+[propel-om] 	+ hr_employee_daily
+[propel-om] 		-> BaseHrEmployeeDailyPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHrEmployeeDaily [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HrEmployeeDailyMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HrEmployeeDailyPeer
+[propel-om] 		-> (exists) HrEmployeeDaily
+[propel-om]   - processing database : cassidy
+[propel-om] 	+ account_category
+[propel-om] 		-> BaseAccountCategoryPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseAccountCategory [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> AccountCategoryMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) AccountCategoryPeer
+[propel-om] 		-> (exists) AccountCategory
+[propel-om] 	+ account_gst_tag
+[propel-om] 		-> BaseAccountGstTagPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseAccountGstTag [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> AccountGstTagMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) AccountGstTagPeer
+[propel-om] 		-> (exists) AccountGstTag
+[propel-om] 	+ creditor_credit_note
+[propel-om] 		-> BaseCreditorCreditNotePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCreditorCreditNote [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CreditorCreditNoteMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CreditorCreditNotePeer
+[propel-om] 		-> (exists) CreditorCreditNote
+[propel-om] 	+ creditor_credit_note_item
+[propel-om] 		-> BaseCreditorCreditNoteItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCreditorCreditNoteItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CreditorCreditNoteItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CreditorCreditNoteItemPeer
+[propel-om] 		-> (exists) CreditorCreditNoteItem
+[propel-om] 	+ payable
+[propel-om] 		-> BasesnappsPayablePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsPayable [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsPayableMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsPayablePeer
+[propel-om] 		-> (exists) snappsPayable
+[propel-om] 	+ payable_item
+[propel-om] 		-> BasesnappsPayableItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsPayableItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsPayableItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsPayableItemPeer
+[propel-om] 		-> (exists) snappsPayableItem
+[propel-om] 	+ payment_voucher
+[propel-om] 		-> BasePaymentVoucherPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePaymentVoucher [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PaymentVoucherMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PaymentVoucherPeer
+[propel-om] 		-> (exists) PaymentVoucher
+[propel-om] 	+ payment_voucher_to_payable
+[propel-om] 		-> BasePaymentVoucherToPayablePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePaymentVoucherToPayable [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PaymentVoucherToPayableMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PaymentVoucherToPayablePeer
+[propel-om] 		-> (exists) PaymentVoucherToPayable
+[propel-om] 	+ payment_method
+[propel-om] 		-> BasePaymentMethodPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePaymentMethod [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PaymentMethodMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PaymentMethodPeer
+[propel-om] 		-> (exists) PaymentMethod
+[propel-om] 	+ period_lock
+[propel-om] 		-> BaseAccountPeriodLockPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseAccountPeriodLock [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> AccountPeriodLockMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) AccountPeriodLockPeer
+[propel-om] 		-> (exists) AccountPeriodLock
+[propel-om]   - processing database : conveyor
+[propel-om] 	+ batch
+[propel-om] 		-> BaseConveyorBatchPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseConveyorBatch [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ConveyorBatchMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ConveyorBatchPeer
+[propel-om] 		-> (exists) ConveyorBatch
+[propel-om] 	+ conveyor
+[propel-om] 		-> BaseConveyorPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseConveyor [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ConveyorMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ConveyorPeer
+[propel-om] 		-> (exists) Conveyor
+[propel-om] 	+ idler
+[propel-om] 		-> BaseConveyorIdlerPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseConveyorIdler [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ConveyorIdlerMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ConveyorIdlerPeer
+[propel-om] 		-> (exists) ConveyorIdler
+[propel-om] 	+ user
+[propel-om] 		-> BaseUserPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseUser [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> UserMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> UserPeer [builder: SfExtensionPeerBuilder]
+[propel-om] 		-> User [builder: SfExtensionObjectBuilder]
+[propel-om] 	+ tool
+[propel-om] 		-> BaseToolPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTool [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ToolMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> ToolPeer [builder: SfExtensionPeerBuilder]
+[propel-om] 		-> Tool [builder: SfExtensionObjectBuilder]
+[propel-om] 	+ qc_item
+[propel-om] 		-> BaseQcItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseQcItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> QcItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> QcItemPeer [builder: SfExtensionPeerBuilder]
+[propel-om] 		-> QcItem [builder: SfExtensionObjectBuilder]
+[propel-om] 	+ conveyor_process_header
+[propel-om] 		-> BaseConveyorProcessHeaderPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseConveyorProcessHeader [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ConveyorProcessHeaderMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> ConveyorProcessHeaderPeer [builder: SfExtensionPeerBuilder]
+[propel-om] 		-> ConveyorProcessHeader [builder: SfExtensionObjectBuilder]
+[propel-om]   - processing database : vendor
+[propel-om] 	+ vendor
+[propel-om] 		-> BasesnappsVendorPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsVendor [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsVendorMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsVendorPeer
+[propel-om] 		-> (exists) snappsVendor
+[propel-om] 	+ evaluation
+[propel-om] 		-> BaseVendorEvaluationPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseVendorEvaluation [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> VendorEvaluationMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) VendorEvaluationPeer
+[propel-om] 		-> (exists) VendorEvaluation
+[propel-om] 	+ vendor_status_log
+[propel-om] 		-> BaseVendorStatusLogPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseVendorStatusLog [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> VendorStatusLogMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) VendorStatusLogPeer
+[propel-om] 		-> (exists) VendorStatusLog
+[propel-om] 	+ part_evaluation
+[propel-om] 		-> BaseVendorPartEvaluationPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseVendorPartEvaluation [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> VendorPartEvaluationMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) VendorPartEvaluationPeer
+[propel-om] 		-> (exists) VendorPartEvaluation
+[propel-om] 	+ part_evaluation_item
+[propel-om] 		-> BaseVendorPartEvaluationItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseVendorPartEvaluationItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> VendorPartEvaluationItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) VendorPartEvaluationItemPeer
+[propel-om] 		-> (exists) VendorPartEvaluationItem
+[propel-om] 	+ part_evaluation_record
+[propel-om] 		-> BaseVendorPartEvaluationRecordPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseVendorPartEvaluationRecord [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> VendorPartEvaluationRecordMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) VendorPartEvaluationRecordPeer
+[propel-om] 		-> (exists) VendorPartEvaluationRecord
+[propel-om] 	+ part_evaluation_record_item
+[propel-om] 		-> BaseVendorPartEvaluationRecordItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseVendorPartEvaluationRecordItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> VendorPartEvaluationRecordItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) VendorPartEvaluationRecordItemPeer
+[propel-om] 		-> (exists) VendorPartEvaluationRecordItem
+[propel-om]   - processing database : general
+[propel-om] 	+ application_setting
+[propel-om] 		-> BasesnappsSettingPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsSetting [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsSettingMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsSettingPeer
+[propel-om] 		-> (exists) snappsSetting
+[propel-om] 	+ currency
+[propel-om] 		-> BasesnappsCurrencyPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsCurrency [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsCurrencyMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsCurrencyPeer
+[propel-om] 		-> (exists) snappsCurrency
+[propel-om] 	+ currency_rate
+[propel-om] 		-> BasesnappsCurrencyRatePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsCurrencyRate [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsCurrencyRateMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsCurrencyRatePeer
+[propel-om] 		-> (exists) snappsCurrencyRate
+[propel-om] 	+ company
+[propel-om] 		-> BasesnappsCompanyPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsCompany [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsCompanyMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsCompanyPeer
+[propel-om] 		-> (exists) snappsCompany
+[propel-om] 	+ namelist
+[propel-om] 		-> BasesnappsNameListPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsNameList [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsNameListMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsNameListPeer
+[propel-om] 		-> (exists) snappsNameList
+[propel-om] 	+ bookmark
+[propel-om] 		-> BasesnappsBookmarkPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsBookmark [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsBookmarkMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsBookmarkPeer
+[propel-om] 		-> (exists) snappsBookmark
+[propel-om]   - processing database : seagateHgas
+[propel-om] 	+ cell
+[propel-om] 		-> BasehgasCellPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasehgasCell [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> hgasCellMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) hgasCellPeer
+[propel-om] 		-> (exists) hgasCell
+[propel-om] 	+ department
+[propel-om] 		-> BasehgasDepartmentPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasehgasDepartment [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> hgasDepartmentMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) hgasDepartmentPeer
+[propel-om] 		-> (exists) hgasDepartment
+[propel-om] 	+ department_team
+[propel-om] 		-> BasehgasDepartmentTeamPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasehgasDepartmentTeam [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> hgasDepartmentTeamMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) hgasDepartmentTeamPeer
+[propel-om] 		-> (exists) hgasDepartmentTeam
+[propel-om] 	+ hanger
+[propel-om] 		-> BasehgasHangerPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasehgasHanger [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> hgasHangerMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) hgasHangerPeer
+[propel-om] 		-> (exists) hgasHanger
+[propel-om] 	+ hanger_slot
+[propel-om] 		-> BasehgasHangerSlotPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasehgasHangerSlot [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> hgasHangerSlotMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) hgasHangerSlotPeer
+[propel-om] 		-> (exists) hgasHangerSlot
+[propel-om] 	+ rack
+[propel-om] 		-> BasehgasRackPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasehgasRack [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> hgasRackMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) hgasRackPeer
+[propel-om] 		-> (exists) hgasRack
+[propel-om] 	+ tag
+[propel-om] 		-> BasehgasTagPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasehgasTag [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> hgasTagMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) hgasTagPeer
+[propel-om] 		-> (exists) hgasTag
+[propel-om] 	+ tag_request
+[propel-om] 		-> BasehgasTagRequestPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasehgasTagRequest [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> hgasTagRequestMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) hgasTagRequestPeer
+[propel-om] 		-> (exists) hgasTagRequest
+[propel-om] 	+ team
+[propel-om] 		-> BasehgasTeamPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasehgasTeam [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> hgasTeamMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) hgasTeamPeer
+[propel-om] 		-> (exists) hgasTeam
+[propel-om] 	+ user_to_department_team
+[propel-om] 		-> BasehgasUserToDepartmentTeamPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasehgasUserToDepartmentTeam [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> hgasUserToDepartmentTeamMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) hgasUserToDepartmentTeamPeer
+[propel-om] 		-> (exists) hgasUserToDepartmentTeam
+[propel-om]   - processing database : seagateGarmentInventory
+[propel-om] 	+ checklist_index
+[propel-om] 		-> BasesgivChecklistIndexPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivChecklistIndex [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivChecklistIndexMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivChecklistIndexPeer
+[propel-om] 		-> (exists) sgivChecklistIndex
+[propel-om] 	+ do_checklist
+[propel-om] 		-> BasesgivDoChecklistPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivDoChecklist [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivDoChecklistMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivDoChecklistPeer
+[propel-om] 		-> (exists) sgivDoChecklist
+[propel-om] 	+ garment_information
+[propel-om] 		-> BasesgivGarmentInformationPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivGarmentInformation [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivGarmentInformationMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivGarmentInformationPeer
+[propel-om] 		-> (exists) sgivGarmentInformation
+[propel-om] 	+ garment_type_attr
+[propel-om] 		-> BasesgivGarmentTypeAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivGarmentTypeAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivGarmentTypeAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivGarmentTypeAttrPeer
+[propel-om] 		-> (exists) sgivGarmentTypeAttr
+[propel-om] 	+ garment_usage
+[propel-om] 		-> BasesgivGarmentUsagePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivGarmentUsage [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivGarmentUsageMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivGarmentUsagePeer
+[propel-om] 		-> (exists) sgivGarmentUsage
+[propel-om] 	+ initial_inventory
+[propel-om] 		-> BasesgivInitialInventoryPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivInitialInventory [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivInitialInventoryMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivInitialInventoryPeer
+[propel-om] 		-> (exists) sgivInitialInventory
+[propel-om] 	+ inventory_state
+[propel-om] 		-> BasesgivInventoryStatePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivInventoryState [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivInventoryStateMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivInventoryStatePeer
+[propel-om] 		-> (exists) sgivInventoryState
+[propel-om] 	+ inventory_transaction
+[propel-om] 		-> BasesgivInventoryTransactionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivInventoryTransaction [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivInventoryTransactionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivInventoryTransactionPeer
+[propel-om] 		-> (exists) sgivInventoryTransaction
+[propel-om] 	+ new_purchase
+[propel-om] 		-> BasesgivPurchasePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivPurchase [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivPurchaseMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivPurchasePeer
+[propel-om] 		-> (exists) sgivPurchase
+[propel-om] 	+ reject
+[propel-om] 		-> BasesgivRejectPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivReject [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivRejectMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivRejectPeer
+[propel-om] 		-> (exists) sgivReject
+[propel-om] 	+ reject_attr
+[propel-om] 		-> BasesgivRejectAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivRejectAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivRejectAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivRejectAttrPeer
+[propel-om] 		-> (exists) sgivRejectAttr
+[propel-om] 	+ reject_followup
+[propel-om] 		-> BasesgivRejectFollowupPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivRejectFollowup [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivRejectFollowupMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivRejectFollowupPeer
+[propel-om] 		-> (exists) sgivRejectFollowup
+[propel-om] 	+ reject_state
+[propel-om] 		-> BasesgivRejectStatePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivRejectState [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivRejectStateMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivRejectStatePeer
+[propel-om] 		-> (exists) sgivRejectState
+[propel-om] 	+ reject_transaction
+[propel-om] 		-> BasesgivRejectTransactionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivRejectTransaction [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivRejectTransactionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivRejectTransactionPeer
+[propel-om] 		-> (exists) sgivRejectTransaction
+[propel-om] 	+ repair_return
+[propel-om] 		-> BasesgivRepairReturnPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivRepairReturn [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivRepairReturnMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivRepairReturnPeer
+[propel-om] 		-> (exists) sgivRepairReturn
+[propel-om] 	+ repair_send
+[propel-om] 		-> BasesgivRepairSendPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivRepairSend [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivRepairSendMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivRepairSendPeer
+[propel-om] 		-> (exists) sgivRepairSend
+[propel-om] 	+ scrap_complete
+[propel-om] 		-> BasesgivScrapCompletePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivScrapComplete [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivScrapCompleteMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivScrapCompletePeer
+[propel-om] 		-> (exists) sgivScrapComplete
+[propel-om] 	+ stock_inventory
+[propel-om] 		-> BasesgivStockInventoryPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivStockInventory [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivStockInventoryMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivStockInventoryPeer
+[propel-om] 		-> (exists) sgivStockInventory
+[propel-om] 	+ stock_issue
+[propel-om] 		-> BasesgivStockIssuePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivStockIssue [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivStockIssueMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivStockIssuePeer
+[propel-om] 		-> (exists) sgivStockIssue
+[propel-om] 	+ team_checklist_index
+[propel-om] 		-> BasesgivTeamChecklistIndexPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivTeamChecklistIndex [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivTeamChecklistIndexMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivTeamChecklistIndexPeer
+[propel-om] 		-> (exists) sgivTeamChecklistIndex
+[propel-om] 	+ team_do_checklist
+[propel-om] 		-> BasesgivTeamDoChecklistPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivTeamDoChecklist [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivTeamDoChecklistMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivTeamDoChecklistPeer
+[propel-om] 		-> (exists) sgivTeamDoChecklist
+[propel-om] 	+ team_garment_type_attr
+[propel-om] 		-> BasesgivTeamGarmentTypeAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivTeamGarmentTypeAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivTeamGarmentTypeAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivTeamGarmentTypeAttrPeer
+[propel-om] 		-> (exists) sgivTeamGarmentTypeAttr
+[propel-om] 	+ transfer
+[propel-om] 		-> BasesgivTransferPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesgivTransfer [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sgivTransferMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sgivTransferPeer
+[propel-om] 		-> (exists) sgivTransfer
+[propel-om]   - processing database : cassette
+[propel-om] 	+ fallout
+[propel-om] 		-> BaseCassetteFalloutPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCassetteFallout [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CassetteFalloutMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CassetteFalloutPeer
+[propel-om] 		-> (exists) CassetteFallout
+[propel-om] 	+ fallout_category
+[propel-om] 		-> BaseCassetteFalloutCategoryPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCassetteFalloutCategory [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CassetteFalloutCategoryMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CassetteFalloutCategoryPeer
+[propel-om] 		-> (exists) CassetteFalloutCategory
+[propel-om] 	+ fallout_item
+[propel-om] 		-> BaseCassetteFalloutItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCassetteFalloutItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CassetteFalloutItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CassetteFalloutItemPeer
+[propel-om] 		-> (exists) CassetteFalloutItem
+[propel-om] 	+ outgoing_inspection
+[propel-om] 		-> BaseCassetteOutgoingInspectionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCassetteOutgoingInspection [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CassetteOutgoingInspectionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CassetteOutgoingInspectionPeer
+[propel-om] 		-> (exists) CassetteOutgoingInspection
+[propel-om]   - processing database : purchase
+[propel-om] 	+ item
+[propel-om] 		-> BasePurchaseItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePurchaseItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PurchaseItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PurchaseItemPeer
+[propel-om] 		-> (exists) PurchaseItem
+[propel-om] 	+ po
+[propel-om] 		-> BasePurchasePoPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePurchasePo [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PurchasePoMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PurchasePoPeer
+[propel-om] 		-> (exists) PurchasePo
+[propel-om] 	+ po_item
+[propel-om] 		-> BasePurchasePoItemPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePurchasePoItem [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PurchasePoItemMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PurchasePoItemPeer
+[propel-om] 		-> (exists) PurchasePoItem
+[propel-om] 	+ purchase
+[propel-om] 		-> BasePurchaseRequestPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePurchaseRequest [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PurchaseRequestMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PurchaseRequestPeer
+[propel-om] 		-> (exists) PurchaseRequest
+[propel-om] 	+ quote_request
+[propel-om] 		-> BasePurchaseQuoteRequestPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasePurchaseQuoteRequest [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> PurchaseQuoteRequestMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) PurchaseQuoteRequestPeer
+[propel-om] 		-> (exists) PurchaseQuoteRequest
+[propel-om]   - processing database : customer
+[propel-om] 	+ company_has_customer_entity
+[propel-om] 		-> BaseCompanyHasCustomerEntityPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCompanyHasCustomerEntity [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CompanyHasCustomerEntityMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CompanyHasCustomerEntityPeer
+[propel-om] 		-> (exists) CompanyHasCustomerEntity
+[propel-om] 	+ company_has_customer_group
+[propel-om] 		-> BaseCompanyHasCustomerGroupPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCompanyHasCustomerGroup [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CompanyHasCustomerGroupMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CompanyHasCustomerGroupPeer
+[propel-om] 		-> (exists) CompanyHasCustomerGroup
+[propel-om] 	+ customer_address
+[propel-om] 		-> BaseCustomerAddressPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCustomerAddress [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CustomerAddressMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CustomerAddressPeer
+[propel-om] 		-> (exists) CustomerAddress
+[propel-om] 	+ customer_attribute_type
+[propel-om] 		-> BaseCustomerAttributeTypePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCustomerAttributeType [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CustomerAttributeTypeMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CustomerAttributeTypePeer
+[propel-om] 		-> (exists) CustomerAttributeType
+[propel-om] 	+ customer_entity
+[propel-om] 		-> BaseCustomerEntityPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCustomerEntity [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CustomerEntityMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CustomerEntityPeer
+[propel-om] 		-> (exists) CustomerEntity
+[propel-om] 	+ customer_entity_has_attribute
+[propel-om] 		-> BaseCustomerEntityHasAttributePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCustomerEntityHasAttribute [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CustomerEntityHasAttributeMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CustomerEntityHasAttributePeer
+[propel-om] 		-> (exists) CustomerEntityHasAttribute
+[propel-om] 	+ customer_entity_has_attribute_option
+[propel-om] 		-> BaseCustomerEntityHasAttributeOptionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCustomerEntityHasAttributeOption [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CustomerEntityHasAttributeOptionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CustomerEntityHasAttributeOptionPeer
+[propel-om] 		-> (exists) CustomerEntityHasAttributeOption
+[propel-om] 	+ customer_group
+[propel-om] 		-> BaseCustomerGroupPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCustomerGroup [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CustomerGroupMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CustomerGroupPeer
+[propel-om] 		-> (exists) CustomerGroup
+[propel-om] 	+ customer_group_has_attribute_type
+[propel-om] 		-> BaseCustomerGroupHasAttributeTypePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCustomerGroupHasAttributeType [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CustomerGroupHasAttributeTypeMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CustomerGroupHasAttributeTypePeer
+[propel-om] 		-> (exists) CustomerGroupHasAttributeType
+[propel-om] 	+ customer_group_has_attribute_option
+[propel-om] 		-> BaseCustomerGroupHasAttributeOptionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCustomerGroupHasAttributeOption [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CustomerGroupHasAttributeOptionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CustomerGroupHasAttributeOptionPeer
+[propel-om] 		-> (exists) CustomerGroupHasAttributeOption
+
+BUILD FINISHED
+
+Total time: 5.7483 seconds

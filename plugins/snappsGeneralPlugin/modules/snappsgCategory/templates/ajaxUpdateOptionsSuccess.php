@@ -1,0 +1,1 @@
+<?php include_partial('select_category'); ?>

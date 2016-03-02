@@ -1,0 +1,413 @@
+>> file-     /opt/httpd/htdocs_i/symfony/qua...erated-sfGuardPlugin-schema.xml
+ath] Resolved /opt/httpd/htdocs_i/symfony/qualityRecord/config to /opt/httpd/htdocs_i/symfony/qualityRecord/config
+
+propel-project-builder > check-project-or-dir-set:
+
+propel-project-builder > check-project-set:
+
+propel-project-builder > set-project-dir:
+
+propel-project-builder > check-buildprops-exists:
+
+propel-project-builder > check-buildprops-for-propel-gen:
+
+propel-project-builder > check-buildprops:
+
+propel-project-builder > configure:
+     [echo] Loading project-specific props from /opt/httpd/htdocs_i/symfony/qualityRecord/config/propel.ini
+ [property] Loading /opt/httpd/htdocs_i/symfony/qualityRecord/config/propel.ini
+
+propel-project-builder > om:
+    [phing] Calling Buildfile '/opt/php/lib/php/symfony/vendor/propel-generator/build-propel.xml' with target 'om'
+ [property] Loading /opt/php/lib/php/symfony/vendor/propel-generator/./default.properties
+
+propel > check-run-only-on-schema-change:
+
+propel > om-check:
+
+propel > om:
+     [echo] +------------------------------------------+
+     [echo] |                                          |
+     [echo] | Generating Peer-based Object Model for   |
+     [echo] | YOUR Propel project! (NEW OM BUILDERS)!  |
+     [echo] |                                          |
+     [echo] +------------------------------------------+
+[phingcall] Calling Buildfile '/opt/php/lib/php/symfony/vendor/propel-generator/build-propel.xml' with target 'om-template'
+ [property] Loading /opt/php/lib/php/symfony/vendor/propel-generator/./default.properties
+
+propel > om-template:
+[propel-om] Target database type: mysql
+[propel-om] Target package: lib.model.garment
+[propel-om] Using template path: /opt/php/lib/php/symfony/vendor/propel-generator/templates
+[propel-om] Output directory: /opt/httpd/htdocs_i/symfony/qualityRecord
+[propel-om] Processing: generated-sfGuardPlugin-schema.xml
+[propel-om] Processing: generated-snapps_garment_schema.xml
+[propel-om] Processing: generated-snapps_general_schema.xml
+[propel-om] Processing Datamodel : JoinedDataModel
+[propel-om]   - processing database : sfguard
+[propel-om] 	+ sf_guard_group
+[propel-om] 		-> BasesfGuardGroupPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardGroup [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardGroupMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardGroupPeer
+[propel-om] 		-> (exists) sfGuardGroup
+[propel-om] 	+ sf_guard_permission
+[propel-om] 		-> BasesfGuardPermissionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardPermission [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardPermissionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardPermissionPeer
+[propel-om] 		-> (exists) sfGuardPermission
+[propel-om] 	+ sf_guard_group_permission
+[propel-om] 		-> BasesfGuardGroupPermissionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardGroupPermission [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardGroupPermissionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardGroupPermissionPeer
+[propel-om] 		-> (exists) sfGuardGroupPermission
+[propel-om] 	+ sf_guard_user
+[propel-om] 		-> BasesfGuardUserPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardUser [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardUserMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardUserPeer
+[propel-om] 		-> (exists) sfGuardUser
+[propel-om] 	+ sf_guard_user_permission
+[propel-om] 		-> BasesfGuardUserPermissionPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardUserPermission [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardUserPermissionMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardUserPermissionPeer
+[propel-om] 		-> (exists) sfGuardUserPermission
+[propel-om] 	+ sf_guard_user_group
+[propel-om] 		-> BasesfGuardUserGroupPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardUserGroup [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardUserGroupMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardUserGroupPeer
+[propel-om] 		-> (exists) sfGuardUserGroup
+[propel-om] 	+ sf_guard_remember_key
+[propel-om] 		-> BasesfGuardRememberKeyPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardRememberKey [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardRememberKeyMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardRememberKeyPeer
+[propel-om] 		-> (exists) sfGuardRememberKey
+[propel-om] 	+ sf_guard_user_profile
+[propel-om] 		-> BasesfGuardUserProfilePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesfGuardUserProfile [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> sfGuardUserProfileMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) sfGuardUserProfilePeer
+[propel-om] 		-> (exists) sfGuardUserProfile
+[propel-om]   - processing database : garment
+[propel-om] 	+ access_level_attr
+[propel-om] 		-> BaseAccessLevelAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseAccessLevelAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> AccessLevelAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) AccessLevelAttrPeer
+[propel-om] 		-> (exists) AccessLevelAttr
+[propel-om] 	+ addnew
+[propel-om] 		-> BaseAddnewPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseAddnew [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> AddnewMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) AddnewPeer
+[propel-om] 		-> (exists) Addnew
+[propel-om] 	+ changedepartmentorshift
+[propel-om] 		-> BaseChangedepartmentorshiftPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseChangedepartmentorshift [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ChangedepartmentorshiftMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ChangedepartmentorshiftPeer
+[propel-om] 		-> (exists) Changedepartmentorshift
+[propel-om] 	+ changesize
+[propel-om] 		-> BaseChangesizePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseChangesize [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ChangesizeMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ChangesizePeer
+[propel-om] 		-> (exists) Changesize
+[propel-om] 	+ check_do_garmentInformation
+[propel-om] 		-> BaseCheckDoGarmentinformationPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCheckDoGarmentinformation [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CheckDoGarmentinformationMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CheckDoGarmentinformationPeer
+[propel-om] 		-> (exists) CheckDoGarmentinformation
+[propel-om] 	+ check_do_outscan
+[propel-om] 		-> BaseCheckDoOutscanPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCheckDoOutscan [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CheckDoOutscanMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CheckDoOutscanPeer
+[propel-om] 		-> (exists) CheckDoOutscan
+[propel-om] 	+ check_do_wearerInformation
+[propel-om] 		-> BaseCheckDoWearerinformationPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCheckDoWearerinformation [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CheckDoWearerinformationMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CheckDoWearerinformationPeer
+[propel-om] 		-> (exists) CheckDoWearerinformation
+[propel-om] 	+ color_attr
+[propel-om] 		-> BaseColorAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseColorAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ColorAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ColorAttrPeer
+[propel-om] 		-> (exists) ColorAttr
+[propel-om] 	+ cost
+[propel-om] 		-> BaseCostPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCost [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CostMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CostPeer
+[propel-om] 		-> (exists) Cost
+[propel-om] 	+ customer_attr
+[propel-om] 		-> BaseCustomerAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseCustomerAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> CustomerAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) CustomerAttrPeer
+[propel-om] 		-> (exists) CustomerAttr
+[propel-om] 	+ deleteuser
+[propel-om] 		-> BaseDeleteuserPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseDeleteuser [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> DeleteuserMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) DeleteuserPeer
+[propel-om] 		-> (exists) Deleteuser
+[propel-om] 	+ department
+[propel-om] 		-> BaseDepartmentPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseDepartment [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> DepartmentMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) DepartmentPeer
+[propel-om] 		-> (exists) Department
+[propel-om] 	+ department_attr
+[propel-om] 		-> BaseDepartmentAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseDepartmentAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> DepartmentAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) DepartmentAttrPeer
+[propel-om] 		-> (exists) DepartmentAttr
+[propel-om] 	+ feedback
+[propel-om] 		-> BaseFeedbackPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseFeedback [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> FeedbackMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) FeedbackPeer
+[propel-om] 		-> (exists) Feedback
+[propel-om] 	+ garment_information
+[propel-om] 		-> BaseGarmentInformationPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseGarmentInformation [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> GarmentInformationMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) GarmentInformationPeer
+[propel-om] 		-> (exists) GarmentInformation
+[propel-om] 	+ hanger_attr
+[propel-om] 		-> BaseHangerAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHangerAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HangerAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HangerAttrPeer
+[propel-om] 		-> (exists) HangerAttr
+[propel-om] 	+ hanger_no
+[propel-om] 		-> BaseHangerNoPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseHangerNo [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> HangerNoMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) HangerNoPeer
+[propel-om] 		-> (exists) HangerNo
+[propel-om] 	+ inscan
+[propel-om] 		-> BaseInscanPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseInscan [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> InscanMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) InscanPeer
+[propel-om] 		-> (exists) Inscan
+[propel-om] 	+ job_title_attr
+[propel-om] 		-> BaseJobTitleAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseJobTitleAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> JobTitleAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) JobTitleAttrPeer
+[propel-om] 		-> (exists) JobTitleAttr
+[propel-om] 	+ log_reason
+[propel-om] 		-> BaseLogReasonPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseLogReason [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> LogReasonMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) LogReasonPeer
+[propel-om] 		-> (exists) LogReason
+[propel-om] 	+ log_reason_attr
+[propel-om] 		-> BaseLogReasonAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseLogReasonAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> LogReasonAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) LogReasonAttrPeer
+[propel-om] 		-> (exists) LogReasonAttr
+[propel-om] 	+ missing
+[propel-om] 		-> BaseMissingPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseMissing [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> MissingMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) MissingPeer
+[propel-om] 		-> (exists) Missing
+[propel-om] 	+ outscan
+[propel-om] 		-> BaseOutscanPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseOutscan [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> OutscanMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) OutscanPeer
+[propel-om] 		-> (exists) Outscan
+[propel-om] 	+ outscan2
+[propel-om] 		-> BaseOutscan2Peer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseOutscan2 [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> Outscan2MapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) Outscan2Peer
+[propel-om] 		-> (exists) Outscan2
+[propel-om] 	+ outscan_blank
+[propel-om] 		-> BaseOutscanBlankPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseOutscanBlank [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> OutscanBlankMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) OutscanBlankPeer
+[propel-om] 		-> (exists) OutscanBlank
+[propel-om] 	+ outscan_blank_complete
+[propel-om] 		-> BaseOutscanBlankCompletePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseOutscanBlankComplete [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> OutscanBlankCompleteMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) OutscanBlankCompletePeer
+[propel-om] 		-> (exists) OutscanBlankComplete
+[propel-om] 	+ outscan_time_change
+[propel-om] 		-> BaseOutscanTimeChangePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseOutscanTimeChange [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> OutscanTimeChangeMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) OutscanTimeChangePeer
+[propel-om] 		-> (exists) OutscanTimeChange
+[propel-om] 	+ reject
+[propel-om] 		-> BaseRejectPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseReject [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> RejectMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) RejectPeer
+[propel-om] 		-> (exists) Reject
+[propel-om] 	+ reject_attr
+[propel-om] 		-> BaseRejectAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseRejectAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> RejectAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) RejectAttrPeer
+[propel-om] 		-> (exists) RejectAttr
+[propel-om] 	+ repair
+[propel-om] 		-> BaseRepairPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseRepair [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> RepairMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) RepairPeer
+[propel-om] 		-> (exists) Repair
+[propel-om] 	+ scrap
+[propel-om] 		-> BaseScrapPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseScrap [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ScrapMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ScrapPeer
+[propel-om] 		-> (exists) Scrap
+[propel-om] 	+ seagate_add_new
+[propel-om] 		-> BaseSeagateAddNewPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSeagateAddNew [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SeagateAddNewMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SeagateAddNewPeer
+[propel-om] 		-> (exists) SeagateAddNew
+[propel-om] 	+ seagate_add_new_garments
+[propel-om] 		-> BaseSeagateAddNewGarmentsPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSeagateAddNewGarments [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SeagateAddNewGarmentsMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SeagateAddNewGarmentsPeer
+[propel-om] 		-> (exists) SeagateAddNewGarments
+[propel-om] 	+ seagate_cost
+[propel-om] 		-> BaseSeagateCostPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSeagateCost [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SeagateCostMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SeagateCostPeer
+[propel-om] 		-> (exists) SeagateCost
+[propel-om] 	+ seagate_damage
+[propel-om] 		-> BaseSeagateDamagePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSeagateDamage [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SeagateDamageMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SeagateDamagePeer
+[propel-om] 		-> (exists) SeagateDamage
+[propel-om] 	+ shift_attr
+[propel-om] 		-> BaseShiftAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseShiftAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ShiftAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ShiftAttrPeer
+[propel-om] 		-> (exists) ShiftAttr
+[propel-om] 	+ showa_namelist
+[propel-om] 		-> BaseShowaNamelistPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseShowaNamelist [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ShowaNamelistMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ShowaNamelistPeer
+[propel-om] 		-> (exists) ShowaNamelist
+[propel-om] 	+ showa_outscan
+[propel-om] 		-> BaseShowaOutscanPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseShowaOutscan [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> ShowaOutscanMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) ShowaOutscanPeer
+[propel-om] 		-> (exists) ShowaOutscan
+[propel-om] 	+ size_attr
+[propel-om] 		-> BaseSizeAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseSizeAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> SizeAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) SizeAttrPeer
+[propel-om] 		-> (exists) SizeAttr
+[propel-om] 	+ temp_garmentInformation_dec_2006
+[propel-om] 		-> BaseTempGarmentinformationDec2006Peer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTempGarmentinformationDec2006 [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TempGarmentinformationDec2006MapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TempGarmentinformationDec2006Peer
+[propel-om] 		-> (exists) TempGarmentinformationDec2006
+[propel-om] 	+ temp_outscan
+[propel-om] 		-> BaseTempOutscanPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTempOutscan [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TempOutscanMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TempOutscanPeer
+[propel-om] 		-> (exists) TempOutscan
+[propel-om] 	+ testing
+[propel-om] 		-> BaseTestingPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTesting [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TestingMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TestingPeer
+[propel-om] 		-> (exists) Testing
+[propel-om] 	+ today_outscan
+[propel-om] 		-> BaseTodayOutscanPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTodayOutscan [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TodayOutscanMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TodayOutscanPeer
+[propel-om] 		-> (exists) TodayOutscan
+[propel-om] 	+ type_attr
+[propel-om] 		-> BaseTypeAttrPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseTypeAttr [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> TypeAttrMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) TypeAttrPeer
+[propel-om] 		-> (exists) TypeAttr
+[propel-om] 	+ visitors
+[propel-om] 		-> BaseVisitorsPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseVisitors [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> VisitorsMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) VisitorsPeer
+[propel-om] 		-> (exists) Visitors
+[propel-om] 	+ wearer_information
+[propel-om] 		-> BaseWearerInformationPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BaseWearerInformation [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> WearerInformationMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) WearerInformationPeer
+[propel-om] 		-> (exists) WearerInformation
+[propel-om]   - processing database : general
+[propel-om] 	+ application_setting
+[propel-om] 		-> BasesnappsSettingPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsSetting [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsSettingMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsSettingPeer
+[propel-om] 		-> (exists) snappsSetting
+[propel-om] 	+ currency
+[propel-om] 		-> BasesnappsCurrencyPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsCurrency [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsCurrencyMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsCurrencyPeer
+[propel-om] 		-> (exists) snappsCurrency
+[propel-om] 	+ currency_rate
+[propel-om] 		-> BasesnappsCurrencyRatePeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsCurrencyRate [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsCurrencyRateMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsCurrencyRatePeer
+[propel-om] 		-> (exists) snappsCurrencyRate
+[propel-om] 	+ company
+[propel-om] 		-> BasesnappsCompanyPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsCompany [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsCompanyMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsCompanyPeer
+[propel-om] 		-> (exists) snappsCompany
+[propel-om] 	+ namelist
+[propel-om] 		-> BasesnappsNameListPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsNameList [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsNameListMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsNameListPeer
+[propel-om] 		-> (exists) snappsNameList
+[propel-om] 	+ bookmark
+[propel-om] 		-> BasesnappsBookmarkPeer [builder: SfAlternativePeerBuilder]
+[propel-om] 		-> BasesnappsBookmark [builder: SfAlternativeObjectBuilder]
+[propel-om] 		-> snappsBookmarkMapBuilder [builder: SfMapBuilderBuilder]
+[propel-om] 		-> (exists) snappsBookmarkPeer
+[propel-om] 		-> (exists) snappsBookmark
+
+BUILD FINISHED
+
+Total time: 1.8807 second

@@ -1,0 +1,812 @@
+
+
+function fadeoutMiniMessages()
+{
+    var aniObj;
+    var els = $$('.sfTMessageContainerMini');
+        
+    if (els.length > 0) {
+        for (var i = 0; i < els.length; i++) {
+        
+		    new Effect.Opacity(els[i], { from: 1.0, to: 0.2, duration: 0.2 });
+
+        }
+    }	    
+}
+
+function floatAndScrollToView(elementID)
+{
+    var obj = document.getElementById(elementID);
+    if(!obj) {
+        alert('Object ' + elementID + ' not found.');
+        return false;
+    } else {
+        obj.style.position = 'absolute';
+        obj.style.top = '20px';
+        obj.style.left = '500px';
+        
+        scrollToView(elementID);
+    }
+}
+
+
+function jumpToPage(selectID)
+{   
+    box = document.getElementById(selectID);
+    destination = box.options[box.selectedIndex].value;
+    if (destination) window.location = destination;
+}
+
+function stopRKey(evt) {
+  var evt = (evt) ? evt : ((event) ? event : null);
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;}
+}
+
+
+function scrollTop() {
+    window.scrollTo(0,0);
+}
+
+function f_clientWidth() {
+    return f_filterResults (
+        window.innerWidth ? window.innerWidth : 0,
+        document.documentElement ? document.documentElement.clientWidth : 0,
+        document.body ? document.body.clientWidth : 0
+    );
+}
+function f_clientHeight() {
+    return f_filterResults (
+        window.innerHeight ? window.innerHeight : 0,
+        document.documentElement ? document.documentElement.clientHeight : 0,
+        document.body ? document.body.clientHeight : 0
+    );
+}
+function f_scrollLeft() {
+    return f_filterResults (
+        window.pageXOffset ? window.pageXOffset : 0,
+        document.documentElement ? document.documentElement.scrollLeft : 0,
+        document.body ? document.body.scrollLeft : 0
+    );
+}
+function f_scrollTop() {
+    return f_filterResults (
+        window.pageYOffset ? window.pageYOffset : 0,
+        document.documentElement ? document.documentElement.scrollTop : 0,
+        document.body ? document.body.scrollTop : 0
+    );
+}
+
+function f_filterResults(n_win, n_docel, n_body) {
+    var n_result = n_win ? n_win : 0;
+    if (n_docel && (!n_result || (n_result > n_docel)))
+        n_result = n_docel;
+    return n_body && (!n_result || (n_result > n_body)) ? n_body : n_result;
+}
+
+
+
+var totalCheckboxChecked = 0;
+function countTotalCheckboxChecked(cb)
+{
+    if (cb.checked)
+    {
+        totalCheckboxChecked++;
+    }
+    if (totalCheckboxChecked >= 10)
+    {
+        alert('Sometimes the little white box could help. Top right.');
+        totalCheckboxChecked = 0;
+    }
+}
+
+
+
+function countCheckedCheckboxes(formName, prefix)
+{
+    var e = document.forms[formName].elements;
+    var totalChecked = 0;
+    for ( var elem, i = 0; ( elem = e[i] ); i++ )
+    {
+        if ( elem.type == 'checkbox' && elem.name.indexOf(prefix) == 0) {
+            if (elem.checked)
+            {
+                totalChecked++;
+            }
+        }
+    }
+    return totalChecked;
+}
+
+function toggleAllCheckboxOptions(formName, prefix)
+{
+    var e = document.forms[formName].elements;
+    var totalChecked = 0;
+    var totalOptions = 0;
+    for ( var elem, i = 0; ( elem = e[i] ); i++ )
+    {
+        if ( elem.type == 'checkbox' && elem.name.indexOf(prefix) == 0) {
+            if (elem.checked)
+            {
+                totalChecked++;
+            } 
+            totalOptions++;
+        }
+    }
+    var newStatus = ((!totalChecked) || (totalChecked > 0 && totalChecked != totalOptions)) ? true : false;
+    for ( var elem, i = 0; ( elem = e[i] ); i++ )
+    {
+        if ( elem.type == 'checkbox' && elem.name.indexOf(prefix) == 0) {
+            elem.checked = newStatus;
+        }
+    }
+    return true;
+}
+
+function toggleCheckboxByID(id)
+{
+    if ($(id)) {
+        $(id).checked = $(id).checked ? false : true;
+    }
+}
+
+
+function toggleAllSelectOptions(selectID)
+{
+    sel = document.getElementById(selectID);
+    if (!sel)
+    {
+        return false;
+    }
+
+    var totalSelected = 0;
+    var len = sel.length;
+    for(i = 0; i < len; i++) {
+        if (sel.options[i].selected)
+        {
+            totalSelected++;
+        }
+    } 
+
+    var newStatus = ((!totalSelected) || (totalSelected > 0 && totalSelected != len)) ? true : false;
+    for(i = 0; i < len; i++) {
+        sel.options[i].selected = newStatus;
+    } 
+    return true;
+}
+
+function toggleAllSelectOptions2(formID)
+{
+    form = document.getElementById(formID);
+    if (!form)
+    {
+        return false;
+    }
+
+
+    var totalSelected = 0;
+    var totalOptions = 0;
+
+    var len = form.elements.length;
+    var el;
+    for(j = 0; j < len; j++) {
+        el = form.elements[j];
+        if (el.type == 'select-multiple')
+        {
+            
+            var lenSel = el.length;
+            for(i = 0; i < lenSel; i++) {
+                if (el.options[i].selected)
+                {
+                    totalSelected++;
+                }
+                totalOptions++;
+            }
+        }
+    } 
+
+
+    var newStatus = ((!totalSelected) || (totalSelected > 0 && totalSelected != totalOptions)) ? true : false;
+    for(j = 0; j < len; j++) {
+        el = form.elements[j];
+        if (el.type == 'select-multiple')
+        {
+            var lenSel = el.length;
+            for(i = 0; i < lenSel; i++) {
+                el.options[i].selected = newStatus;
+            }           
+        }
+    } 
+
+
+
+    return true;
+}
+
+
+function interceptSubmitButton(e)
+{
+    showLoader();
+    return;
+    button = getEventTarget(e);
+    
+    //e.returnValue=false;
+    //e.preventDefault();
+    if (button) {        
+    
+        var newButton = document.createElement('input');
+        newButton.type = 'submit';
+        newButton.name = button.name;
+        newButton.value = button.value;
+        newButton.style.display = 'none';
+        button.parentNode.appendChild(newButton);
+        
+        button.disabled = true;
+        button.className = 'submit-button-disabled';
+        button.value = 'Wait...';
+        newButton.click();
+        //submitParentForm(button);
+    }
+    //showLoader();
+    return false;
+}
+
+function submitParentForm(input)
+{
+    alert(input.parentNode.tagName);
+    if (input.parentNode.tagName.toUpperCase() == 'FORM') {
+        input.parentNode.submit();
+    } else {
+        submitParentForm(input.parentNode);
+    }
+}
+
+function showGlobalDashboard()
+{
+    YAHOO.example.container.dashboardPanel.show();
+}
+function hideGlobalDashboard()
+{
+    YAHOO.example.container.dashboardPanel.hide();
+}
+
+
+function showQuickHelp()
+{
+    YAHOO.example.container.quickHelpPanel.show();
+}
+function hideQuickHelp()
+{
+    YAHOO.example.container.quickHelpPanel.hide();
+}
+
+function showLoader()
+{
+    YAHOO.example.container.wait.show();
+}
+
+function hideLoader()
+{
+    YAHOO.example.container.wait.hide();
+}
+
+function formatFormStyle()
+{
+	test = document.getElementsByTagName('input');
+	if (test.length > 0) {
+	    for (i = 0; i < test.length; i++) {
+	        
+	        var itype = test[i].type.toLowerCase();
+	        if (itype == 'submit') {
+	            if (test[i].className == '') {
+	                test[i].className = 'submit-button';
+	            }	   
+				if (!test[i].onclick) {
+                    unhookEvent(test[i], 'click', showLoader);
+				    hookEvent(test[i], 'click', showLoader);
+				}         	            
+	            
+	            //var div = document.createElement('div');
+	            //div.className = 'submitContainer';	
+	                    
+	            
+	            //test[i].parentNode.insertBefore(div, test[i]);
+	            
+                //var t = document.createElement('img');
+                //t.src = '/cityhall/images/bg/fade-butt-tip2.gif';
+                //div.appendChild(t);    
+                //div.appendChild(test[i]);
+	            
+	        } else if (itype == 'text' || itype == 'password') { 
+	           if (true || !test[i].onfocus) {
+	               hookEvent(test[i], 'focus', inputFocus);
+	           }
+               if (true || !test[i].onblur) {
+                   hookEvent(test[i], 'blur', inputBlur);
+               }
+	        }
+	        
+	        
+	    }
+	}
+}
+function inputFocus(e)
+{
+    var target = getEventTarget(e);
+    target.style.backgroundColor = '#FFFFFF';
+}
+function inputBlur(e)
+{
+    var target = getEventTarget(e);
+    target.style.backgroundColor = '#ebeff9';
+}
+function getEventTarget(e)
+{
+  if(!e)
+    e = window.event;
+    
+  if(e.target)
+    return e.target;
+  return e.srcElement;
+}
+
+
+function hookEvent(element, eventName, callback)
+{
+  if(typeof(element) == "string")
+    element = document.getElementById(element);
+  if(element == null)
+    return;
+  if(element.addEventListener)
+    element.addEventListener(eventName, callback, false);
+  else if(element.attachEvent)
+    element.attachEvent("on" + eventName, callback);
+}
+
+function unhookEvent(element, eventName, callback)
+{
+  if(typeof(element) == "string")
+    element = document.getElementById(element);
+  if(element == null)
+    return;
+  if(element.removeEventListener)
+    element.removeEventListener(eventName, callback, false);
+  else if(element.detachEvent)
+    element.detachEvent("on" + eventName, callback);
+}
+
+
+
+function toggleHighlightCell(obj)
+{    
+    if(obj) {
+        
+        var objClassName = obj.className;
+        
+        par1 = obj.parentNode;
+        par2 = par1.parentNode;
+        par3 = par2.parentNode;        
+        
+        trs = par2.getElementsByTagName('tr');
+        for (i = 0; i < trs.length; i++) {
+            cols = trs[i].getElementsByTagName('td');
+            for (j = 0; j < cols.length; j++) {
+                cols[j].className = cols[j].className.replace(/clicked/, '');       
+            }
+        }
+        
+        if(objClassName.indexOf(' unclicked') > -1) {
+            obj.className = objClassName.replace(/unclicked/, 'clicked');
+        } else if (objClassName.indexOf(' clicked') > -1) {
+            obj.className = objClassName.replace(/clicked/, '');
+        } else {
+            obj.className += ' clicked';
+        }        
+    }
+}
+function highlightCell(obj)
+{    
+    if(obj) {
+        
+        var objClassName = obj.className;
+        
+        par1 = obj.parentNode;
+        par2 = par1.parentNode;
+        par3 = par2.parentNode;        
+        
+        trs = par2.getElementsByTagName('tr');
+        for (i = 0; i < trs.length; i++) {
+            cols = trs[i].getElementsByTagName('td');
+            for (j = 0; j < cols.length; j++) {
+                cols[j].className = cols[j].className.replace(/clicked/, '');       
+            }
+        }
+        obj.className += ' clicked';     
+    }
+}
+
+
+function toggleHighlight(el)
+{
+    el.className = (el.className.indexOf('highlighted') != -1) ? 
+                        el.className.replace(/highlighted/,'hanger') : 
+                        el.className.replace(/hanger/,'highlighted');
+}
+
+
+
+function textfieldFocus(fieldID)
+{
+    var obj = document.getElementById(fieldID);
+    if(!obj) {
+        alert('Object ' + fieldID + ' not found.');
+        return false;
+    } else {
+        changeObjectBackground(fieldID, '#FFFFFF');
+    }
+}
+
+function textfieldBlur(fieldID)
+{
+    var obj = document.getElementById(fieldID);
+    if(!obj) {
+        alert('Object ' + fieldID + ' not found.');
+        return false;
+    } else {
+        changeObjectBackground(fieldID, '#ebeff9');
+    }
+}
+
+function textfieldDisabled(fieldID)
+{
+    var obj = document.getElementById(fieldID);
+    if(!obj) {
+        alert('Object ' + fieldID + ' not found.');
+        return false;
+    } else {
+        changeObjectBackground(fieldID, '#999999');
+    }
+}
+
+function usernamefieldFocus(fieldID)
+{
+    var obj = document.getElementById(fieldID);
+    if(!obj) {
+        alert('Object ' + fieldID + ' not found.');
+        return false;
+    } else {
+        if(obj.value == 'username') obj.value = '';
+        textfieldFocus(fieldID);
+    }
+}
+function usernamefieldBlur(fieldID)
+{
+    var obj = document.getElementById(fieldID);
+    if(!obj) {
+        alert('Object ' + fieldID + ' not found.');
+        return false;
+    } else {
+        if(obj.value == '') {
+            obj.value = 'username';
+        }
+        textfieldBlur(fieldID);
+    }
+}
+
+
+function keywordfieldFocus(fieldID)
+{
+    var obj = document.getElementById(fieldID);
+    if(!obj) {
+        alert('Object ' + fieldID + ' not found.');
+        return false;
+    } else {
+        if(obj.value == 'keyword') obj.value = '';
+        textfieldFocus(fieldID);
+    }
+}
+function keywordfieldBlur(fieldID)
+{
+    var obj = document.getElementById(fieldID);
+    if(!obj) {
+        alert('Object ' + fieldID + ' not found.');
+        return false;
+    } else {
+        if(obj.value == '') {
+            obj.value = 'keyword';
+        }
+        textfieldBlur(fieldID);
+    }
+}
+
+
+
+function passwordfieldFocus(fieldID)
+{
+    var obj = document.getElementById(fieldID);
+    if(!obj) {
+        alert('Object ' + fieldID + ' not found.');
+        return false;
+    } else {
+        obj.value = '';
+        textfieldFocus(fieldID);
+    }
+}
+function passwordfieldBlur(fieldID)
+{
+    var obj = document.getElementById(fieldID);
+    if(!obj) {
+        alert('Object ' + fieldID + ' not found.');
+        return false;
+    } else {
+        if(obj.value == '') {
+            obj.value = 'password';
+        }
+        textfieldBlur(fieldID);
+    }
+}
+
+
+
+
+function changeObjectBackground(fieldID, color) {
+    
+    var obj = document.getElementById(fieldID);
+    if(!obj) {
+        alert('Object ' + fieldID + ' not found.');
+        return false;
+    } else {
+        obj.style.backgroundColor = color;
+    }
+}
+
+
+function showHideElement(elementID)
+{
+    var obj = document.getElementById(elementID);
+    if(!obj) {
+        alert('Object ' + elementID + ' not found.');
+        return false;
+    } else {
+        
+        display = obj.style.display;
+        if(display == 'none') obj.style.display = '';
+        else obj.style.display = 'none';
+    }
+}
+
+function showElement(elementID)
+{
+    var obj = document.getElementById(elementID);
+    if(!obj) {
+        alert('Object ' + elementID + ' not found.');
+        return false;
+    } else {
+        
+        display = obj.style.display;
+        obj.style.display = '';
+    }
+}
+function hideElement(elementID)
+{
+    var obj = document.getElementById(elementID);
+    if(!obj) {
+        alert('Object ' + elementID + ' not found.');
+        return false;
+    } else {
+        
+        display = obj.style.display;
+        obj.style.display = 'none';
+    }
+}
+
+function scrollToView(elementID)
+{
+    var obj = document.getElementById(elementID);
+    if(!obj) {
+        alert('Object ' + elementID + ' not found.');
+        return false;
+    } else {
+        var h = f_scrollTop();
+        obj.style.top = h + 'px';
+    }
+}
+
+function FORMcancelled(returnURL)
+{
+    var sure = confirm('Sure to cancel?');
+    if (sure)
+    {
+        window.location = returnURL;
+        return false;
+    } else return false;
+}
+
+
+
+function openWindow(url, winname, extra) 
+{
+    var iswin = null;
+    iswin = window.open(url, winname, extra);
+    if(iswin.focus) {
+        iswin.focus();
+    }
+}
+
+
+function openEmailWindow2(emailURL)
+{
+    openWindow(emailURL, 'emailWindow', ' status=yes,width=800,height=600,left=0,top=0,scrollbars=1,resizable=1 ');    
+    return false;
+}
+
+function printButtonClicked(warning, printURL)
+{
+    var c = true;
+    if (warning != '') {
+        c = confirm(warning);
+    }
+    
+    if (c) {
+        openWindow(printURL, 'printWindow', ' width=800,height=600,left=0,top=0,resizable=1 ');
+    }
+    
+    return false;
+}
+
+
+function setSelectedOptionByValue(selectID, val)
+{
+    if ($(selectID)) {
+        for(var i = 0; i < $(selectID).options.length; i++) {
+            if ($(selectID).options[i].value == val) {
+                $(selectID).selectedIndex = i;
+            }
+        }
+    }
+}
+
+function isEmpty(text)
+{
+    text = trim(text);
+
+    if(text == '') return true;
+    else return false;
+}
+
+function rtrim(text)
+{
+    var stop = 0;
+    var text = text;
+    var length = text.length;
+
+    while (!stop && length!=0 ) {
+
+        if(text.substring( (length-1), length ) == ' ') {
+            text = text.substring(0, length-1);
+        }
+        else stop = 1;
+
+        length = text.length;
+    }
+    return text;
+}
+
+function ltrim(text)
+{
+    var stop = 0;
+    var text = text;
+    var length = text.length;
+
+    while (!stop && length!=0 ) {
+
+        if(text.substring( 0, 1 ) == ' ') {
+            text = text.substring(1, length);
+        }
+        else stop = 1;
+
+        length = text.length;
+    }
+    return text;
+}
+
+function trim(text)
+{
+    text = ltrim(text);
+    text = rtrim(text);
+
+    return text;
+}
+
+
+function onKeyPressBlockNonNumbers(e)
+{
+    var key = window.event ? e.keyCode : e.which;
+    var keychar = String.fromCharCode(key);
+    reg = /[\d\.]/;
+    if (reg.test(keychar)) {
+        return true;
+    } else {
+        alert('Invalid Number');
+        return false;
+    }
+}
+function onKeyPressBlockNonRoundNumbers(e)
+{
+    var key = window.event ? e.keyCode : e.which;
+    var keychar = String.fromCharCode(key);
+    reg = /\d/;
+    if (reg.test(keychar)) {
+        return true;
+    } else {
+        alert('Invalid Number');
+        return false;
+    }
+}
+
+function IsNumeric(sText)
+
+{
+   var ValidChars = "0123456789.";
+   var IsNumber=true;
+   var Char;
+
+ 
+   for (i = 0; i < sText.length && IsNumber == true; i++) 
+      { 
+      Char = sText.charAt(i); 
+      if (ValidChars.indexOf(Char) == -1) 
+         {
+         IsNumber = false;
+         }
+      }
+   return IsNumber;
+   
+   }
+   
+function formatCurrency(strValue)
+{
+    strValue = strValue.toString().replace(/\$|\,/g,'');
+    dblValue = parseFloat(strValue);
+
+    blnSign = (dblValue == (dblValue = Math.abs(dblValue)));
+    dblValue = Math.floor(dblValue*100+0.50000000001);
+    intCents = dblValue%100;
+    strCents = intCents.toString();
+    dblValue = Math.floor(dblValue/100).toString();
+    if(intCents<10)
+        strCents = "0" + strCents;
+    for (var i = 0; i < Math.floor((dblValue.length-(1+i))/3); i++)
+        dblValue = dblValue.substring(0,dblValue.length-(4*i+3))+','+
+        dblValue.substring(dblValue.length-(4*i+3));
+    return (((blnSign)?'':'-') + dblValue + '.' + strCents);
+}
+function roundVal(val, dec){
+    var result = Math.round(val*Math.pow(10,dec))/Math.pow(10,dec);
+    return result;
+}
+
+function updateEditTotalPrice() {    
+    
+    unitField = document.getElementById('unit_price');
+    qtyField = document.getElementById('quantity');
+    
+    if (unitField && qtyField) {
+        price = unitField.value;
+        qty = qtyField.value;
+        
+        if (price < 0 || !IsNumeric(price) || qty <= 0 || !IsNumeric(qty)) {
+            alert('Invalid Unit Price and/or Qty');
+            return false;
+        } else {
+            totalContainer = document.getElementById('DIVtotalPrice');
+            if (totalContainer) {
+                totalPrice = formatCurrency(price * qty);
+                totalContainer.innerHTML = '<b>' + totalPrice + '</b>';
+            }        
+        }
+
+    } else return false;
+    return true;
+}
+

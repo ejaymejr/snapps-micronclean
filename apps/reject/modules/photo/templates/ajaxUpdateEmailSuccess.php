@@ -1,0 +1,1 @@
+<?php include_partial('dept_shift_info', array('customerList'=> $customerList , 'shiftList'=>$shiftList, 'deptList'=>$deptList))?>

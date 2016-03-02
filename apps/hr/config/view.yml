@@ -1,0 +1,55 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Human Resource | Micronclean
+    robots:       index, follow
+    description:  Micronclean Singapore
+    keywords:     micronclean, singapore
+    language:     en
+
+  stylesheets: [style: {media: screen,print}]
+#    - html
+#    - grid
+#    - layout
+#    - calendar
+#    - bigtable
+#    - search
+#    - /js/extjs/resources/css/ext-all.css
+
+#    - /js/yahoo/container/assets/skins/sam/container.css
+#    - /js/yahoo/tabview/assets/skins/sam/tabview.css    
+#    - /js/yahoo/button/assets/skins/sam/button.css   
+#    - /js/yahoo/datatable/assets/skins/sam/datatable.css
+
+#    - style
+#   - yui
+
+  javascripts: [script]
+#    - form
+#    - grid
+    
+#    - yahoo/yahoo/yahoo
+#    - yahoo/event/event
+#    - yahoo/utilities/utilities
+#    - yahoo/yahoo-dom-event/yahoo-dom-event.js
+#    - yahoo/element/element-beta-min.js 
+#    - yahoo/container/container-min
+#    - yahoo/datasource/datasource-beta-min.js
+#    - yahoo/datatable/datatable-beta-min.js
+#    - yahoo/tabview/tabview-min.js
+#    - yahoo/button/button-min.js
+
+#    - /sf/prototype/js/prototype
+#    - /sf/prototype/js/scriptaculous
+#    - /sf/prototype/js/resizable
+
+#    - tabs
+
+#    - extjs/adapter/ext/ext-base.js
+#    - extjs/ext-all-debug.js
+
+
+  has_layout:     on
+  layout:         layout
